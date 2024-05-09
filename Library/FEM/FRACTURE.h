@@ -282,7 +282,7 @@ void Initialize_Fracture(
             BASE_STORAGE<int> TriVI2TetVI;
             BASE_STORAGE<VECTOR<int, 3>> Tri;
             Find_Surface_TriMesh(X_vis, Elem_vis, TriVI2TetVI, Tri);
-            Write_Surface_TriMesh_Obj(X_vis, TriVI2TetVI, Tri, "fracturable.obj");
+            //Write_Surface_TriMesh_Obj(X_vis, TriVI2TetVI, Tri, "fracturable.obj");
         }
 
         T allowedStretch = std::sqrt(fractureRatio2) - 1;
@@ -595,60 +595,60 @@ void Update_Fracture(
     }
 }
 
-template <class T>
-void Test_Fracture(void)
-{
-    {
-        MESH_NODE<T, 2> X;
-        MESH_ELEM<2> Elem;
-        Read_TriMesh_Obj("sheet100.obj", X, Elem);
-        Write_TriMesh_Obj(X, Elem, "before.obj");
-
-        std::vector<std::array<int, 4>> edge_dupV;
-        std::vector<int> isFracture_edge;
-        std::vector<VECTOR<int, 4>> incTriV_edge;
-        std::vector<T> incTriRestDist2_edge;
-        Initialize_Fracture<T, 2>(X, Elem, -1, T(2), T(2), edge_dupV, isFracture_edge, 
-            incTriV_edge, incTriRestDist2_edge);
-
-        std::vector<int> finalV2old;
-        Node_Fracture<T, 2>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
-        Write_TriMesh_Obj(X, Elem, "after_0.obj");
-
-        isFracture_edge.resize(0);
-        isFracture_edge.resize(edge_dupV.size(), 1);
-        Node_Fracture<T, 2>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
-        Write_TriMesh_Obj(X, Elem, "after_1.obj");
-    }
-
-    {
-        MESH_NODE<T, 3> X;
-        MESH_ELEM<3> Elem;
-        Read_TetMesh_Vtk("mat20x20.vtk", X, Elem);
-        BASE_STORAGE<int> TriVI2TetVI;
-        BASE_STORAGE<VECTOR<int, 3>> Tri;
-        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
-        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_before.obj");
-
-        std::vector<std::array<int, 6>> edge_dupV;
-        std::vector<int> isFracture_edge;
-        std::vector<VECTOR<int, 4>> incTriV_edge;
-        std::vector<T> incTriRestDist2_edge;
-        Initialize_Fracture<T, 3>(X, Elem, 2, T(2), T(2), edge_dupV, isFracture_edge, 
-            incTriV_edge, incTriRestDist2_edge);
-
-        std::vector<int> finalV2old;
-        Node_Fracture<T, 3>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
-        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
-        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_after_0.obj");
-
-        isFracture_edge.resize(0);
-        isFracture_edge.resize(edge_dupV.size(), 1);
-        Node_Fracture<T, 3>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
-        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
-        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_after_1.obj");
-    }
-}
+//template <class T>
+//void Test_Fracture(void)
+//{
+//    {
+//        MESH_NODE<T, 2> X;
+//        MESH_ELEM<2> Elem;
+//        Read_TriMesh_Obj("sheet100.obj", X, Elem);
+//        Write_TriMesh_Obj(X, Elem, "before.obj");
+//
+//        std::vector<std::array<int, 4>> edge_dupV;
+//        std::vector<int> isFracture_edge;
+//        std::vector<VECTOR<int, 4>> incTriV_edge;
+//        std::vector<T> incTriRestDist2_edge;
+//        Initialize_Fracture<T, 2>(X, Elem, -1, T(2), T(2), edge_dupV, isFracture_edge,
+//            incTriV_edge, incTriRestDist2_edge);
+//
+//        std::vector<int> finalV2old;
+//        Node_Fracture<T, 2>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
+//        Write_TriMesh_Obj(X, Elem, "after_0.obj");
+//
+//        isFracture_edge.resize(0);
+//        isFracture_edge.resize(edge_dupV.size(), 1);
+//        Node_Fracture<T, 2>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
+//        Write_TriMesh_Obj(X, Elem, "after_1.obj");
+//    }
+//
+//    {
+//        MESH_NODE<T, 3> X;
+//        MESH_ELEM<3> Elem;
+//        Read_TetMesh_Vtk("mat20x20.vtk", X, Elem);
+//        BASE_STORAGE<int> TriVI2TetVI;
+//        BASE_STORAGE<VECTOR<int, 3>> Tri;
+//        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
+//        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_before.obj");
+//
+//        std::vector<std::array<int, 6>> edge_dupV;
+//        std::vector<int> isFracture_edge;
+//        std::vector<VECTOR<int, 4>> incTriV_edge;
+//        std::vector<T> incTriRestDist2_edge;
+//        Initialize_Fracture<T, 3>(X, Elem, 2, T(2), T(2), edge_dupV, isFracture_edge,
+//            incTriV_edge, incTriRestDist2_edge);
+//
+//        std::vector<int> finalV2old;
+//        Node_Fracture<T, 3>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
+//        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
+//        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_after_0.obj");
+//
+//        isFracture_edge.resize(0);
+//        isFracture_edge.resize(edge_dupV.size(), 1);
+//        Node_Fracture<T, 3>(edge_dupV, isFracture_edge, X, Elem, finalV2old);
+//        Find_Surface_TriMesh(X, Elem, TriVI2TetVI, Tri);
+//        Write_Surface_TriMesh_Obj(X, TriVI2TetVI, Tri, "3D_after_1.obj");
+//    }
+//}
 
 // export python
 void Export_Fracture(py::module& m) {
@@ -660,7 +660,7 @@ void Export_Fracture(py::module& m) {
     m.def("Node_Fracture", &Node_Fracture<double, 3>, "decide which node to fracture according to edge fracture");
     m.def("Update_Fracture", &Update_Fracture<double, 2>, "initialize FEM fracture data structures");
     m.def("Update_Fracture", &Update_Fracture<double, 3>, "initialize FEM fracture data structures");
-    m.def("Test_Fracture", &Test_Fracture<double>, "test FEM fracture functionality");
+    //m.def("Test_Fracture", &Test_Fracture<double>, "test FEM fracture functionality");
 }
 
 }

@@ -1,0 +1,1632 @@
+span size = 0
+project rhs for Dirichlet boundary condition 0
+span size = 9.79311e-17
+Total PN iteration count:  1 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 1
+[#                                                 ]   3.333
+┏ Global : 59.383532s (100.0%%)   59.383532s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007030s (0.0%%)   0.007030s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004229s (0.0%%)   0.004229s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.843580s (23.3%%)   13.843580s (23.3%%)
+┃┃ Compute Total Volume : 0.025573s (0.0%%)   0.025573s (0.0%%)
+┃┃ Compute XTilde : 0.000336s (0.0%%)   0.000336s (0.0%%)
+┃┃ Find Object Boundary : 2.125920s (3.6%%)   2.125920s (3.6%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.071362s (0.1%%)   0.071362s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.046571s (0.1%%)   0.046571s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005894s (0.0%%)   0.005894s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.011434s (0.0%%)   0.011434s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.017629s (0.0%%)   0.017629s (0.0%%)
+┃┃┏ Compute_Constraint_Set : 0.074640s (0.1%%)   0.074640s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.053732s (0.1%%)   0.053732s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.005156s (0.0%%)   0.005156s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.008284s (0.0%%)   0.008284s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000132s (0.0%%)   0.000132s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.048702s (0.1%%)   0.048702s (0.1%%)
+┃┃┃ computePsi : 0.042791s (0.1%%)   0.042791s (0.1%%)
+┃┃┃ Compute_Barrier : 0.000005s (0.0%%)   0.000005s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.077674s (0.1%%)   0.077674s (0.1%%)
+┃┃┃ computeStress : 0.004582s (0.0%%)   0.004582s (0.0%%)
+┃┃┃ elem2node : 0.066693s (0.1%%)   0.066693s (0.1%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000004s (0.0%%)   0.000004s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.057761s (1.8%%)   1.057761s (1.8%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.602042s (1.0%%)   0.602042s (1.0%%)
+┃┃┃┃ computeStressDerivative : 0.064795s (0.1%%)   0.064795s (0.1%%)
+┃┃┃┃ elem2node : 0.383882s (0.6%%)   0.383882s (0.6%%)
+┃┃┃┃ Uncounted : 0.153364s (0.3%%)   0.153364s (0.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.433409s (0.7%%)   0.433409s (0.7%%)
+┃┃┃ Compute_Barrier_Hessian : 0.022301s (0.0%%)   0.022301s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.864201s (1.5%%)   0.864201s (1.5%%)
+┃┃ projectDBC : 0.030065s (0.1%%)   0.030065s (0.1%%)
+┃┃ linearSolve : 9.322496s (15.7%%)   9.322496s (15.7%%)
+┃┃ Uncounted : 0.127222s (0.2%%)   0.127222s (0.2%%)
+┃┗
+┃ computeDG : 0.009940s (0.0%%)   0.009940s (0.0%%)
+┃ Uncounted : 45.518753s (76.7%%)   45.518753s (76.7%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  2 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 2
+[###                                               ]   6.667
+┏ Global : 13.583750s (100.0%%)   1m 12.967282s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008191s (0.1%%)   0.015222s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003975s (0.0%%)   0.008204s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.540223s (99.7%%)   27.383803s (37.5%%)
+┃┃ Compute Total Volume : 0.025560s (0.2%%)   0.051133s (0.1%%)
+┃┃ Compute XTilde : 0.000377s (0.0%%)   0.000713s (0.0%%)
+┃┃ Find Object Boundary : 2.143844s (15.8%%)   4.269764s (5.9%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.061455s (0.5%%)   0.132817s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.039563s (0.3%%)   0.086134s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.006281s (0.0%%)   0.012175s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008281s (0.1%%)   0.019715s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.017631s (0.1%%)   0.035260s (0.0%%)
+┃┃┏ Compute_Constraint_Set : 0.060212s (0.4%%)   0.134852s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.042136s (0.3%%)   0.095868s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003685s (0.0%%)   0.008841s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.007397s (0.1%%)   0.015681s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000113s (0.0%%)   0.000245s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.043112s (0.3%%)   0.091813s (0.1%%)
+┃┃┃ computePsi : 0.041990s (0.3%%)   0.084781s (0.1%%)
+┃┃┃ Compute_Barrier : 0.000003s (0.0%%)   0.000008s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.074272s (0.5%%)   0.151946s (0.2%%)
+┃┃┃ computeStress : 0.010881s (0.1%%)   0.015463s (0.0%%)
+┃┃┃ elem2node : 0.062409s (0.5%%)   0.129102s (0.2%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000006s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.989407s (7.3%%)   2.047168s (2.8%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.568402s (4.2%%)   1.170444s (1.6%%)
+┃┃┃┃ computeStressDerivative : 0.058033s (0.4%%)   0.122829s (0.2%%)
+┃┃┃┃ elem2node : 0.368742s (2.7%%)   0.752624s (1.0%%)
+┃┃┃┃ Uncounted : 0.141627s (1.0%%)   0.294991s (0.4%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411500s (3.0%%)   0.844910s (1.2%%)
+┃┃┃ Compute_Barrier_Hessian : 0.009499s (0.1%%)   0.031800s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.853321s (6.3%%)   1.717522s (2.4%%)
+┃┃ projectDBC : 0.029976s (0.2%%)   0.060040s (0.1%%)
+┃┃ linearSolve : 9.139512s (67.3%%)   18.462007s (25.3%%)
+┃┃ Uncounted : 0.101544s (0.7%%)   0.228766s (0.3%%)
+┃┗
+┃ computeDG : 0.008942s (0.1%%)   0.018882s (0.0%%)
+┃ Uncounted : 0.022418s (0.2%%)   45.541171s (62.4%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  3 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 3
+[#####                                             ]  10.000
+┏ Global : 13.581760s (100.0%%)   1m 26.549042s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008114s (0.1%%)   0.023335s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004154s (0.0%%)   0.012358s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.544775s (99.7%%)   40.928578s (47.3%%)
+┃┃ Compute Total Volume : 0.026574s (0.2%%)   0.077708s (0.1%%)
+┃┃ Compute XTilde : 0.000315s (0.0%%)   0.001028s (0.0%%)
+┃┃ Find Object Boundary : 2.043361s (15.0%%)   6.313125s (7.3%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.058716s (0.4%%)   0.191533s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.037993s (0.3%%)   0.124127s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005439s (0.0%%)   0.017614s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008044s (0.1%%)   0.027760s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.014937s (0.1%%)   0.050197s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.075276s (0.6%%)   0.210128s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.052621s (0.4%%)   0.148489s (0.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003513s (0.0%%)   0.012354s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.011798s (0.1%%)   0.027480s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000130s (0.0%%)   0.000376s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.046280s (0.3%%)   0.138093s (0.2%%)
+┃┃┃ computePsi : 0.042563s (0.3%%)   0.127344s (0.1%%)
+┃┃┃ Compute_Barrier : 0.000004s (0.0%%)   0.000012s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.074732s (0.6%%)   0.226678s (0.3%%)
+┃┃┃ computeStress : 0.006745s (0.0%%)   0.022208s (0.0%%)
+┃┃┃ elem2node : 0.066669s (0.5%%)   0.195772s (0.2%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000008s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.989883s (7.3%%)   3.037050s (3.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.578165s (4.3%%)   1.748609s (2.0%%)
+┃┃┃┃ computeStressDerivative : 0.064395s (0.5%%)   0.187224s (0.2%%)
+┃┃┃┃ elem2node : 0.373146s (2.7%%)   1.125770s (1.3%%)
+┃┃┃┃ Uncounted : 0.140625s (1.0%%)   0.435616s (0.5%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411101s (3.0%%)   1.256011s (1.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000610s (0.0%%)   0.032410s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.852614s (6.3%%)   2.570136s (3.0%%)
+┃┃ projectDBC : 0.030288s (0.2%%)   0.090328s (0.1%%)
+┃┃ linearSolve : 9.197827s (67.7%%)   27.659834s (32.0%%)
+┃┃ Uncounted : 0.133974s (1.0%%)   0.362740s (0.4%%)
+┃┗
+┃ computeDG : 0.006451s (0.0%%)   0.025333s (0.0%%)
+┃ Uncounted : 0.018266s (0.1%%)   45.559437s (52.6%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  4 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 4
+[######                                            ]  13.333
+┏ Global : 13.649230s (100.0%%)   1m 40.198272s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.009448s (0.1%%)   0.032784s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003872s (0.0%%)   0.016229s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.606503s (99.7%%)   54.535081s (54.4%%)
+┃┃ Compute Total Volume : 0.025044s (0.2%%)   0.102751s (0.1%%)
+┃┃ Compute XTilde : 0.000319s (0.0%%)   0.001347s (0.0%%)
+┃┃ Find Object Boundary : 2.094411s (15.3%%)   8.407536s (8.4%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.069358s (0.5%%)   0.260891s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.048092s (0.4%%)   0.172220s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005946s (0.0%%)   0.023559s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008099s (0.1%%)   0.035859s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.020947s (0.2%%)   0.071144s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.062368s (0.5%%)   0.272496s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.044220s (0.3%%)   0.192709s (0.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003653s (0.0%%)   0.016006s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.007279s (0.1%%)   0.034758s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000124s (0.0%%)   0.000500s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.049346s (0.4%%)   0.187439s (0.2%%)
+┃┃┃ computePsi : 0.041143s (0.3%%)   0.168487s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000003s (0.0%%)   0.000015s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.075332s (0.6%%)   0.302010s (0.3%%)
+┃┃┃ computeStress : 0.004645s (0.0%%)   0.026853s (0.0%%)
+┃┃┃ elem2node : 0.067699s (0.5%%)   0.263471s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000010s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.991595s (7.3%%)   4.028646s (4.0%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.576293s (4.2%%)   2.324902s (2.3%%)
+┃┃┃┃ computeStressDerivative : 0.052071s (0.4%%)   0.239295s (0.2%%)
+┃┃┃┃ elem2node : 0.371461s (2.7%%)   1.497231s (1.5%%)
+┃┃┃┃ Uncounted : 0.152761s (1.1%%)   0.588377s (0.6%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.415023s (3.0%%)   1.671034s (1.7%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000273s (0.0%%)   0.032683s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.864957s (6.3%%)   3.435093s (3.4%%)
+┃┃ projectDBC : 0.031286s (0.2%%)   0.121614s (0.1%%)
+┃┃ linearSolve : 9.215975s (67.5%%)   36.875809s (36.8%%)
+┃┃ Uncounted : 0.105564s (0.8%%)   0.468304s (0.5%%)
+┃┗
+┃ computeDG : 0.007094s (0.1%%)   0.032427s (0.0%%)
+┃ Uncounted : 0.022313s (0.2%%)   45.581750s (45.5%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  5 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 5
+[########                                          ]  16.667
+┏ Global : 13.689993s (100.0%%)   1m 53.888265s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007134s (0.1%%)   0.039918s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003631s (0.0%%)   0.019861s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.647700s (99.7%%)   1m 8.182781s (59.9%%)
+┃┃ Compute Total Volume : 0.025780s (0.2%%)   0.128532s (0.1%%)
+┃┃ Compute XTilde : 0.000327s (0.0%%)   0.001673s (0.0%%)
+┃┃ Find Object Boundary : 2.036423s (14.9%%)   10.443959s (9.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.061013s (0.4%%)   0.321904s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.038391s (0.3%%)   0.210611s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.007254s (0.1%%)   0.030813s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008148s (0.1%%)   0.044007s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.045345s (0.3%%)   0.116488s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.067772s (0.5%%)   0.340269s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.044643s (0.3%%)   0.237352s (0.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003544s (0.0%%)   0.019550s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.012015s (0.1%%)   0.046774s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000130s (0.0%%)   0.000630s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.046960s (0.3%%)   0.234400s (0.2%%)
+┃┃┃ computePsi : 0.045415s (0.3%%)   0.213901s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000004s (0.0%%)   0.000019s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.070708s (0.5%%)   0.372718s (0.3%%)
+┃┃┃ computeStress : 0.007767s (0.1%%)   0.034621s (0.0%%)
+┃┃┃ elem2node : 0.058706s (0.4%%)   0.322177s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000013s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.988253s (7.2%%)   5.016898s (4.4%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.579460s (4.2%%)   2.904363s (2.6%%)
+┃┃┃┃ computeStressDerivative : 0.063217s (0.5%%)   0.302512s (0.3%%)
+┃┃┃┃ elem2node : 0.372066s (2.7%%)   1.869296s (1.6%%)
+┃┃┃┃ Uncounted : 0.144178s (1.1%%)   0.732554s (0.6%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.408665s (3.0%%)   2.079699s (1.8%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000121s (0.0%%)   0.032805s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.866324s (6.3%%)   4.301417s (3.8%%)
+┃┃ projectDBC : 0.030623s (0.2%%)   0.152238s (0.1%%)
+┃┃ linearSolve : 9.254070s (67.6%%)   46.129879s (40.5%%)
+┃┃ Uncounted : 0.154101s (1.1%%)   0.622406s (0.5%%)
+┃┗
+┃ computeDG : 0.008632s (0.1%%)   0.041059s (0.0%%)
+┃ Uncounted : 0.022896s (0.2%%)   45.604646s (40.0%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  6 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 6
+[##########                                        ]  20.000
+┏ Global : 13.812792s (100.0%%)   2m 7.701057s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008204s (0.1%%)   0.048122s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004017s (0.0%%)   0.023877s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.765270s (99.7%%)   1m 21.948051s (64.2%%)
+┃┃ Compute Total Volume : 0.025463s (0.2%%)   0.153995s (0.1%%)
+┃┃ Compute XTilde : 0.000407s (0.0%%)   0.002080s (0.0%%)
+┃┃ Find Object Boundary : 2.061532s (14.9%%)   12.505492s (9.8%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.053885s (0.4%%)   0.375789s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.032369s (0.2%%)   0.242980s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005391s (0.0%%)   0.036204s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008935s (0.1%%)   0.052942s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.019725s (0.1%%)   0.136214s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.082677s (0.6%%)   0.422945s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.060093s (0.4%%)   0.297445s (0.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.004040s (0.0%%)   0.023590s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.010728s (0.1%%)   0.057502s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000130s (0.0%%)   0.000760s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.052876s (0.4%%)   0.287276s (0.2%%)
+┃┃┃ computePsi : 0.040698s (0.3%%)   0.254599s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000004s (0.0%%)   0.000023s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.078056s (0.6%%)   0.450774s (0.4%%)
+┃┃┃ computeStress : 0.006179s (0.0%%)   0.040799s (0.0%%)
+┃┃┃ elem2node : 0.059745s (0.4%%)   0.381922s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000015s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.017992s (7.4%%)   6.034890s (4.7%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.586168s (4.2%%)   3.490531s (2.7%%)
+┃┃┃┃ computeStressDerivative : 0.056316s (0.4%%)   0.358828s (0.3%%)
+┃┃┃┃ elem2node : 0.381570s (2.8%%)   2.250867s (1.8%%)
+┃┃┃┃ Uncounted : 0.148282s (1.1%%)   0.880837s (0.7%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.431527s (3.1%%)   2.511226s (2.0%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000289s (0.0%%)   0.033094s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.852891s (6.2%%)   5.154308s (4.0%%)
+┃┃ projectDBC : 0.030676s (0.2%%)   0.182914s (0.1%%)
+┃┃ linearSolve : 9.368252s (67.8%%)   55.498131s (43.5%%)
+┃┃ Uncounted : 0.120838s (0.9%%)   0.743244s (0.6%%)
+┃┗
+┃ computeDG : 0.008134s (0.1%%)   0.049194s (0.0%%)
+┃ Uncounted : 0.027167s (0.2%%)   45.631813s (35.7%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  7 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 7
+[###########                                       ]  23.333
+┏ Global : 14.231715s (100.0%%)   2m 21.932771s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008112s (0.1%%)   0.056234s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004149s (0.0%%)   0.028026s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.153884s (99.5%%)   1m 36.101935s (67.7%%)
+┃┃ Compute Total Volume : 0.025039s (0.2%%)   0.179033s (0.1%%)
+┃┃ Compute XTilde : 0.000399s (0.0%%)   0.002480s (0.0%%)
+┃┃ Find Object Boundary : 2.477163s (17.4%%)   14.982654s (10.6%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.057832s (0.4%%)   0.433621s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.035403s (0.2%%)   0.278383s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005468s (0.0%%)   0.041672s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009595s (0.1%%)   0.062536s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.016315s (0.1%%)   0.152529s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.100002s (0.7%%)   0.522947s (0.4%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.058412s (0.4%%)   0.355858s (0.3%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.023464s (0.2%%)   0.047054s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.007472s (0.1%%)   0.064974s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000133s (0.0%%)   0.000893s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.064711s (0.5%%)   0.351987s (0.2%%)
+┃┃┃ computePsi : 0.046461s (0.3%%)   0.301060s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000005s (0.0%%)   0.000028s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.091313s (0.6%%)   0.542087s (0.4%%)
+┃┃┃ computeStress : 0.014271s (0.1%%)   0.055070s (0.0%%)
+┃┃┃ elem2node : 0.070349s (0.5%%)   0.452272s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000017s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.032969s (7.3%%)   7.067860s (5.0%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.595585s (4.2%%)   4.086116s (2.9%%)
+┃┃┃┃ computeStressDerivative : 0.067912s (0.5%%)   0.426740s (0.3%%)
+┃┃┃┃ elem2node : 0.373185s (2.6%%)   2.624052s (1.8%%)
+┃┃┃┃ Uncounted : 0.154488s (1.1%%)   1.035325s (0.7%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.428805s (3.0%%)   2.940031s (2.1%%)
+┃┃┃ Compute_Barrier_Hessian : 0.008572s (0.1%%)   0.041666s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.872244s (6.1%%)   6.026552s (4.2%%)
+┃┃ projectDBC : 0.030841s (0.2%%)   0.213755s (0.2%%)
+┃┃ linearSolve : 9.266037s (65.1%%)   1m 4.764167s (45.6%%)
+┃┃ Uncounted : 0.119019s (0.8%%)   0.862263s (0.6%%)
+┃┗
+┃ computeDG : 0.022144s (0.2%%)   0.071338s (0.1%%)
+┃ Uncounted : 0.043425s (0.3%%)   45.675238s (32.2%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  8 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 8
+[#############                                     ]  26.667
+┏ Global : 13.678637s (100.0%%)   2m 35.611408s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008153s (0.1%%)   0.064386s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.005125s (0.0%%)   0.033152s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.638278s (99.7%%)   1m 49.740213s (70.5%%)
+┃┃ Compute Total Volume : 0.025427s (0.2%%)   0.204460s (0.1%%)
+┃┃ Compute XTilde : 0.000331s (0.0%%)   0.002810s (0.0%%)
+┃┃ Find Object Boundary : 2.060794s (15.1%%)   17.043448s (11.0%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.051053s (0.4%%)   0.484673s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.029842s (0.2%%)   0.308225s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005297s (0.0%%)   0.046969s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008767s (0.1%%)   0.071304s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.035128s (0.3%%)   0.187657s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.124399s (0.9%%)   0.647346s (0.4%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.073597s (0.5%%)   0.429454s (0.3%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.008989s (0.1%%)   0.056043s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.027559s (0.2%%)   0.092533s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000261s (0.0%%)   0.001153s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.094447s (0.7%%)   0.446434s (0.3%%)
+┃┃┃ computePsi : 0.081726s (0.6%%)   0.382786s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000007s (0.0%%)   0.000035s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.076618s (0.6%%)   0.618705s (0.4%%)
+┃┃┃ computeStress : 0.004352s (0.0%%)   0.059422s (0.0%%)
+┃┃┃ elem2node : 0.071463s (0.5%%)   0.523735s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000018s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.974169s (7.1%%)   8.042028s (5.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.563570s (4.1%%)   4.649687s (3.0%%)
+┃┃┃┃ computeStressDerivative : 0.051944s (0.4%%)   0.478683s (0.3%%)
+┃┃┃┃ elem2node : 0.365379s (2.7%%)   2.989431s (1.9%%)
+┃┃┃┃ Uncounted : 0.146248s (1.1%%)   1.181573s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.409819s (3.0%%)   3.349850s (2.2%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000774s (0.0%%)   0.042440s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.852343s (6.2%%)   6.878895s (4.4%%)
+┃┃ projectDBC : 0.030473s (0.2%%)   0.244228s (0.2%%)
+┃┃ linearSolve : 9.192545s (67.2%%)   1m 13.956713s (47.5%%)
+┃┃ Uncounted : 0.120551s (0.9%%)   0.982815s (0.6%%)
+┃┗
+┃ computeDG : 0.006946s (0.1%%)   0.078284s (0.1%%)
+┃ Uncounted : 0.020135s (0.1%%)   45.695374s (29.4%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  9 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 9
+[###############                                   ]  30.000
+┏ Global : 13.940787s (100.0%%)   2m 49.552196s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008439s (0.1%%)   0.072826s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004013s (0.0%%)   0.037165s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.899772s (99.7%%)   2m 3.639986s (72.9%%)
+┃┃ Compute Total Volume : 0.025467s (0.2%%)   0.229927s (0.1%%)
+┃┃ Compute XTilde : 0.000408s (0.0%%)   0.003219s (0.0%%)
+┃┃ Find Object Boundary : 2.045113s (14.7%%)   19.088561s (11.3%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.067200s (0.5%%)   0.551874s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.042701s (0.3%%)   0.350926s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005556s (0.0%%)   0.052525s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.011655s (0.1%%)   0.082958s (0.0%%)
+┃┃┗
+┃┃ computeDG : 0.055096s (0.4%%)   0.242752s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.293767s (2.1%%)   0.941113s (0.6%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.213452s (1.5%%)   0.642906s (0.4%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.012784s (0.1%%)   0.068827s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.036633s (0.3%%)   0.129166s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000455s (0.0%%)   0.001608s (0.0%%)
+┃┃┃ Uncounted : 0.030444s (0.2%%)   0.098606s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.170258s (1.2%%)   0.616692s (0.4%%)
+┃┃┃ computePsi : 0.160743s (1.2%%)   0.543529s (0.3%%)
+┃┃┃ Compute_Barrier : 0.000014s (0.0%%)   0.000049s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.081638s (0.6%%)   0.700343s (0.4%%)
+┃┃┃ computeStress : 0.010619s (0.1%%)   0.070040s (0.0%%)
+┃┃┃ elem2node : 0.058213s (0.4%%)   0.581948s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000021s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.989074s (7.1%%)   9.031102s (5.3%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.567214s (4.1%%)   5.216901s (3.1%%)
+┃┃┃┃ computeStressDerivative : 0.047434s (0.3%%)   0.526117s (0.3%%)
+┃┃┃┃ elem2node : 0.367366s (2.6%%)   3.356797s (2.0%%)
+┃┃┃┃ Uncounted : 0.152414s (1.1%%)   1.333987s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410317s (2.9%%)   3.760166s (2.2%%)
+┃┃┃ Compute_Barrier_Hessian : 0.011536s (0.1%%)   0.053977s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.853733s (6.1%%)   7.732628s (4.6%%)
+┃┃ projectDBC : 0.030384s (0.2%%)   0.274612s (0.2%%)
+┃┃ linearSolve : 9.174485s (65.8%%)   1m 23.131197s (49.0%%)
+┃┃ Uncounted : 0.113149s (0.8%%)   1.095964s (0.6%%)
+┃┗
+┃ computeDG : 0.006376s (0.0%%)   0.084659s (0.0%%)
+┃ Uncounted : 0.022187s (0.2%%)   45.717560s (27.0%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  10 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 10
+[################                                  ]  33.333
+┏ Global : 14.348616s (100.0%%)   3m 3.900812s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008176s (0.1%%)   0.081001s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004045s (0.0%%)   0.041210s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.305896s (99.7%%)   2m 17.945881s (75.0%%)
+┃┃ Compute Total Volume : 0.025321s (0.2%%)   0.255248s (0.1%%)
+┃┃ Compute XTilde : 0.000332s (0.0%%)   0.003551s (0.0%%)
+┃┃ Find Object Boundary : 2.095936s (14.6%%)   21.184497s (11.5%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.065862s (0.5%%)   0.617736s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.042700s (0.3%%)   0.393626s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005727s (0.0%%)   0.058252s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009944s (0.1%%)   0.092903s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.077823s (0.5%%)   0.320576s (0.2%%)
+┃┃┏ Compute_Constraint_Set : 0.402000s (2.8%%)   1.343113s (0.7%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.294832s (2.1%%)   0.937738s (0.5%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.023790s (0.2%%)   0.092617s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.046829s (0.3%%)   0.175995s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000645s (0.0%%)   0.002253s (0.0%%)
+┃┃┃ Uncounted : 0.035904s (0.3%%)   0.134511s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.238986s (1.7%%)   0.855678s (0.5%%)
+┃┃┃ computePsi : 0.222351s (1.5%%)   0.765880s (0.4%%)
+┃┃┃ Compute_Barrier : 0.000019s (0.0%%)   0.000068s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.093356s (0.7%%)   0.793699s (0.4%%)
+┃┃┃ computeStress : 0.005970s (0.0%%)   0.076010s (0.0%%)
+┃┃┃ elem2node : 0.074475s (0.5%%)   0.656423s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000023s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.999313s (7.0%%)   10.030415s (5.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.579198s (4.0%%)   5.796099s (3.2%%)
+┃┃┃┃ computeStressDerivative : 0.054587s (0.4%%)   0.580704s (0.3%%)
+┃┃┃┃ elem2node : 0.372441s (2.6%%)   3.729238s (2.0%%)
+┃┃┃┃ Uncounted : 0.152171s (1.1%%)   1.486158s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411974s (2.9%%)   4.172140s (2.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.008136s (0.1%%)   0.062113s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.852925s (5.9%%)   8.585553s (4.7%%)
+┃┃ projectDBC : 0.029924s (0.2%%)   0.304536s (0.2%%)
+┃┃ linearSolve : 9.321928s (65.0%%)   1m 32.453126s (50.3%%)
+┃┃ Uncounted : 0.102188s (0.7%%)   1.198152s (0.7%%)
+┃┗
+┃ computeDG : 0.007814s (0.1%%)   0.092473s (0.1%%)
+┃ Uncounted : 0.022686s (0.2%%)   45.740246s (24.9%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  11 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 11
+[##################                                ]  36.667
+┏ Global : 14.304606s (100.0%%)   3m 18.205418s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008229s (0.1%%)   0.089230s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003971s (0.0%%)   0.045181s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.259931s (99.7%%)   2m 32.205812s (76.8%%)
+┃┃ Compute Total Volume : 0.025572s (0.2%%)   0.280821s (0.1%%)
+┃┃ Compute XTilde : 0.000370s (0.0%%)   0.003921s (0.0%%)
+┃┃ Find Object Boundary : 2.077157s (14.5%%)   23.261654s (11.7%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.074537s (0.5%%)   0.692273s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.049940s (0.3%%)   0.443567s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.008302s (0.1%%)   0.066554s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008966s (0.1%%)   0.101868s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.092133s (0.6%%)   0.412708s (0.2%%)
+┃┃┏ Compute_Constraint_Set : 0.414730s (2.9%%)   1.757844s (0.9%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.294561s (2.1%%)   1.232300s (0.6%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.025921s (0.2%%)   0.118537s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.047022s (0.3%%)   0.223016s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000736s (0.0%%)   0.002989s (0.0%%)
+┃┃┃ Uncounted : 0.046491s (0.3%%)   0.181002s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.338749s (2.4%%)   1.194427s (0.6%%)
+┃┃┃ computePsi : 0.279662s (2.0%%)   1.045541s (0.5%%)
+┃┃┃ Compute_Barrier : 0.000025s (0.0%%)   0.000093s (0.0%%)
+┃┃┃ Uncounted : 0.059062s (0.4%%)   0.148792s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.066805s (0.5%%)   0.860504s (0.4%%)
+┃┃┃ computeStress : 0.005206s (0.0%%)   0.081217s (0.0%%)
+┃┃┃ elem2node : 0.060225s (0.4%%)   0.716648s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000025s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.984314s (6.9%%)   11.014729s (5.6%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.572419s (4.0%%)   6.368518s (3.2%%)
+┃┃┃┃ computeStressDerivative : 0.052517s (0.4%%)   0.633221s (0.3%%)
+┃┃┃┃ elem2node : 0.368597s (2.6%%)   4.097835s (2.1%%)
+┃┃┃┃ Uncounted : 0.151304s (1.1%%)   1.637463s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410988s (2.9%%)   4.583128s (2.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000902s (0.0%%)   0.063015s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.853317s (6.0%%)   9.438870s (4.8%%)
+┃┃ projectDBC : 0.029907s (0.2%%)   0.334442s (0.2%%)
+┃┃ linearSolve : 9.194998s (64.3%%)   1m 41.648124s (51.3%%)
+┃┃ Uncounted : 0.107343s (0.8%%)   1.305495s (0.7%%)
+┃┗
+┃ computeDG : 0.009175s (0.1%%)   0.101648s (0.1%%)
+┃ Uncounted : 0.023300s (0.2%%)   45.763546s (23.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  12 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 12
+[####################                              ]  40.000
+┏ Global : 14.690410s (100.0%%)   3m 32.895827s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008179s (0.1%%)   0.097409s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004049s (0.0%%)   0.049230s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.650430s (99.7%%)   2m 46.856242s (78.4%%)
+┃┃ Compute Total Volume : 0.025210s (0.2%%)   0.306031s (0.1%%)
+┃┃ Compute XTilde : 0.000332s (0.0%%)   0.004253s (0.0%%)
+┃┃ Find Object Boundary : 2.069364s (14.1%%)   25.331018s (11.9%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.063451s (0.4%%)   0.755724s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.039000s (0.3%%)   0.482567s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.007573s (0.1%%)   0.074127s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009597s (0.1%%)   0.111465s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.146259s (1.0%%)   0.558967s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.584325s (4.0%%)   2.342169s (1.1%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.411695s (2.8%%)   1.643995s (0.8%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.037124s (0.3%%)   0.155661s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.071555s (0.5%%)   0.294571s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001061s (0.0%%)   0.004050s (0.0%%)
+┃┃┃ Uncounted : 0.062890s (0.4%%)   0.243892s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.462960s (3.2%%)   1.657387s (0.8%%)
+┃┃┃ computePsi : 0.400190s (2.7%%)   1.445731s (0.7%%)
+┃┃┃ Compute_Barrier : 0.000036s (0.0%%)   0.000129s (0.0%%)
+┃┃┃ Uncounted : 0.062735s (0.4%%)   0.211527s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.076053s (0.5%%)   0.936557s (0.4%%)
+┃┃┃ computeStress : 0.005951s (0.0%%)   0.087167s (0.0%%)
+┃┃┃ elem2node : 0.058307s (0.4%%)   0.774954s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000027s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.990715s (6.7%%)   12.005444s (5.6%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.578481s (3.9%%)   6.946999s (3.3%%)
+┃┃┃┃ computeStressDerivative : 0.057726s (0.4%%)   0.690947s (0.3%%)
+┃┃┃┃ elem2node : 0.369013s (2.5%%)   4.466847s (2.1%%)
+┃┃┃┃ Uncounted : 0.151742s (1.0%%)   1.789205s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411552s (2.8%%)   4.994680s (2.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000677s (0.0%%)   0.063692s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.852362s (5.8%%)   10.291232s (4.8%%)
+┃┃ projectDBC : 0.030020s (0.2%%)   0.364462s (0.2%%)
+┃┃ linearSolve : 9.225420s (62.8%%)   1m 50.873544s (52.1%%)
+┃┃ Uncounted : 0.123958s (0.8%%)   1.429453s (0.7%%)
+┃┗
+┃ computeDG : 0.005955s (0.0%%)   0.107602s (0.1%%)
+┃ Uncounted : 0.021797s (0.1%%)   45.785344s (21.5%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  13 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 13
+[#####################                             ]  43.333
+┏ Global : 14.603025s (100.0%%)   3m 47.498852s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008235s (0.1%%)   0.105645s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003568s (0.0%%)   0.052799s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.546395s (99.6%%)   3m 1.402637s (79.7%%)
+┃┃ Compute Total Volume : 0.027225s (0.2%%)   0.333255s (0.1%%)
+┃┃ Compute XTilde : 0.000726s (0.0%%)   0.004978s (0.0%%)
+┃┃ Find Object Boundary : 2.034902s (13.9%%)   27.365919s (12.0%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.059954s (0.4%%)   0.815678s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.037960s (0.3%%)   0.520527s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005336s (0.0%%)   0.079462s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009265s (0.1%%)   0.120730s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.149053s (1.0%%)   0.708020s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.614816s (4.2%%)   2.956985s (1.3%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.419328s (2.9%%)   2.063322s (0.9%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.046009s (0.3%%)   0.201669s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.082476s (0.6%%)   0.377047s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001107s (0.0%%)   0.005157s (0.0%%)
+┃┃┃ Uncounted : 0.065897s (0.5%%)   0.309789s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.421233s (2.9%%)   2.078620s (0.9%%)
+┃┃┃ computePsi : 0.399552s (2.7%%)   1.845283s (0.8%%)
+┃┃┃ Compute_Barrier : 0.000036s (0.0%%)   0.000164s (0.0%%)
+┃┃┃ Uncounted : 0.021645s (0.1%%)   0.233172s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.071418s (0.5%%)   1.007976s (0.4%%)
+┃┃┃ computeStress : 0.005723s (0.0%%)   0.092890s (0.0%%)
+┃┃┃ elem2node : 0.058897s (0.4%%)   0.833851s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000029s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.997097s (6.8%%)   13.002541s (5.7%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.584551s (4.0%%)   7.531551s (3.3%%)
+┃┃┃┃ computeStressDerivative : 0.071853s (0.5%%)   0.762800s (0.3%%)
+┃┃┃┃ elem2node : 0.370743s (2.5%%)   4.837590s (2.1%%)
+┃┃┃┃ Uncounted : 0.141955s (1.0%%)   1.931160s (0.8%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.412328s (2.8%%)   5.407008s (2.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000212s (0.0%%)   0.063904s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.855246s (5.9%%)   11.146478s (4.9%%)
+┃┃ projectDBC : 0.030621s (0.2%%)   0.395083s (0.2%%)
+┃┃ linearSolve : 9.174596s (62.8%%)   2m 0.048140s (52.8%%)
+┃┃ Uncounted : 0.109511s (0.7%%)   1.538964s (0.7%%)
+┃┗
+┃ computeDG : 0.007772s (0.1%%)   0.115375s (0.1%%)
+┃ Uncounted : 0.037054s (0.3%%)   45.822398s (20.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  14 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 14
+[#######################                           ]  46.667
+┏ Global : 14.781885s (100.0%%)   4m 2.280737s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008200s (0.1%%)   0.113845s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004123s (0.0%%)   0.056922s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.740264s (99.7%%)   3m 16.142901s (81.0%%)
+┃┃ Compute Total Volume : 0.028586s (0.2%%)   0.361841s (0.1%%)
+┃┃ Compute XTilde : 0.000350s (0.0%%)   0.005328s (0.0%%)
+┃┃ Find Object Boundary : 2.038796s (13.8%%)   29.404715s (12.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.113065s (0.8%%)   0.928743s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.091744s (0.6%%)   0.612271s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005616s (0.0%%)   0.085078s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008452s (0.1%%)   0.129182s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.145332s (1.0%%)   0.853352s (0.4%%)
+┃┃┏ Compute_Constraint_Set : 0.640215s (4.3%%)   3.597200s (1.5%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.456987s (3.1%%)   2.520310s (1.0%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.039605s (0.3%%)   0.241274s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.078101s (0.5%%)   0.455148s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001112s (0.0%%)   0.006269s (0.0%%)
+┃┃┃ Uncounted : 0.064409s (0.4%%)   0.374198s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.456768s (3.1%%)   2.535387s (1.0%%)
+┃┃┃ computePsi : 0.394958s (2.7%%)   2.240241s (0.9%%)
+┃┃┃ Compute_Barrier : 0.000036s (0.0%%)   0.000200s (0.0%%)
+┃┃┃ Uncounted : 0.061774s (0.4%%)   0.294946s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.075979s (0.5%%)   1.083955s (0.4%%)
+┃┃┃ computeStress : 0.006726s (0.0%%)   0.099616s (0.0%%)
+┃┃┃ elem2node : 0.065554s (0.4%%)   0.899405s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000031s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.978436s (6.6%%)   13.980977s (5.8%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.567313s (3.8%%)   8.098864s (3.3%%)
+┃┃┃┃ computeStressDerivative : 0.053959s (0.4%%)   0.816759s (0.3%%)
+┃┃┃┃ elem2node : 0.371374s (2.5%%)   5.208964s (2.1%%)
+┃┃┃┃ Uncounted : 0.141980s (1.0%%)   2.073140s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410945s (2.8%%)   5.817954s (2.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000172s (0.0%%)   0.064076s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.856249s (5.8%%)   12.002727s (5.0%%)
+┃┃ projectDBC : 0.029522s (0.2%%)   0.424606s (0.2%%)
+┃┃ linearSolve : 9.234645s (62.5%%)   2m 9.282785s (53.4%%)
+┃┃ Uncounted : 0.142322s (1.0%%)   1.681286s (0.7%%)
+┃┗
+┃ computeDG : 0.007519s (0.1%%)   0.122894s (0.1%%)
+┃ Uncounted : 0.021778s (0.1%%)   45.844176s (18.9%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  15 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 15
+[#########################                         ]  50.000
+┏ Global : 13.716681s (100.0%%)   4m 15.997418s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008159s (0.1%%)   0.122004s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004119s (0.0%%)   0.061041s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.673022s (99.7%%)   3m 29.815922s (82.0%%)
+┃┃ Compute Total Volume : 0.025467s (0.2%%)   0.387308s (0.2%%)
+┃┃ Compute XTilde : 0.000321s (0.0%%)   0.005649s (0.0%%)
+┃┃ Find Object Boundary : 2.036540s (14.8%%)   31.441255s (12.3%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.064251s (0.5%%)   0.992994s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.038481s (0.3%%)   0.650752s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.006562s (0.0%%)   0.091640s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.011762s (0.1%%)   0.140943s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.021242s (0.2%%)   0.874594s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.124282s (0.9%%)   3.721482s (1.5%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.091911s (0.7%%)   2.612221s (1.0%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.009051s (0.1%%)   0.250326s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.012604s (0.1%%)   0.467752s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000189s (0.0%%)   0.006459s (0.0%%)
+┃┃┃ Uncounted : 0.010526s (0.1%%)   0.384724s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.072297s (0.5%%)   2.607684s (1.0%%)
+┃┃┃ computePsi : 0.070434s (0.5%%)   2.310675s (0.9%%)
+┃┃┃ Compute_Barrier : 0.000006s (0.0%%)   0.000206s (0.0%%)
+┃┃┃ Uncounted : 0.001857s (0.0%%)   0.296803s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.063616s (0.5%%)   1.147571s (0.4%%)
+┃┃┃ computeStress : 0.005115s (0.0%%)   0.104731s (0.0%%)
+┃┃┃ elem2node : 0.057693s (0.4%%)   0.957098s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000033s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.985070s (7.2%%)   14.966047s (5.8%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.572590s (4.2%%)   8.671454s (3.4%%)
+┃┃┃┃ computeStressDerivative : 0.054104s (0.4%%)   0.870863s (0.3%%)
+┃┃┃┃ elem2node : 0.371481s (2.7%%)   5.580445s (2.2%%)
+┃┃┃┃ Uncounted : 0.147005s (1.1%%)   2.220146s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411865s (3.0%%)   6.229819s (2.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000608s (0.0%%)   0.064683s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.856398s (6.2%%)   12.859126s (5.0%%)
+┃┃ projectDBC : 0.030070s (0.2%%)   0.454675s (0.2%%)
+┃┃ linearSolve : 9.285640s (67.7%%)   2m 18.568425s (54.1%%)
+┃┃ Uncounted : 0.107828s (0.8%%)   1.789114s (0.7%%)
+┃┗
+┃ computeDG : 0.006886s (0.1%%)   0.129779s (0.1%%)
+┃ Uncounted : 0.024496s (0.2%%)   45.868672s (17.9%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  16 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 16
+[##########################                        ]  53.333
+┏ Global : 13.740990s (100.0%%)   4m 29.738409s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008316s (0.1%%)   0.130320s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004031s (0.0%%)   0.065071s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 13.696997s (99.7%%)   3m 43.512920s (82.9%%)
+┃┃ Compute Total Volume : 0.025216s (0.2%%)   0.412523s (0.2%%)
+┃┃ Compute XTilde : 0.000415s (0.0%%)   0.006063s (0.0%%)
+┃┃ Find Object Boundary : 2.068401s (15.1%%)   33.509656s (12.4%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.119086s (0.9%%)   1.112079s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.081711s (0.6%%)   0.732463s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.021220s (0.2%%)   0.112860s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008756s (0.1%%)   0.149699s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.022886s (0.2%%)   0.897480s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.094522s (0.7%%)   3.816004s (1.4%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.064276s (0.5%%)   2.676497s (1.0%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.005719s (0.0%%)   0.256045s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.013887s (0.1%%)   0.481640s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000180s (0.0%%)   0.006638s (0.0%%)
+┃┃┃ Uncounted : 0.010460s (0.1%%)   0.395184s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.065545s (0.5%%)   2.673229s (1.0%%)
+┃┃┃ computePsi : 0.062838s (0.5%%)   2.373512s (0.9%%)
+┃┃┃ Compute_Barrier : 0.000005s (0.0%%)   0.000211s (0.0%%)
+┃┃┃ Uncounted : 0.002702s (0.0%%)   0.299505s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.072902s (0.5%%)   1.220472s (0.5%%)
+┃┃┃ computeStress : 0.004704s (0.0%%)   0.109435s (0.0%%)
+┃┃┃ elem2node : 0.067428s (0.5%%)   1.024526s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000035s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.994677s (7.2%%)   15.960724s (5.9%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.576056s (4.2%%)   9.247510s (3.4%%)
+┃┃┃┃ computeStressDerivative : 0.059144s (0.4%%)   0.930008s (0.3%%)
+┃┃┃┃ elem2node : 0.370698s (2.7%%)   5.951143s (2.2%%)
+┃┃┃┃ Uncounted : 0.146214s (1.1%%)   2.366360s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410305s (3.0%%)   6.640124s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.008312s (0.1%%)   0.072995s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.849786s (6.2%%)   13.708912s (5.1%%)
+┃┃ projectDBC : 0.030424s (0.2%%)   0.485099s (0.2%%)
+┃┃ linearSolve : 9.207163s (67.0%%)   2m 27.775588s (54.8%%)
+┃┃ Uncounted : 0.145975s (1.1%%)   1.935089s (0.7%%)
+┃┗
+┃ computeDG : 0.008330s (0.1%%)   0.138109s (0.1%%)
+┃ Uncounted : 0.023316s (0.2%%)   45.891988s (17.0%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  17 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 17
+[############################                      ]  56.667
+┏ Global : 14.115006s (100.0%%)   4m 43.853415s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007391s (0.1%%)   0.137711s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003587s (0.0%%)   0.068658s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.076836s (99.7%%)   3m 57.589756s (83.7%%)
+┃┃ Compute Total Volume : 0.025617s (0.2%%)   0.438140s (0.2%%)
+┃┃ Compute XTilde : 0.000366s (0.0%%)   0.006429s (0.0%%)
+┃┃ Find Object Boundary : 2.057819s (14.6%%)   35.567475s (12.5%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.052910s (0.4%%)   1.164990s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.029946s (0.2%%)   0.762410s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.007397s (0.1%%)   0.120256s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008272s (0.1%%)   0.157971s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.079649s (0.6%%)   0.977129s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.391063s (2.8%%)   4.207068s (1.5%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.293623s (2.1%%)   2.970120s (1.0%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.019491s (0.1%%)   0.275536s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.042819s (0.3%%)   0.524459s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000634s (0.0%%)   0.007273s (0.0%%)
+┃┃┃ Uncounted : 0.034496s (0.2%%)   0.429680s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.234492s (1.7%%)   2.907721s (1.0%%)
+┃┃┃ computePsi : 0.224225s (1.6%%)   2.597737s (0.9%%)
+┃┃┃ Compute_Barrier : 0.000019s (0.0%%)   0.000230s (0.0%%)
+┃┃┃ Uncounted : 0.010248s (0.1%%)   0.309753s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.065425s (0.5%%)   1.285897s (0.5%%)
+┃┃┃ computeStress : 0.005791s (0.0%%)   0.115226s (0.0%%)
+┃┃┃ elem2node : 0.058783s (0.4%%)   1.083309s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000037s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.982810s (7.0%%)   16.943534s (6.0%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.570068s (4.0%%)   9.817578s (3.5%%)
+┃┃┃┃ computeStressDerivative : 0.054288s (0.4%%)   0.984295s (0.3%%)
+┃┃┃┃ elem2node : 0.370274s (2.6%%)   6.321417s (2.2%%)
+┃┃┃┃ Uncounted : 0.145506s (1.0%%)   2.511866s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411982s (2.9%%)   7.052106s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000754s (0.0%%)   0.073749s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.853472s (6.0%%)   14.562384s (5.1%%)
+┃┃ projectDBC : 0.030101s (0.2%%)   0.515201s (0.2%%)
+┃┃ linearSolve : 9.196392s (65.2%%)   2m 36.971981s (55.3%%)
+┃┃ Uncounted : 0.106720s (0.8%%)   2.041809s (0.7%%)
+┃┗
+┃ computeDG : 0.007090s (0.1%%)   0.145199s (0.1%%)
+┃ Uncounted : 0.020103s (0.1%%)   45.912091s (16.2%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  18 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 18
+[##############################                    ]  60.000
+┏ Global : 14.112786s (100.0%%)   4m 57.966201s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008152s (0.1%%)   0.145864s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003974s (0.0%%)   0.072632s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.065021s (99.7%%)   4m 11.654776s (84.5%%)
+┃┃ Compute Total Volume : 0.025441s (0.2%%)   0.463581s (0.2%%)
+┃┃ Compute XTilde : 0.000336s (0.0%%)   0.006765s (0.0%%)
+┃┃ Find Object Boundary : 2.041954s (14.5%%)   37.609429s (12.6%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.250934s (1.8%%)   1.415924s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.227614s (1.6%%)   0.990024s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.006475s (0.0%%)   0.126731s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009440s (0.1%%)   0.167412s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.053637s (0.4%%)   1.030766s (0.3%%)
+┃┃┏ Compute_Constraint_Set : 0.253703s (1.8%%)   4.460770s (1.5%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.175801s (1.2%%)   3.145921s (1.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.021979s (0.2%%)   0.297515s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.030801s (0.2%%)   0.555260s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000416s (0.0%%)   0.007689s (0.0%%)
+┃┃┃ Uncounted : 0.024706s (0.2%%)   0.454386s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.147348s (1.0%%)   3.055069s (1.0%%)
+┃┃┃ computePsi : 0.132708s (0.9%%)   2.730446s (0.9%%)
+┃┃┃ Compute_Barrier : 0.000012s (0.0%%)   0.000242s (0.0%%)
+┃┃┃ Uncounted : 0.014628s (0.1%%)   0.324381s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.074435s (0.5%%)   1.360332s (0.5%%)
+┃┃┃ computeStress : 0.006381s (0.0%%)   0.121607s (0.0%%)
+┃┃┃ elem2node : 0.067258s (0.5%%)   1.150567s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000039s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.004571s (7.1%%)   17.948104s (6.0%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.575798s (4.1%%)   10.393376s (3.5%%)
+┃┃┃┃ computeStressDerivative : 0.056447s (0.4%%)   1.040742s (0.3%%)
+┃┃┃┃ elem2node : 0.368036s (2.6%%)   6.689453s (2.2%%)
+┃┃┃┃ Uncounted : 0.151315s (1.1%%)   2.663181s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410097s (2.9%%)   7.462203s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.018670s (0.1%%)   0.092419s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.851802s (6.0%%)   15.414186s (5.2%%)
+┃┃ projectDBC : 0.030026s (0.2%%)   0.545227s (0.2%%)
+┃┃ linearSolve : 9.188289s (65.1%%)   2m 46.160269s (55.8%%)
+┃┃ Uncounted : 0.142543s (1.0%%)   2.184353s (0.7%%)
+┃┗
+┃ computeDG : 0.007350s (0.1%%)   0.152548s (0.1%%)
+┃ Uncounted : 0.028289s (0.2%%)   45.940380s (15.4%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  19 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 19
+[###############################                   ]  63.333
+┏ Global : 14.410420s (100.0%%)   5m 12.376621s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007440s (0.1%%)   0.153304s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003606s (0.0%%)   0.076239s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.372326s (99.7%%)   4m 26.027102s (85.2%%)
+┃┃ Compute Total Volume : 0.030422s (0.2%%)   0.494003s (0.2%%)
+┃┃ Compute XTilde : 0.000339s (0.0%%)   0.007104s (0.0%%)
+┃┃ Find Object Boundary : 2.067916s (14.4%%)   39.677344s (12.7%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.054041s (0.4%%)   1.469965s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.032782s (0.2%%)   1.022806s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005408s (0.0%%)   0.132140s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008593s (0.1%%)   0.176004s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.107026s (0.7%%)   1.137793s (0.4%%)
+┃┃┏ Compute_Constraint_Set : 0.458738s (3.2%%)   4.919509s (1.6%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.321063s (2.2%%)   3.466984s (1.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.030063s (0.2%%)   0.327578s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.053803s (0.4%%)   0.609063s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000814s (0.0%%)   0.008502s (0.0%%)
+┃┃┃ Uncounted : 0.052995s (0.4%%)   0.507381s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.321367s (2.2%%)   3.376436s (1.1%%)
+┃┃┃ computePsi : 0.313463s (2.2%%)   3.043909s (1.0%%)
+┃┃┃ Compute_Barrier : 0.000028s (0.0%%)   0.000271s (0.0%%)
+┃┃┃ Uncounted : 0.007876s (0.1%%)   0.332257s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.064481s (0.4%%)   1.424813s (0.5%%)
+┃┃┃ computeStress : 0.005426s (0.0%%)   0.127032s (0.0%%)
+┃┃┃ elem2node : 0.058305s (0.4%%)   1.208872s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000040s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.991057s (6.9%%)   18.939162s (6.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.572103s (4.0%%)   10.965480s (3.5%%)
+┃┃┃┃ computeStressDerivative : 0.057480s (0.4%%)   1.098222s (0.4%%)
+┃┃┃┃ elem2node : 0.368500s (2.6%%)   7.057953s (2.3%%)
+┃┃┃┃ Uncounted : 0.146124s (1.0%%)   2.809305s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.413575s (2.9%%)   7.875777s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.005374s (0.0%%)   0.097793s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.851954s (5.9%%)   16.266140s (5.2%%)
+┃┃ projectDBC : 0.030587s (0.2%%)   0.575814s (0.2%%)
+┃┃ linearSolve : 9.285509s (64.4%%)   2m 55.445778s (56.2%%)
+┃┃ Uncounted : 0.108889s (0.8%%)   2.293242s (0.7%%)
+┃┗
+┃ computeDG : 0.006477s (0.0%%)   0.159026s (0.1%%)
+┃ Uncounted : 0.020569s (0.1%%)   45.960949s (14.7%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  20 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 20
+[#################################                 ]  66.667
+┏ Global : 14.617480s (100.0%%)   5m 26.994100s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.011310s (0.1%%)   0.164614s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003874s (0.0%%)   0.080113s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.573849s (99.7%%)   4m 40.600952s (85.8%%)
+┃┃ Compute Total Volume : 0.029915s (0.2%%)   0.523918s (0.2%%)
+┃┃ Compute XTilde : 0.000336s (0.0%%)   0.007440s (0.0%%)
+┃┃ Find Object Boundary : 2.106666s (14.4%%)   41.784010s (12.8%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.072211s (0.5%%)   1.542176s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.050599s (0.3%%)   1.073405s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005807s (0.0%%)   0.137947s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008476s (0.1%%)   0.184480s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.118717s (0.8%%)   1.256510s (0.4%%)
+┃┃┏ Compute_Constraint_Set : 0.553765s (3.8%%)   5.473273s (1.7%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.367539s (2.5%%)   3.834523s (1.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.058546s (0.4%%)   0.386124s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.069105s (0.5%%)   0.678168s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000943s (0.0%%)   0.009445s (0.0%%)
+┃┃┃ Uncounted : 0.057632s (0.4%%)   0.565013s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.400336s (2.7%%)   3.776772s (1.2%%)
+┃┃┃ computePsi : 0.339854s (2.3%%)   3.383762s (1.0%%)
+┃┃┃ Compute_Barrier : 0.000030s (0.0%%)   0.000300s (0.0%%)
+┃┃┃ Uncounted : 0.060453s (0.4%%)   0.392710s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.065316s (0.4%%)   1.490129s (0.5%%)
+┃┃┃ computeStress : 0.005316s (0.0%%)   0.132348s (0.0%%)
+┃┃┃ elem2node : 0.058641s (0.4%%)   1.267513s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000003s (0.0%%)   0.000043s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.994997s (6.8%%)   19.934158s (6.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.576784s (3.9%%)   11.542263s (3.5%%)
+┃┃┃┃ computeStressDerivative : 0.055520s (0.4%%)   1.153742s (0.4%%)
+┃┃┃┃ elem2node : 0.373732s (2.6%%)   7.431684s (2.3%%)
+┃┃┃┃ Uncounted : 0.147532s (1.0%%)   2.956837s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.412780s (2.8%%)   8.288557s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.005427s (0.0%%)   0.103220s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.856262s (5.9%%)   17.122402s (5.2%%)
+┃┃ projectDBC : 0.030653s (0.2%%)   0.606467s (0.2%%)
+┃┃ linearSolve : 9.215069s (63.0%%)   3m 4.660848s (56.5%%)
+┃┃ Uncounted : 0.129605s (0.9%%)   2.422847s (0.7%%)
+┃┗
+┃ computeDG : 0.006653s (0.0%%)   0.165679s (0.1%%)
+┃ Uncounted : 0.021793s (0.1%%)   45.982742s (14.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  21 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 21
+[###################################               ]  70.000
+┏ Global : 14.834614s (100.0%%)   5m 41.828714s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008301s (0.1%%)   0.172916s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004586s (0.0%%)   0.084699s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.783102s (99.7%%)   4m 55.384054s (86.4%%)
+┃┃ Compute Total Volume : 0.025445s (0.2%%)   0.549363s (0.2%%)
+┃┃ Compute XTilde : 0.000330s (0.0%%)   0.007770s (0.0%%)
+┃┃ Find Object Boundary : 2.061330s (13.9%%)   43.845340s (12.8%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.142971s (1.0%%)   1.685148s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.121755s (0.8%%)   1.195159s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005481s (0.0%%)   0.143428s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008218s (0.1%%)   0.192698s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.152879s (1.0%%)   1.409388s (0.4%%)
+┃┃┏ Compute_Constraint_Set : 0.637697s (4.3%%)   6.110971s (1.8%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.407812s (2.7%%)   4.242336s (1.2%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.041048s (0.3%%)   0.427172s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.110128s (0.7%%)   0.788297s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001139s (0.0%%)   0.010585s (0.0%%)
+┃┃┃ Uncounted : 0.077570s (0.5%%)   0.642583s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.454056s (3.1%%)   4.230828s (1.2%%)
+┃┃┃ computePsi : 0.408874s (2.8%%)   3.792636s (1.1%%)
+┃┃┃ Compute_Barrier : 0.000037s (0.0%%)   0.000337s (0.0%%)
+┃┃┃ Uncounted : 0.045145s (0.3%%)   0.437855s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.085393s (0.6%%)   1.575522s (0.5%%)
+┃┃┃ computeStress : 0.004460s (0.0%%)   0.136808s (0.0%%)
+┃┃┃ elem2node : 0.080141s (0.5%%)   1.347654s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000045s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.994321s (6.7%%)   20.928480s (6.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.579695s (3.9%%)   12.121958s (3.5%%)
+┃┃┃┃ computeStressDerivative : 0.059602s (0.4%%)   1.213343s (0.4%%)
+┃┃┃┃ elem2node : 0.369989s (2.5%%)   7.801674s (2.3%%)
+┃┃┃┃ Uncounted : 0.150104s (1.0%%)   3.106941s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.413130s (2.8%%)   8.701687s (2.5%%)
+┃┃┃ Compute_Barrier_Hessian : 0.001490s (0.0%%)   0.104710s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.851459s (5.7%%)   17.973861s (5.3%%)
+┃┃ projectDBC : 0.029923s (0.2%%)   0.636391s (0.2%%)
+┃┃ linearSolve : 9.196310s (62.0%%)   3m 13.857158s (56.7%%)
+┃┃ Uncounted : 0.150986s (1.0%%)   2.573833s (0.8%%)
+┃┗
+┃ computeDG : 0.006608s (0.0%%)   0.172287s (0.1%%)
+┃ Uncounted : 0.032016s (0.2%%)   46.014759s (13.5%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  22 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 22
+[####################################              ]  73.333
+┏ Global : 14.756865s (100.0%%)   5m 56.585579s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008023s (0.1%%)   0.180939s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003726s (0.0%%)   0.088425s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.712756s (99.7%%)   5m 10.096810s (87.0%%)
+┃┃ Compute Total Volume : 0.026339s (0.2%%)   0.575703s (0.2%%)
+┃┃ Compute XTilde : 0.000370s (0.0%%)   0.008140s (0.0%%)
+┃┃ Find Object Boundary : 2.049725s (13.9%%)   45.895065s (12.9%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.071142s (0.5%%)   1.756290s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.048254s (0.3%%)   1.243414s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.006182s (0.0%%)   0.149610s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009353s (0.1%%)   0.202051s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.168229s (1.1%%)   1.577617s (0.4%%)
+┃┃┏ Compute_Constraint_Set : 0.728740s (4.9%%)   6.839711s (1.9%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.529757s (3.6%%)   4.772093s (1.3%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.040612s (0.3%%)   0.467784s (0.1%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.082148s (0.6%%)   0.870444s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001202s (0.0%%)   0.011786s (0.0%%)
+┃┃┃ Uncounted : 0.075022s (0.5%%)   0.717605s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.527514s (3.6%%)   4.758342s (1.3%%)
+┃┃┃ computePsi : 0.448508s (3.0%%)   4.241144s (1.2%%)
+┃┃┃ Compute_Barrier : 0.000040s (0.0%%)   0.000377s (0.0%%)
+┃┃┃ Uncounted : 0.078967s (0.5%%)   0.516822s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.063856s (0.4%%)   1.639378s (0.5%%)
+┃┃┃ computeStress : 0.004926s (0.0%%)   0.141734s (0.0%%)
+┃┃┃ elem2node : 0.057853s (0.4%%)   1.405507s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000047s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.983525s (6.7%%)   21.912004s (6.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.570711s (3.9%%)   12.692670s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.056843s (0.4%%)   1.270186s (0.4%%)
+┃┃┃┃ elem2node : 0.367285s (2.5%%)   8.168959s (2.3%%)
+┃┃┃┃ Uncounted : 0.146584s (1.0%%)   3.253525s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.409735s (2.8%%)   9.111422s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.003073s (0.0%%)   0.107783s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.847367s (5.7%%)   18.821229s (5.3%%)
+┃┃ projectDBC : 0.030054s (0.2%%)   0.666445s (0.2%%)
+┃┃ linearSolve : 9.092171s (61.6%%)   3m 22.949328s (56.9%%)
+┃┃ Uncounted : 0.123723s (0.8%%)   2.697556s (0.8%%)
+┃┗
+┃ computeDG : 0.009394s (0.1%%)   0.181681s (0.1%%)
+┃ Uncounted : 0.022967s (0.2%%)   46.037725s (12.9%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  23 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 23
+[######################################            ]  76.667
+┏ Global : 15.078272s (100.0%%)   6m 11.663851s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007857s (0.1%%)   0.188795s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003533s (0.0%%)   0.091957s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.038764s (99.7%%)   5m 25.135573s (87.5%%)
+┃┃ Compute Total Volume : 0.026393s (0.2%%)   0.602096s (0.2%%)
+┃┃ Compute XTilde : 0.000347s (0.0%%)   0.008487s (0.0%%)
+┃┃ Find Object Boundary : 2.056554s (13.6%%)   47.951620s (12.9%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.058124s (0.4%%)   1.814414s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.036400s (0.2%%)   1.279814s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005250s (0.0%%)   0.154860s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009177s (0.1%%)   0.211228s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.184573s (1.2%%)   1.762191s (0.5%%)
+┃┃┏ Compute_Constraint_Set : 0.903744s (6.0%%)   7.743455s (2.1%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.530825s (3.5%%)   5.302918s (1.4%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.116830s (0.8%%)   0.584613s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.173479s (1.2%%)   1.043923s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001444s (0.0%%)   0.013230s (0.0%%)
+┃┃┃ Uncounted : 0.081167s (0.5%%)   0.798772s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.508859s (3.4%%)   5.267202s (1.4%%)
+┃┃┃ computePsi : 0.464513s (3.1%%)   4.705657s (1.3%%)
+┃┃┃ Compute_Barrier : 0.000040s (0.0%%)   0.000417s (0.0%%)
+┃┃┃ Uncounted : 0.044306s (0.3%%)   0.561128s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.083364s (0.6%%)   1.722742s (0.5%%)
+┃┃┃ computeStress : 0.004369s (0.0%%)   0.146103s (0.0%%)
+┃┃┃ elem2node : 0.066545s (0.4%%)   1.472052s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000049s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.984451s (6.5%%)   22.896456s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.573797s (3.8%%)   13.266466s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.054452s (0.4%%)   1.324639s (0.4%%)
+┃┃┃┃ elem2node : 0.369142s (2.4%%)   8.538100s (2.3%%)
+┃┃┃┃ Uncounted : 0.150203s (1.0%%)   3.403728s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.410497s (2.7%%)   9.521918s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000153s (0.0%%)   0.107936s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.849737s (5.6%%)   19.670966s (5.3%%)
+┃┃ projectDBC : 0.030388s (0.2%%)   0.696833s (0.2%%)
+┃┃ linearSolve : 9.227240s (61.2%%)   3m 32.176568s (57.1%%)
+┃┃ Uncounted : 0.124988s (0.8%%)   2.822544s (0.8%%)
+┃┗
+┃ computeDG : 0.006386s (0.0%%)   0.188067s (0.1%%)
+┃ Uncounted : 0.021733s (0.1%%)   46.059458s (12.4%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  24 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 24
+[########################################          ]  80.000
+┏ Global : 15.103757s (100.0%%)   6m 26.767608s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.007773s (0.1%%)   0.196568s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003527s (0.0%%)   0.095484s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.059496s (99.7%%)   5m 40.195069s (88.0%%)
+┃┃ Compute Total Volume : 0.026799s (0.2%%)   0.628895s (0.2%%)
+┃┃ Compute XTilde : 0.000335s (0.0%%)   0.008822s (0.0%%)
+┃┃ Find Object Boundary : 2.056782s (13.6%%)   50.008401s (12.9%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.153536s (1.0%%)   1.967950s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.130781s (0.9%%)   1.410594s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005520s (0.0%%)   0.160381s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.010059s (0.1%%)   0.221287s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.178930s (1.2%%)   1.941121s (0.5%%)
+┃┃┏ Compute_Constraint_Set : 0.765533s (5.1%%)   8.508989s (2.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.546360s (3.6%%)   5.849277s (1.5%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.042993s (0.3%%)   0.627607s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.090117s (0.6%%)   1.134040s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001307s (0.0%%)   0.014537s (0.0%%)
+┃┃┃ Uncounted : 0.084756s (0.6%%)   0.883528s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.538544s (3.6%%)   5.805746s (1.5%%)
+┃┃┃ computePsi : 0.485988s (3.2%%)   5.191645s (1.3%%)
+┃┃┃ Compute_Barrier : 0.000045s (0.0%%)   0.000462s (0.0%%)
+┃┃┃ Uncounted : 0.052511s (0.3%%)   0.613639s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.080582s (0.5%%)   1.803324s (0.5%%)
+┃┃┃ computeStress : 0.009258s (0.1%%)   0.155361s (0.0%%)
+┃┃┃ elem2node : 0.070521s (0.5%%)   1.542573s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000051s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.988341s (6.5%%)   23.884797s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.572484s (3.8%%)   13.838950s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.054751s (0.4%%)   1.379390s (0.4%%)
+┃┃┃┃ elem2node : 0.371173s (2.5%%)   8.909273s (2.3%%)
+┃┃┃┃ Uncounted : 0.146559s (1.0%%)   3.550287s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.415292s (2.7%%)   9.937211s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000559s (0.0%%)   0.108495s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.866076s (5.7%%)   20.537042s (5.3%%)
+┃┃ projectDBC : 0.030140s (0.2%%)   0.726973s (0.2%%)
+┃┃ linearSolve : 9.165189s (60.7%%)   3m 41.341758s (57.2%%)
+┃┃ Uncounted : 0.208709s (1.4%%)   3.031252s (0.8%%)
+┃┗
+┃ computeDG : 0.008012s (0.1%%)   0.196079s (0.1%%)
+┃ Uncounted : 0.024949s (0.2%%)   46.084407s (11.9%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  25 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 25
+[#########################################         ]  83.333
+┏ Global : 14.830731s (100.0%%)   6m 41.598338s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.010398s (0.1%%)   0.206966s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.005889s (0.0%%)   0.101373s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 14.782082s (99.7%%)   5m 54.977151s (88.4%%)
+┃┃ Compute Total Volume : 0.025447s (0.2%%)   0.654342s (0.2%%)
+┃┃ Compute XTilde : 0.000329s (0.0%%)   0.009151s (0.0%%)
+┃┃ Find Object Boundary : 2.023509s (13.6%%)   52.031910s (13.0%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.065560s (0.4%%)   2.033510s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.035454s (0.2%%)   1.446048s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.009983s (0.1%%)   0.170363s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.012430s (0.1%%)   0.233718s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.167930s (1.1%%)   2.109051s (0.5%%)
+┃┃┏ Compute_Constraint_Set : 0.661265s (4.5%%)   9.170253s (2.3%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.449501s (3.0%%)   6.298779s (1.6%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.044677s (0.3%%)   0.672284s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.085382s (0.6%%)   1.219422s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001283s (0.0%%)   0.015820s (0.0%%)
+┃┃┃ Uncounted : 0.080421s (0.5%%)   0.963948s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.533783s (3.6%%)   6.339529s (1.6%%)
+┃┃┃ computePsi : 0.494713s (3.3%%)   5.686357s (1.4%%)
+┃┃┃ Compute_Barrier : 0.000046s (0.0%%)   0.000508s (0.0%%)
+┃┃┃ Uncounted : 0.039025s (0.3%%)   0.652664s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.065271s (0.4%%)   1.868595s (0.5%%)
+┃┃┃ computeStress : 0.005593s (0.0%%)   0.160954s (0.0%%)
+┃┃┃ elem2node : 0.058820s (0.4%%)   1.601393s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000053s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.997893s (6.7%%)   24.882690s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.578012s (3.9%%)   14.416962s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.053454s (0.4%%)   1.432843s (0.4%%)
+┃┃┃┃ elem2node : 0.367271s (2.5%%)   9.276544s (2.3%%)
+┃┃┃┃ Uncounted : 0.157287s (1.1%%)   3.707574s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.419143s (2.8%%)   10.356354s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000731s (0.0%%)   0.109226s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.844968s (5.7%%)   21.382010s (5.3%%)
+┃┃ projectDBC : 0.029362s (0.2%%)   0.756335s (0.2%%)
+┃┃ linearSolve : 9.238822s (62.3%%)   3m 50.580580s (57.4%%)
+┃┃ Uncounted : 0.127943s (0.9%%)   3.159195s (0.8%%)
+┃┗
+┃ computeDG : 0.008726s (0.1%%)   0.204805s (0.1%%)
+┃ Uncounted : 0.023636s (0.2%%)   46.108043s (11.5%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  26 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 26
+[###########################################       ]  86.667
+┏ Global : 15.423996s (100.0%%)   6m 57.022335s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008184s (0.1%%)   0.215150s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004024s (0.0%%)   0.105396s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.377578s (99.7%%)   6m 10.354730s (88.8%%)
+┃┃ Compute Total Volume : 0.025619s (0.2%%)   0.679961s (0.2%%)
+┃┃ Compute XTilde : 0.000334s (0.0%%)   0.009485s (0.0%%)
+┃┃ Find Object Boundary : 2.031106s (13.2%%)   54.063016s (13.0%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.091392s (0.6%%)   2.124902s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.059477s (0.4%%)   1.505525s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.015945s (0.1%%)   0.186308s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008679s (0.1%%)   0.242397s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.199865s (1.3%%)   2.308916s (0.6%%)
+┃┃┏ Compute_Constraint_Set : 0.976096s (6.3%%)   10.146349s (2.4%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.738303s (4.8%%)   7.037081s (1.7%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.056874s (0.4%%)   0.729158s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.096692s (0.6%%)   1.316114s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001407s (0.0%%)   0.017228s (0.0%%)
+┃┃┃ Uncounted : 0.082819s (0.5%%)   1.046768s (0.3%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.632098s (4.1%%)   6.971627s (1.7%%)
+┃┃┃ computePsi : 0.518209s (3.4%%)   6.204567s (1.5%%)
+┃┃┃ Compute_Barrier : 0.000047s (0.0%%)   0.000555s (0.0%%)
+┃┃┃ Uncounted : 0.113841s (0.7%%)   0.766505s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.074174s (0.5%%)   1.942770s (0.5%%)
+┃┃┃ computeStress : 0.004632s (0.0%%)   0.165586s (0.0%%)
+┃┃┃ elem2node : 0.058152s (0.4%%)   1.659545s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000055s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.979789s (6.4%%)   25.862479s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.568427s (3.7%%)   14.985389s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.047785s (0.3%%)   1.480629s (0.4%%)
+┃┃┃┃ elem2node : 0.368849s (2.4%%)   9.645394s (2.3%%)
+┃┃┃┃ Uncounted : 0.151793s (1.0%%)   3.859366s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411137s (2.7%%)   10.767491s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000219s (0.0%%)   0.109444s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.897742s (5.8%%)   22.279752s (5.3%%)
+┃┃ projectDBC : 0.031017s (0.2%%)   0.787352s (0.2%%)
+┃┃ linearSolve : 9.265460s (60.1%%)   3m 59.846040s (57.5%%)
+┃┃ Uncounted : 0.172888s (1.1%%)   3.332083s (0.8%%)
+┃┗
+┃ computeDG : 0.011462s (0.1%%)   0.216267s (0.1%%)
+┃ Uncounted : 0.022749s (0.1%%)   46.130791s (11.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  27 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 27
+[#############################################     ]  90.000
+┏ Global : 15.894858s (100.0%%)   7m 12.917192s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008834s (0.1%%)   0.223984s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.003458s (0.0%%)   0.108854s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.833717s (99.6%%)   6m 26.188447s (89.2%%)
+┃┃ Compute Total Volume : 0.025239s (0.2%%)   0.705200s (0.2%%)
+┃┃ Compute XTilde : 0.000441s (0.0%%)   0.009926s (0.0%%)
+┃┃ Find Object Boundary : 2.446440s (15.4%%)   56.509455s (13.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.070823s (0.4%%)   2.195725s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.049161s (0.3%%)   1.554686s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005566s (0.0%%)   0.191874s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008542s (0.1%%)   0.250940s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.233372s (1.5%%)   2.542288s (0.6%%)
+┃┃┏ Compute_Constraint_Set : 1.071493s (6.7%%)   11.217842s (2.6%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.706686s (4.4%%)   7.743768s (1.8%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.125237s (0.8%%)   0.854395s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.149319s (0.9%%)   1.465433s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001430s (0.0%%)   0.018657s (0.0%%)
+┃┃┃ Uncounted : 0.088821s (0.6%%)   1.135589s (0.3%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.541426s (3.4%%)   7.513053s (1.7%%)
+┃┃┃ computePsi : 0.482196s (3.0%%)   6.686763s (1.5%%)
+┃┃┃ Compute_Barrier : 0.000045s (0.0%%)   0.000600s (0.0%%)
+┃┃┃ Uncounted : 0.059185s (0.4%%)   0.825690s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.066648s (0.4%%)   2.009418s (0.5%%)
+┃┃┃ computeStress : 0.004540s (0.0%%)   0.170126s (0.0%%)
+┃┃┃ elem2node : 0.060845s (0.4%%)   1.720390s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000057s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.008699s (6.3%%)   26.871178s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.571808s (3.6%%)   15.557197s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.053267s (0.3%%)   1.533896s (0.4%%)
+┃┃┃┃ elem2node : 0.371464s (2.3%%)   10.016858s (2.3%%)
+┃┃┃┃ Uncounted : 0.147077s (0.9%%)   4.006443s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.411705s (2.6%%)   11.179196s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.025179s (0.2%%)   0.134623s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.886909s (5.6%%)   23.166660s (5.4%%)
+┃┃ projectDBC : 0.030296s (0.2%%)   0.817648s (0.2%%)
+┃┃ linearSolve : 9.245672s (58.2%%)   4m 9.091712s (57.5%%)
+┃┃ Uncounted : 0.206261s (1.3%%)   3.538343s (0.8%%)
+┃┗
+┃ computeDG : 0.010113s (0.1%%)   0.226379s (0.1%%)
+┃ Uncounted : 0.038736s (0.2%%)   46.169527s (10.7%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  28 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 28
+[##############################################    ]  93.333
+┏ Global : 15.358560s (100.0%%)   7m 28.275752s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.009716s (0.1%%)   0.233700s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.005654s (0.0%%)   0.114509s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.311641s (99.7%%)   6m 41.500088s (89.6%%)
+┃┃ Compute Total Volume : 0.028023s (0.2%%)   0.733223s (0.2%%)
+┃┃ Compute XTilde : 0.000342s (0.0%%)   0.010268s (0.0%%)
+┃┃ Find Object Boundary : 2.310200s (15.0%%)   58.819655s (13.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.180445s (1.2%%)   2.376169s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.153265s (1.0%%)   1.707951s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.010573s (0.1%%)   0.202447s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008969s (0.1%%)   0.259909s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.203123s (1.3%%)   2.745411s (0.6%%)
+┃┃┏ Compute_Constraint_Set : 0.752796s (4.9%%)   11.970638s (2.7%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.537941s (3.5%%)   8.281709s (1.8%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.047728s (0.3%%)   0.902122s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.087685s (0.6%%)   1.553119s (0.3%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001302s (0.0%%)   0.019959s (0.0%%)
+┃┃┃ Uncounted : 0.078140s (0.5%%)   1.213729s (0.3%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.536093s (3.5%%)   8.049146s (1.8%%)
+┃┃┃ computePsi : 0.477991s (3.1%%)   7.164754s (1.6%%)
+┃┃┃ Compute_Barrier : 0.000042s (0.0%%)   0.000642s (0.0%%)
+┃┃┃ Uncounted : 0.058060s (0.4%%)   0.883750s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.075158s (0.5%%)   2.084576s (0.5%%)
+┃┃┃ computeStress : 0.005453s (0.0%%)   0.175578s (0.0%%)
+┃┃┃ elem2node : 0.068884s (0.4%%)   1.789274s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000059s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.004812s (6.5%%)   27.875990s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.582547s (3.8%%)   16.139744s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.062720s (0.4%%)   1.596616s (0.4%%)
+┃┃┃┃ elem2node : 0.373056s (2.4%%)   10.389914s (2.3%%)
+┃┃┃┃ Uncounted : 0.146771s (1.0%%)   4.153214s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.414120s (2.7%%)   11.593316s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.008140s (0.1%%)   0.142763s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.855806s (5.6%%)   24.022467s (5.4%%)
+┃┃ projectDBC : 0.029915s (0.2%%)   0.847563s (0.2%%)
+┃┃ linearSolve : 9.194177s (59.9%%)   4m 18.285889s (57.6%%)
+┃┃ Uncounted : 0.140750s (0.9%%)   3.679093s (0.8%%)
+┃┗
+┃ computeDG : 0.008206s (0.1%%)   0.234585s (0.1%%)
+┃ Uncounted : 0.023342s (0.2%%)   46.192870s (10.3%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  29 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 29
+[################################################  ]  96.667
+┏ Global : 15.654937s (100.0%%)   7m 43.930689s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008235s (0.1%%)   0.241935s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004087s (0.0%%)   0.118595s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.611051s (99.7%%)   6m 57.111139s (89.9%%)
+┃┃ Compute Total Volume : 0.029405s (0.2%%)   0.762628s (0.2%%)
+┃┃ Compute XTilde : 0.000367s (0.0%%)   0.010634s (0.0%%)
+┃┃ Find Object Boundary : 2.291967s (14.6%%)   1m 1.111622s (13.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.064517s (0.4%%)   2.440687s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.041201s (0.3%%)   1.749152s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.007000s (0.0%%)   0.209447s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008865s (0.1%%)   0.268774s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.199139s (1.3%%)   2.944550s (0.6%%)
+┃┃┏ Compute_Constraint_Set : 0.927621s (5.9%%)   12.898259s (2.8%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.649755s (4.2%%)   8.931464s (1.9%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.077665s (0.5%%)   0.979788s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.119154s (0.8%%)   1.672273s (0.4%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001366s (0.0%%)   0.021325s (0.0%%)
+┃┃┃ Uncounted : 0.079680s (0.5%%)   1.293410s (0.3%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.563869s (3.6%%)   8.613015s (1.9%%)
+┃┃┃ computePsi : 0.492298s (3.1%%)   7.657052s (1.7%%)
+┃┃┃ Compute_Barrier : 0.000046s (0.0%%)   0.000688s (0.0%%)
+┃┃┃ Uncounted : 0.071525s (0.5%%)   0.955275s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.067914s (0.4%%)   2.152490s (0.5%%)
+┃┃┃ computeStress : 0.005389s (0.0%%)   0.180967s (0.0%%)
+┃┃┃ elem2node : 0.061619s (0.4%%)   1.850893s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000061s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.991155s (6.3%%)   28.867145s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.577846s (3.7%%)   16.717590s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.055845s (0.4%%)   1.652461s (0.4%%)
+┃┃┃┃ elem2node : 0.368981s (2.4%%)   10.758896s (2.3%%)
+┃┃┃┃ Uncounted : 0.153020s (1.0%%)   4.306234s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.412924s (2.6%%)   12.006240s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000379s (0.0%%)   0.143141s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.889348s (5.7%%)   24.911815s (5.4%%)
+┃┃ projectDBC : 0.030431s (0.2%%)   0.877994s (0.2%%)
+┃┃ linearSolve : 9.390991s (60.0%%)   4m 27.676880s (57.7%%)
+┃┃ Uncounted : 0.164328s (1.0%%)   3.843421s (0.8%%)
+┃┗
+┃ computeDG : 0.010198s (0.1%%)   0.244783s (0.1%%)
+┃ Uncounted : 0.021367s (0.1%%)   46.214237s (10.0%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 0
+span size = 0.0
+Total PN iteration count:  30 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 30
+[##################################################] 100.000
+┏ Global : 15.118372s (100.0%%)   7m 59.049061s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.008602s (0.1%%)   0.250537s (0.1%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004101s (0.0%%)   0.122696s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 15.079103s (99.7%%)   7m 12.190242s (90.2%%)
+┃┃ Compute Total Volume : 0.024951s (0.2%%)   0.787579s (0.2%%)
+┃┃ Compute XTilde : 0.000339s (0.0%%)   0.010973s (0.0%%)
+┃┃ Find Object Boundary : 2.111380s (14.0%%)   1m 3.223002s (13.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.064082s (0.4%%)   2.504769s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.040475s (0.3%%)   1.789627s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005419s (0.0%%)   0.214866s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.010343s (0.1%%)   0.279117s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.174249s (1.2%%)   3.118800s (0.7%%)
+┃┃┏ Compute_Constraint_Set : 0.763093s (5.0%%)   13.661352s (2.9%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.551158s (3.6%%)   9.482622s (2.0%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.046526s (0.3%%)   1.026314s (0.2%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.087448s (0.6%%)   1.759721s (0.4%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.001306s (0.0%%)   0.022631s (0.0%%)
+┃┃┃ Uncounted : 0.076654s (0.5%%)   1.370064s (0.3%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.542075s (3.6%%)   9.155090s (1.9%%)
+┃┃┃ computePsi : 0.481039s (3.2%%)   8.138092s (1.7%%)
+┃┃┃ Compute_Barrier : 0.000044s (0.0%%)   0.000732s (0.0%%)
+┃┃┃ Uncounted : 0.060991s (0.4%%)   1.016266s (0.2%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.082577s (0.5%%)   2.235067s (0.5%%)
+┃┃┃ computeStress : 0.017770s (0.1%%)   0.198738s (0.0%%)
+┃┃┃ elem2node : 0.058520s (0.4%%)   1.909413s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000063s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.005455s (6.7%%)   29.872599s (6.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.584103s (3.9%%)   17.301693s (3.6%%)
+┃┃┃┃ computeStressDerivative : 0.065071s (0.4%%)   1.717531s (0.4%%)
+┃┃┃┃ elem2node : 0.372431s (2.5%%)   11.131326s (2.3%%)
+┃┃┃┃ Uncounted : 0.146601s (1.0%%)   4.452835s (0.9%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.413186s (2.7%%)   12.419425s (2.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.008159s (0.1%%)   0.151300s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.879144s (5.8%%)   25.790958s (5.4%%)
+┃┃ projectDBC : 0.031515s (0.2%%)   0.909508s (0.2%%)
+┃┃ linearSolve : 9.243334s (61.1%%)   4m 36.920213s (57.8%%)
+┃┃ Uncounted : 0.156910s (1.0%%)   4.000331s (0.8%%)
+┃┗
+┃ computeDG : 0.007027s (0.0%%)   0.251810s (0.1%%)
+┃ Uncounted : 0.019538s (0.1%%)   46.233775s (9.7%%)
+┗

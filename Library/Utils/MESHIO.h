@@ -4,11 +4,16 @@
 #include <Utils/STDCONTAINER.h>
 #include <set>
 #include <sstream>
+#include <filesystem>
 #include <fstream>
 #include <FEM/DATA_TYPE.h>
 #include <Grid/SPATIAL_HASH.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
+#include <pybind11/stl.h>
+#include <pybind11/functional.h>
+#include <pybind11/complex.h>
+#include <pybind11/chrono.h>
 
 namespace py = pybind11;
 namespace JGSL {
@@ -431,17 +436,39 @@ void Write_TriMesh_Region_Obj(MESH_NODE<T, dim>& nodes,
 }
 
 template <class T>
-VECTOR<int, 4> Read_TetMesh_Vtk(const std::string& filePath, MESH_NODE<T, 3>& X,
-    MESH_ELEM<3>& indices)
+void Set_Ori_Hands(MESH_NODE<T, 3>& Hand_pos,VECTOR<T, 3> vec)
+//std::vector<MESH_NODE<T,3>>& ori_hand
 {
+//    for(const auto& vec : ori_hand){
+//        Hand_pos.Append(vec);
+//    }
+    Hand_pos.Append(vec);
+    printf("vec:%lf %lf %lf\n",vec[0],vec[1],vec[2]);
+    return;
+}
+
+template <class T>
+VECTOR<int, 4> Read_TetMesh_Vtk(const std::string& filePath,
+    MESH_NODE<T, 3>& X,  MESH_ELEM<3>& indices,
+    MESH_NODE<T, 3>& Xt, MESH_ELEM<3>& elem_t,
+    MESH_NODE<T, 3>& hand_pos, VECTOR<int, 4>& work_range,double nearDistance,
+    const VECTOR<T, 3>& model_pos,BASE_STORAGE<int>& WorkIndex,VECTOR<int, 4>& Xt_meshCounter)
+{//std::vector<VECTOR<T,3>>& hand_pos,std::vector<int>& work_range
+
     std::ifstream in(filePath);
     if (!in.is_open()) {
         puts((filePath + " not found!").c_str());
         exit(-1);
     }
 
+    std::unordered_map<int,int>indexMap;
+
+    auto initial_Xt_size = Xt.size;
     auto initial_X_size = X.size;
     auto initial_indices_size = indices.size;
+    auto initial_elemt_size = elem_t.size;
+    printf("initial X :%d initial Elem: %d\n",initial_X_size,initial_indices_size);
+    printf("initial Xt :%d initial Elemt: %d\n",initial_Xt_size,initial_elemt_size);
 
     std::string line;
     VECTOR<T, 3> position;
@@ -450,6 +477,8 @@ VECTOR<int, 4> Read_TetMesh_Vtk(const std::string& filePath, MESH_NODE<T, 3>& X,
     bool reading_tets = false;
     size_t n_points = 0;
     size_t n_tets = 0;
+
+    size_t index_points = 0;
 
     while (std::getline(in, line)) {
         std::stringstream ss(line);
@@ -474,25 +503,79 @@ VECTOR<int, 4> Read_TetMesh_Vtk(const std::string& filePath, MESH_NODE<T, 3>& X,
         else if (reading_points) {
             for (size_t i = 0; i < 3; i++)
                 ss >> position(i);
-            X.Append(position);
+
+
+            //tiaojian
+            bool isInNear = true;
+//            for(const auto& vec : hand_pos){
+//                if((position - vec).length() > nearDistance){
+//                    isInNear = false;
+//                    break;
+//                }
+//            }
+
+            hand_pos.Each([&](int id,auto data){
+                auto[vec] = data;
+                if((position - vec + model_pos).length() > nearDistance){
+                    isInNear = false;
+                    return false;
+                }
+
+                return true;
+            });
+
+            Xt.Append(position);
+            if(isInNear){
+                int work_range_new = index_points + initial_Xt_size;
+                WorkIndex.Append(work_range_new);
+                if(work_range[0] == -1 || work_range_new < work_range[0]){
+                    work_range[0] = work_range_new;
+                }
+                else if(work_range[1] < work_range_new){
+                    work_range[1] = work_range_new;
+                }
+                indexMap[index_points] = X.size;
+                X.Append(position);
+            }
+            index_points++;
         }
         else if (reading_tets) {
             ss.ignore(128, ' '); // ignore "4"
             VECTOR<int, 4> tet;
+            VECTOR<int, 4> tet_t;
+            bool allPointsInX = true;
             for (size_t i = 0; i < 4; i++) {
                 ss >> tet(i);
-                tet(i) += initial_X_size;
+                tet_t(i) = tet(i);
+                if(indexMap.find(tet(i)) == indexMap.end()){//no Xt
+                    allPointsInX = false;
+                }
+                else{//yes X
+                    tet(i) = indexMap[tet(i)];
+                }
+                tet_t(i) += initial_Xt_size;
             }
-            indices.Append(tet);
+            elem_t.Append(tet_t);
+            if(allPointsInX){
+                indices.Append(tet);
+                //printf("indexMap:%d Xsize:%d   tet: %d %d %d %d\n",indexMap.size(),X.size,tet(0),tet(1),tet(2),tet(3));
+            }
+
         }
     }
     in.close();
-
+    printf("Xt:%d Et:%d X:%d E:%d\n",Xt.size,elem_t.size,X.size,indices.size);
     assert((n_points == X.size - initial_X_size) && "vtk read X count doesn't match.");
     assert(((size_t)n_tets == indices.size - initial_indices_size) && "vtk read element count doesn't match.");
-    printf("%d %d %d %d\n", initial_X_size, initial_indices_size, X.size, indices.size);
 
+    Xt_meshCounter = VECTOR<int, 4>(initial_Xt_size, initial_elemt_size, Xt.size, elem_t.size);
     return VECTOR<int, 4>(initial_X_size, initial_indices_size, X.size, indices.size);
+//    Xt_meshCounter[0]=initial_Xt_size;
+//    Xt_meshCounter[1]=initial_elemt_size;
+//    Xt_meshCounter[2]=Xt.size;
+//    Xt_meshCounter[3]=elem_t.size;
+//    printf("Xt_meshCounter:%d %d %d %d\n",Xt_meshCounter[0],Xt_meshCounter[1],Xt_meshCounter[2],Xt_meshCounter[3]);
+//    //Xt_meshCounter = VECTOR<int, 4>(initial_Xt_size, initial_elemt_size, Xt.size, elem_t.size);
 }
 
 template <class T>
@@ -733,9 +816,16 @@ void Find_Surface_TriMesh(
                 finder = tri2Tet.find(Triplet(triVInd[0], triVInd[2], triVInd[1]));
                 if (finder == tri2Tet.end()) {
                     Tri.Append(VECTOR<int, 3>(triVInd[0], triVInd[1], triVInd[2]));
+                    //std::cout << "Triangle added to surface mesh: " << triVInd[0] << ", " << triVInd[1] << ", " << triVInd[2] << std::endl;
                 }
             }
         }
+
+        // 在检查每个三角形时输出调试信息
+        //std::cout << "Checking triangle: " << triVInd[0] << ", " << triVInd[1] << ", " << triVInd[2] << std::endl;
+        // 如果三角形被添加到 Tri 中，输出确认信息
+        //std::cout << "Triangle added to surface mesh: " << triVInd[0] << ", " << triVInd[1] << ", " << triVInd[2] << std::endl;
+
     }
 
     // find surface nodes
@@ -762,6 +852,7 @@ void Find_Surface_TriMesh(
             Tri.update(i, VECTOR<int, 3>(TetVI2TriVI[t(0)], TetVI2TriVI[t(1)], TetVI2TriVI[t(2)]));
         }
     }
+    printf("Tri size:%d Xt size:%d Elemt size:%d\n",Tri.size,X.size,Tet.size);
 }
 
 template <class T, bool mapTriVInd = true>
@@ -830,10 +921,40 @@ void Find_Surface_TriMesh_With_Extra_Mesh(
 }
 
 
+std::unordered_map<int,int> Create_Unordered_Set(BASE_STORAGE<int>& TriIndex) {
+    std::unordered_map<int,int> triIndexSet;
+    for (int i = 0; i < TriIndex.size; ++i) {
+        int index = std::get<0>(TriIndex.Get(i).value());
+        triIndexSet[index] = i;
+        //triIndexSet.insert();
+    }
+    //std::unordered_set<int> triIndexSet(TriIndex.begin(), TriIndex.end());
+    return triIndexSet;
+}
+
+template <class T>
+void Write_Ori(MESH_NODE<T, 3>& Xt, MESH_ELEM<3>& elem_t,const std::string& filename){
+    FILE *file = fopen(filename.c_str(), "w");
+    if (!file) {
+        puts("failed to create file");
+        exit(-1);
+    }
+    fprintf(file, "Xt size:%d\n",Xt.size);
+    Xt.Each([&](int id, auto data) {
+        auto [node] = data;
+        fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+    });
+    fprintf(file, "elem size:%d\n",elem_t.size);
+    elem_t.Each([&](int id, auto data) {
+        auto [node] = data;
+        fprintf(file, "f %d %d %d %d\n", node(0), node(1), node(2),node(3));
+    });
+}
+
 template <class T>
 void Write_Surface_TriMesh_Obj(BASE_STORAGE<VECTOR<T, 3>>& nodes,
-    BASE_STORAGE<int>& TriVI2TetVI, BASE_STORAGE<VECTOR<int, 3>>& faces,
-    const std::string& filename)
+    BASE_STORAGE<int>& TriVI2TetVI, BASE_STORAGE<VECTOR<int, 3>>& faces,BASE_STORAGE<VECTOR<T, 3>>& ori,
+    const std::string& filename,BASE_STORAGE<int>& TriIndex)
 {
     TIMER_FLAG("Write_Surface_TriMesh_Obj");
 
@@ -842,22 +963,49 @@ void Write_Surface_TriMesh_Obj(BASE_STORAGE<VECTOR<T, 3>>& nodes,
         puts("failed to create file");
         exit(-1);
     }
+    //printf("write 1\n");
+    //std::unordered_map<int, int> mapping;
+    //int cnt = 0;
+    //printf("range: %d %d\n",work_range[0],work_range[1]);
+    std::unordered_map<int,int> triIndexSet = Create_Unordered_Set(TriIndex);
+    printf("triIndexSet:%d\n",triIndexSet.size());
     TriVI2TetVI.Each([&](int id, auto data) {
         auto [i] = data;
-        auto [node] = nodes.Get(i).value();
-        fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+        //printf("id: %d\n",i);
+        if (triIndexSet.find(i) != triIndexSet.end()) {//in X
+            //printf("id in X: %d\n",triIndexSet[i]);
+            //mapping[id] = cnt;
+            //cnt++;
+            auto [node] = nodes.Get(triIndexSet[i]).value();
+            fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+        }
+        else{//in Xt
+            //printf("id in Xt: %d\n",i);
+            auto [node] = ori.Get(i).value();
+            //fprintf(file, "v %.12le %.12le %.12le\n", 0,0,0);
+            fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+        }
     });
+    printf("write 3\n");
+    printf("faces size:%d\n",faces.size);
     faces.Each([&](int id, auto data) {
         auto [face] = data;
-        fprintf(file, "f %d %d %d\n", face(0) + 1, face(1) + 1, face(2) + 1);
+        //printf("face:%d %d %d\n",face(0)+ 1, face(1) + 1, face(2) + 1);
+        fprintf(file, "f %d %d %d\n", face(0)+ 1, face(1) + 1, face(2) + 1);
+//        if (mapping.find(face(0)) != mapping.end()) {
+//            fprintf(file, "f %d %d %d\n", mapping[face(0)] + 1, mapping[face(1)] + 1, mapping[face(2)] + 1);
+//        }
     });
     fclose(file);
+
 }
 
 template <class T>
 void Write_Surface_TriMesh_Obj_Regional(BASE_STORAGE<VECTOR<T, 3>>& nodes,
-    BASE_STORAGE<int>& TriVI2TetVI, BASE_STORAGE<VECTOR<int, 3>>& faces,
-    const std::string& filename, VECTOR<int, 4> counter)
+    BASE_STORAGE<int>& TriVI2TetVI, BASE_STORAGE<VECTOR<int, 3>>& faces,BASE_STORAGE<VECTOR<T, 3>>& ori,
+    const std::string& filename, VECTOR<int, 4> counter,BASE_STORAGE<int>& TriIndex,
+    const VECTOR<T, 3>& trans, const VECTOR<T, 3>& rotCenter, const VECTOR<T, 3>& rotAxis,
+    const T rotAngDeg, const VECTOR<T, 3>& scale)//, VECTOR<int, 4>& work_range)
 {
     TIMER_FLAG("Write_Surface_TriMesh_Obj_Regional");
 
@@ -868,22 +1016,37 @@ void Write_Surface_TriMesh_Obj_Regional(BASE_STORAGE<VECTOR<T, 3>>& nodes,
     }
     std::unordered_map<int, int> mapping;
     int cnt = 0;
+    std::unordered_map<int,int> triIndexSet = Create_Unordered_Set(TriIndex);
     TriVI2TetVI.Each([&](int id, auto data) {
         auto [i] = data;
         if (counter[0] <= i && i < counter[2]) {
             mapping[id] = cnt;
             cnt++;
-            auto [node] = nodes.Get(i).value();
-            fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+            //if(work_range[0] <= i && i < work_range[1]){//in X
+            if(triIndexSet.find(i) != triIndexSet.end()){
+                auto [s_node] = nodes.Get(triIndexSet[i]).value();
+                auto node = Inverse_Transform_Point(s_node,trans,rotCenter,rotAxis,rotAngDeg,scale);
+                fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+            }
+            else{//in Xt
+                auto [s_node] = ori.Get(i).value();
+                auto node = Inverse_Transform_Point(s_node,trans,rotCenter,rotAxis,rotAngDeg,scale);
+                fprintf(file, "v %.12le %.12le %.12le\n", node(0), node(1), node(2));
+            }
         }
     });
     faces.Each([&](int id, auto data) {
         auto [face] = data;
-        if (mapping.find(face(0)) != mapping.end()) {
+        if (mapping.find(face(0)) != mapping.end() &&
+            mapping.find(face(1)) != mapping.end() &&
+            mapping.find(face(2)) != mapping.end()) {
             fprintf(file, "f %d %d %d\n", mapping[face(0)] + 1, mapping[face(1)] + 1, mapping[face(2)] + 1);
         }
     });
     fclose(file);
+    std::filesystem::copy(filename,"output/main_model/model.obj",
+    std::filesystem::copy_options::overwrite_existing);
+
 }
 
 template <class T, int dim>
@@ -1163,6 +1326,40 @@ VECTOR<int, 4> Merge_Heros(const VECTOR<int ,4>& hero0, const VECTOR<int, 4>& he
 }
 
 template <class T, int dim>
+VECTOR<T, dim> Inverse_Transform_Point(
+    const VECTOR<T, dim>& point,
+    const VECTOR<T, dim>& trans,
+    const VECTOR<T, dim>& rotCenter,
+    const VECTOR<T, dim>& rotAxis,
+    const T rotAngDeg,
+    const VECTOR<T, dim>& scale)
+{
+    T rotAngRad = -rotAngDeg / 180 * M_PI; // 反向旋转
+    VECTOR<T, dim> transformed_point = point; // 创建一个新的变量来存储反向变换后的点
+    if constexpr (dim == 3) {
+        const Eigen::Matrix3d rotMtr = Eigen::AngleAxis<double>(rotAngRad,
+            Eigen::Vector3d(rotAxis[0], rotAxis[1], rotAxis[2]).normalized()).toRotationMatrix();
+        Eigen::Vector3d x((transformed_point - trans - rotCenter).data); // 反向平移
+        const Eigen::Vector3d rotx = rotMtr * x; // 反向旋转
+        for (int d = 0; d < dim; ++d) {
+            transformed_point[d] = rotx[d] / scale[d] + rotCenter[d]; // 反向缩放
+        }
+    }
+    else {
+        MATRIX<T, dim> rotMtr;
+        rotMtr(0, 0) = rotMtr(1, 1) = std::cos(rotAngRad);
+        rotMtr(0, 1) = std::sin(rotAngRad); // 反向旋转
+        rotMtr(1, 0) = -rotMtr(0, 1);
+        VECTOR<T, dim> x = transformed_point - trans; // 反向平移
+        transformed_point = rotMtr * x / scale + rotCenter; // 反向缩放
+    }
+    return transformed_point; // 返回反向变换后的点
+}
+
+
+
+
+template <class T, int dim>
 void Transform_Points(
     const VECTOR<T, dim>& trans,
     const VECTOR<T, dim>& rotCenter,
@@ -1173,9 +1370,13 @@ void Transform_Points(
     MESH_NODE<T, dim>& X)
 {
     T rotAngRad = rotAngDeg / 180 * M_PI;
+    printf("meshcounter:%d %d\n",meshCounter[0],meshCounter[2]);
     for (int i = meshCounter[0]; i < meshCounter[2]; ++i) {
         VECTOR<T, dim>& xI = std::get<0>(X.Get_Unchecked(i));
         if constexpr (dim == 3) {
+            if(i == 23043){
+                printf("xI:%lf %lf %lf(before)\n",xI[0],xI[1],xI[2]);
+            }
             const Eigen::Matrix3d rotMtr = Eigen::AngleAxis<double>(rotAngRad,
                 Eigen::Vector3d(rotAxis[0], rotAxis[1], rotAxis[2]).normalized()).toRotationMatrix();
             Eigen::Vector3d x((xI - rotCenter).data);
@@ -1183,6 +1384,10 @@ void Transform_Points(
             const Eigen::Vector3d rotx = rotMtr * x;
             for (int d = 0; d < dim; ++d) {
                 xI[d] = rotx[d] + rotCenter[d] + trans[d];
+            }
+            //printf("before after %d\n",i);
+            if(i == 23043){
+                printf("xI:%lf %lf %lf(after)\n",xI[0],xI[1],xI[2]);
             }
         }
         else {
@@ -1656,6 +1861,7 @@ void Export_MeshIO(py::module& m) {
     m.def("Write_TriMesh_Obj", &Write_TriMesh_Obj<double, 2>, "write planar triangle mesh to obj file");
     m.def("Write_TriMesh_Obj", &Write_TriMesh_Obj<double, 3>, "write triangle mesh to obj file");
     m.def("Write_TriMesh_Tex_Obj", &Write_TriMesh_Tex_Obj<double, 3>, "write triangle mesh with texture to obj file");
+    m.def("Set_Ori_Hands", &Set_Ori_Hands<double>, "read tetrahedra mesh from vtk file");
     m.def("Read_TetMesh_Vtk", &Read_TetMesh_Vtk<double>, "read tetrahedra mesh from vtk file");
     m.def("Read_TetMesh_Mesh", &Read_TetMesh_Mesh<double>, "read tetrahedra mesh from mesh file");
     m.def("Read_TriMesh_With_Tex_Obj", &Read_TriMesh_With_Tex_Obj<double, 2>, "read triangle mesh with texture from obj file");
@@ -1670,6 +1876,7 @@ void Export_MeshIO(py::module& m) {
     m.def("Write_TetMesh_Vtk", &Write_TetMesh_Vtk<double>, "write tetrahedra mesh from vtk file");
     m.def("Find_Surface_TriMesh", &Find_Surface_TriMesh<double>, "find surface triangle mesh of tetrahedra mesh");
     m.def("Write_Surface_TriMesh_Obj", &Write_Surface_TriMesh_Obj<double>, "write surface triangle mesh of tetrahedra mesh");
+    m.def("Write_Ori", &Write_Ori<double>, "write surface triangle mesh of tetrahedra mesh");
     m.def("Read_SegMesh_Seg", &Read_SegMesh_Seg<double, 2>, "read segment mesh");
     m.def("Read_SegMesh_Seg", &Read_SegMesh_Seg<double, 3>, "read segment mesh");
     m.def("Write_SegMesh_Obj", &Write_SegMesh_Obj<double, 2>, "write segment mesh");
@@ -1677,6 +1884,7 @@ void Export_MeshIO(py::module& m) {
 
     m.def("Merge_Heros", &Merge_Heros);
 
+    m.def("Inverse_Transform_Point", &Inverse_Transform_Point<double, 3>, "re transform 3d points");
     m.def("Transform_Points", &Transform_Points<double, 2>, "transform 2d points");
     m.def("Transform_Points", &Transform_Points<double, 3>, "transform 3d points");
     m.def("Transform_Points_Range", &Transform_Points_Range<double, 3>, "transform 3d selected points");

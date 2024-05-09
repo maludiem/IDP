@@ -1,4 +1,6 @@
 import sys
+from taichi._lib.core.taichi_python import Vector3d
+
 sys.path.insert(0, "../../../Python")
 sys.path.insert(0, "../../../build")
 import Drivers

@@ -40,6 +40,7 @@ bool Solve_Direct(
     cholmod_factor* L = cholmod_analyze(A, &cm);
     cholmod_factorize(A, L, &cm);
     if (cm.status == CHOLMOD_NOT_POSDEF) {
+        printf("CHOLMOD_NOT_POSDEF error\n");
         return false;
     }
 

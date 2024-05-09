@@ -1,6 +1,10 @@
 import sys
-sys.path.insert(0, "../../../Python")
-sys.path.insert(0, "../../../build")
+
+from taichi._lib.core.taichi_python import Vector3d
+
+sys.path.insert(0, "/home/jiangjinke/IDP/IDP-modeling/Python")
+sys.path.insert(0, "/home/jiangjinke/IDP/IDP-modeling/build")
+
 import Drivers
 from JGSL import *
 import math

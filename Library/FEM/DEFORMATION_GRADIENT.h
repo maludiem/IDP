@@ -14,15 +14,18 @@ T Get_F_coeff(MESH_NODE<T, dim>& X, VECTOR<int, dim + 1> elemVInd)
         const VECTOR<T, dim>& X1 = std::get<0>(X.Get_Unchecked_Const(elemVInd(1)));
         const VECTOR<T, dim>& X2 = std::get<0>(X.Get_Unchecked_Const(elemVInd(2)));
         const VECTOR<T, dim>& X3 = std::get<0>(X.Get_Unchecked_Const(elemVInd(3)));
+        //no
         if (PARAMETER::Get("Init_F_script", std::string("")) == std::string("bunny_inside_box")) {
             if (X0.min() < -0.25 || X0.max() > 0.25)
                 return (T)1.0;
             else
                 return PARAMETER::Get("bunny_inside_box_scale", (T)1.0);
         }
+        //no
         if (PARAMETER::Get("Init_F_script", std::string("")) == std::string("two")) {
             return 2.0;
         }
+        //no
         if (PARAMETER::Get("Init_F_script", std::string("")) == std::string("armadillo")) {
             T radius = PARAMETER::Get("Init_F_script_armadillo_radius", T(20));
             T scale = PARAMETER::Get("Init_F_script_armadillo_scale", T(5));
@@ -48,26 +51,37 @@ void Compute_Vol_And_Inv_Basis(
     SCALAR_STORAGE<T>& vol, 
     MESH_ELEM_ATTR<T, dim>& elemAttr)
 {
+    printf("compute X:%d Elem:%d elemAttr:%d\n",X.size,Elem.size,elemAttr.size);
     vol.Reserve(Elem.size);
     elemAttr.Reserve(Elem.size);
+    //printf("compute 1\n");
+    int count = 0;
     Elem.Each([&](int id, auto data) {
         auto &[elemVInd] = data;
+        count++;
+//        if(count>=4921){
+//            printf("compute 00 %d\n",count);
+//            printf("elemVInd %d %d %d %d\n",elemVInd[0],elemVInd[1],elemVInd[2],elemVInd[3]);
+//        }
         T F_coeff = Get_F_coeff<T, dim>(X, elemVInd);
+        //if(count==4921) printf("compute 11 %d\n",count);
         VECTOR<T, dim> X0 = std::get<0>(X.Get_Unchecked_Const(elemVInd(0))) * F_coeff;
         VECTOR<T, dim> X1 = std::get<0>(X.Get_Unchecked_Const(elemVInd(1))) * F_coeff;
         VECTOR<T, dim> X2 = std::get<0>(X.Get_Unchecked_Const(elemVInd(2))) * F_coeff;
+        //if(count==4921) printf("compute 2 %d\n",count);
         if (PARAMETER::Get("Init_F_script", std::string("")) == std::string("tube_inside_tube")) {
             X0(0) *= 1.1; X0(1) *= 3.2; X0(2) *= 1.1;
             X1(0) *= 1.1; X1(1) *= 3.2; X1(2) *= 1.1;
             X2(0) *= 1.1; X2(1) *= 3.2; X2(2) *= 1.1;
         }
-
+        //if(count==4921) printf("compute 3 %d\n",count);
         MATRIX<T, dim> IB;
         IB(0, 0) = X1(0) - X0(0);
         IB(1, 0) = X1(1) - X0(1);
         IB(0, 1) = X2(0) - X0(0);
         IB(1, 1) = X2(1) - X0(1);
 
+        //if(count==4921) printf("compute 4 %d\n",count);
         if constexpr (dim == 3) {
             VECTOR<T, dim> X3 = std::get<0>(X.Get_Unchecked_Const(elemVInd(3))) * F_coeff;
             if (PARAMETER::Get("Init_F_script", std::string("")) == std::string("tube_inside_tube")) {
@@ -83,9 +97,11 @@ void Compute_Vol_And_Inv_Basis(
         else {
             vol.Append(IB.determinant() / 2.0);
         }
-
+        //if(count==4921) printf("compute 5 %d\n",count);
         IB.invert();
+        //if(count==4921) printf("compute 6 %d\n",count);
         elemAttr.Append(IB, MATRIX<T, dim>());
+        //if(count==4921) printf("compute 7 %d\n",count);
     });
 }
 

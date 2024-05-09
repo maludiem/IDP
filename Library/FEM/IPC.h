@@ -904,7 +904,7 @@ void Compute_Barrier(MESH_NODE<T, dim>& X,
                     Point_Triangle_Distance(p, t0, t1, t2, dist2);
                 }
                 else if (cIVInd[2] >= 0) {
-                    // -++[-] PE, last digit stores muliplicity
+                    // -++[-] PE, last digit stores multiplicity
                     const VECTOR<T, 3>& Xp = std::get<0>(X.Get_Unchecked(-cIVInd[0] - 1));
                     const VECTOR<T, 3>& Xe0 = std::get<0>(X.Get_Unchecked(cIVInd[1]));
                     const VECTOR<T, 3>& Xe1 = std::get<0>(X.Get_Unchecked(cIVInd[2]));

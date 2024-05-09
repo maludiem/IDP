@@ -52,6 +52,13 @@ public:
         A.resize(rows, cols);
         A.reserve(triplets.size());
         A.setFromTriplets(triplets.begin(), triplets.end());
+
+         // 添加一个小的正数到对角线元素
+        T epsilon = 1e-10;  // 你可以根据需要调整这个值
+        for (int i = 0; i < rows; ++i) {
+            A.coeffRef(i, i) += epsilon;
+        }
+
         A.finalize();
 
         // // a parallel version:

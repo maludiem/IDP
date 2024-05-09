@@ -129,7 +129,7 @@ class SimulationBase:
         os.makedirs(self.output_folder + 'images/', exist_ok=True)
         ti.init(arch=ti.gpu)
         if self.dim == 2:
-            self.gui = ti.GUI("IPC", (512, 512), background_color=0x462391)
+            self.gui = ti.GUI("IPC", (512,  512), background_color=0x462391)
         else:
             self.gui = ti.GUI("IPC", (768, 768), background_color=0x462391)
 

@@ -1,0 +1,5124 @@
+span size = 0.0302484
+project rhs for Dirichlet boundary condition 16
+span size = 9.22586e-17
+Total PN iteration count:  1 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 1
+[#                                                 ]   3.333
+┏ Global : 14.979349s (100.0%%)   14.979349s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.005221s (0.0%%)   0.005221s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004969s (0.0%%)   0.004969s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 6.932037s (46.3%%)   6.932037s (46.3%%)
+┃┃ Compute Total Volume : 0.015711s (0.1%%)   0.015711s (0.1%%)
+┃┃ Compute XTilde : 0.000186s (0.0%%)   0.000186s (0.0%%)
+┃┃ Find Object Boundary : 1.103808s (7.4%%)   1.103808s (7.4%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.224041s (1.5%%)   0.224041s (1.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.150527s (1.0%%)   0.150527s (1.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.001321s (0.0%%)   0.001321s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.027749s (0.2%%)   0.027749s (0.2%%)
+┃┃┃ Uncounted : 0.044444s (0.3%%)   0.044444s (0.3%%)
+┃┃┗
+┃┃ computeDG : 0.006637s (0.0%%)   0.006637s (0.0%%)
+┃┃┏ Compute_Constraint_Set : 0.019073s (0.1%%)   0.019073s (0.1%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.012111s (0.1%%)   0.012111s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.000938s (0.0%%)   0.000938s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.003524s (0.0%%)   0.003524s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000046s (0.0%%)   0.000046s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.020138s (0.1%%)   0.020138s (0.1%%)
+┃┃┃ computePsi : 0.019373s (0.1%%)   0.019373s (0.1%%)
+┃┃┃ Compute_Barrier : 0.000004s (0.0%%)   0.000004s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.042030s (0.3%%)   0.042030s (0.3%%)
+┃┃┃ computeStress : 0.002505s (0.0%%)   0.002505s (0.0%%)
+┃┃┃ elem2node : 0.030373s (0.2%%)   0.030373s (0.2%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000004s (0.0%%)   0.000004s (0.0%%)
+┃┃┃ Uncounted : 0.009148s (0.1%%)   0.009148s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.451641s (3.0%%)   0.451641s (3.0%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.274683s (1.8%%)   0.274683s (1.8%%)
+┃┃┃┃ computeStressDerivative : 0.037864s (0.3%%)   0.037864s (0.3%%)
+┃┃┃┃ elem2node : 0.173793s (1.2%%)   0.173793s (1.2%%)
+┃┃┃┃ Uncounted : 0.063027s (0.4%%)   0.063027s (0.4%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.176666s (1.2%%)   0.176666s (1.2%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000285s (0.0%%)   0.000285s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.411964s (2.8%%)   0.411964s (2.8%%)
+┃┃ projectDBC : 0.015160s (0.1%%)   0.015160s (0.1%%)
+┃┃ linearSolve : 4.573175s (30.5%%)   4.573175s (30.5%%)
+┃┃ Uncounted : 0.048474s (0.3%%)   0.048474s (0.3%%)
+┃┗
+┃ computeDG : 0.003623s (0.0%%)   0.003623s (0.0%%)
+┃ Uncounted : 8.033499s (53.6%%)   8.033499s (53.6%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 2
+[###                                               ]   6.667
+┏ Global : 6.601555s (100.0%%)   21.580904s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004120s (0.1%%)   0.009341s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004428s (0.1%%)   0.009397s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 6.575611s (99.6%%)   13.507648s (62.6%%)
+┃┃ Compute Total Volume : 0.013755s (0.2%%)   0.029466s (0.1%%)
+┃┃ Compute XTilde : 0.000194s (0.0%%)   0.000380s (0.0%%)
+┃┃ Find Object Boundary : 1.063311s (16.1%%)   2.167119s (10.0%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.020844s (0.3%%)   0.244885s (1.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.013500s (0.2%%)   0.164028s (0.8%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.001554s (0.0%%)   0.002875s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.003099s (0.0%%)   0.030848s (0.1%%)
+┃┃┃ Uncounted : 0.002690s (0.0%%)   0.047134s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.007852s (0.1%%)   0.014489s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.019474s (0.3%%)   0.038548s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.012804s (0.2%%)   0.024915s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.000898s (0.0%%)   0.001836s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.003181s (0.0%%)   0.006705s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000045s (0.0%%)   0.000091s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.019207s (0.3%%)   0.039345s (0.2%%)
+┃┃┃ computePsi : 0.018598s (0.3%%)   0.037971s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000002s (0.0%%)   0.000006s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.029277s (0.4%%)   0.071308s (0.3%%)
+┃┃┃ computeStress : 0.005501s (0.1%%)   0.008006s (0.0%%)
+┃┃┃ elem2node : 0.022983s (0.3%%)   0.053355s (0.2%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000006s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.440765s (6.7%%)   0.892406s (4.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.260321s (3.9%%)   0.535005s (2.5%%)
+┃┃┃┃ computeStressDerivative : 0.033287s (0.5%%)   0.071151s (0.3%%)
+┃┃┃┃ elem2node : 0.165742s (2.5%%)   0.339534s (1.6%%)
+┃┃┃┃ Uncounted : 0.061293s (0.9%%)   0.124320s (0.6%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.175085s (2.7%%)   0.351750s (1.6%%)
+┃┃┃ Compute_Barrier_Hessian : 0.005354s (0.1%%)   0.005639s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.389979s (5.9%%)   0.801943s (3.7%%)
+┃┃ projectDBC : 0.014949s (0.2%%)   0.030109s (0.1%%)
+┃┃ linearSolve : 4.504437s (68.2%%)   9.077612s (42.1%%)
+┃┃ Uncounted : 0.051565s (0.8%%)   0.100039s (0.5%%)
+┃┗
+┃ computeDG : 0.003624s (0.1%%)   0.007247s (0.0%%)
+┃ Uncounted : 0.013771s (0.2%%)   8.047270s (37.3%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  3 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 3
+[#####                                             ]  10.000
+┏ Global : 6.548655s (100.0%%)   28.129558s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004092s (0.1%%)   0.013434s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004437s (0.1%%)   0.013834s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 6.527619s (99.7%%)   20.035267s (71.2%%)
+┃┃ Compute Total Volume : 0.013536s (0.2%%)   0.043003s (0.2%%)
+┃┃ Compute XTilde : 0.000191s (0.0%%)   0.000571s (0.0%%)
+┃┃ Find Object Boundary : 1.033905s (15.8%%)   3.201024s (11.4%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.019837s (0.3%%)   0.264721s (0.9%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.012578s (0.2%%)   0.176606s (0.6%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.001498s (0.0%%)   0.004373s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.003023s (0.0%%)   0.033871s (0.1%%)
+┃┃┃ Uncounted : 0.002738s (0.0%%)   0.049872s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.007894s (0.1%%)   0.022383s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.018678s (0.3%%)   0.057226s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.012194s (0.2%%)   0.037109s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.000976s (0.0%%)   0.002811s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.002808s (0.0%%)   0.009513s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000044s (0.0%%)   0.000135s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.023643s (0.4%%)   0.062988s (0.2%%)
+┃┃┃ computePsi : 0.023091s (0.4%%)   0.061062s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000004s (0.0%%)   0.000010s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.025887s (0.4%%)   0.097194s (0.3%%)
+┃┃┃ computeStress : 0.002384s (0.0%%)   0.010390s (0.0%%)
+┃┃┃ elem2node : 0.022523s (0.3%%)   0.075878s (0.3%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000002s (0.0%%)   0.000008s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 0.454053s (6.9%%)   1.346458s (4.8%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.277586s (4.2%%)   0.812590s (2.9%%)
+┃┃┃┃ computeStressDerivative : 0.034394s (0.5%%)   0.105545s (0.4%%)
+┃┃┃┃ elem2node : 0.172322s (2.6%%)   0.511856s (1.8%%)
+┃┃┃┃ Uncounted : 0.070870s (1.1%%)   0.195189s (0.7%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.175502s (2.7%%)   0.527252s (1.9%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000960s (0.0%%)   0.006599s (0.0%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 0.388395s (5.9%%)   1.190338s (4.2%%)
+┃┃ projectDBC : 0.014957s (0.2%%)   0.045066s (0.2%%)
+┃┃ linearSolve : 4.468369s (68.2%%)   13.545981s (48.2%%)
+┃┃ Uncounted : 0.058273s (0.9%%)   0.158312s (0.6%%)
+┃┗
+┃ computeDG : 0.003012s (0.0%%)   0.010259s (0.0%%)
+┃ Uncounted : 0.009494s (0.1%%)   8.056764s (28.6%%)
+┗
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  145 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 4
+[######                                            ]  13.333
+┏ Global : 12m 53.518715s (100.0%%)   13m 21.648273s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004121s (0.0%%)   0.017555s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004531s (0.0%%)   0.018365s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 12m 53.486074s (100.0%%)   13m 13.521341s (99.0%%)
+┃┃ Compute Total Volume : 0.013347s (0.0%%)   0.056350s (0.0%%)
+┃┃ Compute XTilde : 0.000190s (0.0%%)   0.000761s (0.0%%)
+┃┃ Find Object Boundary : 1.025652s (0.1%%)   4.226676s (0.5%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 3.485899s (0.5%%)   3.750620s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 1.545080s (0.2%%)   1.721685s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.385818s (0.0%%)   0.390190s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 1.353771s (0.2%%)   1.387642s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.569904s (0.1%%)   0.592287s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 1.553647s (0.2%%)   1.610872s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 1.008380s (0.1%%)   1.045489s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.086512s (0.0%%)   0.089323s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.272699s (0.0%%)   0.282212s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.003728s (0.0%%)   0.003863s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 1.340417s (0.2%%)   1.403405s (0.2%%)
+┃┃┃ computePsi : 1.265433s (0.2%%)   1.326495s (0.2%%)
+┃┃┃ Compute_Barrier : 0.003338s (0.0%%)   0.003348s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 4.463039s (0.6%%)   4.560233s (0.6%%)
+┃┃┃ computeStress : 0.317028s (0.0%%)   0.327418s (0.0%%)
+┃┃┃ elem2node : 3.330186s (0.4%%)   3.406064s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.011940s (0.0%%)   0.011948s (0.0%%)
+┃┃┃ Uncounted : 0.803885s (0.1%%)   0.814803s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1m 3.207314s (8.2%%)   1m 4.553772s (8.1%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 37.636903s (4.9%%)   38.449493s (4.8%%)
+┃┃┃┃ computeStressDerivative : 4.493128s (0.6%%)   4.598673s (0.6%%)
+┃┃┃┃ elem2node : 23.998993s (3.1%%)   24.510850s (3.1%%)
+┃┃┃┃ Uncounted : 9.144781s (1.2%%)   9.339970s (1.2%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 25.036525s (3.2%%)   25.563778s (3.2%%)
+┃┃┃ Compute_Barrier_Hessian : 0.532844s (0.1%%)   0.539443s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 56.681520s (7.3%%)   57.871858s (7.2%%)
+┃┃ projectDBC : 2.135231s (0.3%%)   2.180297s (0.3%%)
+┃┃ linearSolve : 10m 35.347546s (82.1%%)   10m 48.893527s (80.9%%)
+┃┃ Compute_Min_Dist : 0.004730s (0.0%%)   0.004730s (0.0%%)
+┃┃┏ DBCStiff : 0.048662s (0.0%%)   0.048662s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.028103s (0.0%%)   0.028103s (0.0%%)
+┃┃┃┃ computePsi : 0.027164s (0.0%%)   0.027164s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000141s (0.0%%)   0.000141s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 3.608978s (0.5%%)   3.767290s (0.5%%)
+┃┗
+┃ computeDG : 0.003050s (0.0%%)   0.013308s (0.0%%)
+┃ Uncounted : 0.020939s (0.0%%)   8.077703s (1.0%%)
+┗
+span size = 0.0
+span size = 0.5
+span size = 0.6
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.6
+span size = 0.6
+span size = 0.8
+span size = 0.8
+span size = 0.9
+span size = 0.7
+span size = 0.9
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.7
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.6
+span size = 0.7
+span size = 0.7
+span size = 0.7
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  440 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 5
+[########                                          ]  16.667
+┏ Global : 26m 48.564106s (100.0%%)   40m 10.212379s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004111s (0.0%%)   0.021666s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004490s (0.0%%)   0.022855s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 26m 48.529647s (100.0%%)   40m 2.050988s (99.7%%)
+┃┃ Compute Total Volume : 0.013310s (0.0%%)   0.069660s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.000950s (0.0%%)
+┃┃ Find Object Boundary : 1.005627s (0.1%%)   5.232303s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 6.156154s (0.4%%)   9.906774s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 3.073017s (0.2%%)   4.794702s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.633886s (0.0%%)   1.024077s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 2.054283s (0.1%%)   3.441924s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.991552s (0.1%%)   1.583838s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 3.165391s (0.2%%)   4.776263s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 2.004386s (0.1%%)   3.049875s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.157911s (0.0%%)   0.247234s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.643864s (0.0%%)   0.926076s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.023810s (0.0%%)   0.027673s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 2.917430s (0.2%%)   4.320835s (0.2%%)
+┃┃┃ computePsi : 2.759744s (0.2%%)   4.086238s (0.2%%)
+┃┃┃ Compute_Barrier : 0.021015s (0.0%%)   0.024363s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 9.087240s (0.6%%)   13.647474s (0.6%%)
+┃┃┃ computeStress : 0.636321s (0.0%%)   0.963739s (0.0%%)
+┃┃┃ elem2node : 6.832432s (0.4%%)   10.238496s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.068216s (0.0%%)   0.080164s (0.0%%)
+┃┃┃ Uncounted : 1.550272s (0.1%%)   2.365074s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 2m 13.778729s (8.3%%)   3m 18.332501s (8.2%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1m 19.405450s (4.9%%)   1m 57.854943s (4.9%%)
+┃┃┃┃ computeStressDerivative : 9.220559s (0.6%%)   13.819233s (0.6%%)
+┃┃┃┃ elem2node : 50.117033s (3.1%%)   1m 14.627882s (3.1%%)
+┃┃┃┃ Uncounted : 20.067857s (1.2%%)   29.407828s (1.2%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 53.076183s (3.3%%)   1m 18.639960s (3.3%%)
+┃┃┃ Compute_Barrier_Hessian : 1.294520s (0.1%%)   1.833963s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1m 58.630056s (7.4%%)   2m 56.501914s (7.3%%)
+┃┃ projectDBC : 4.438359s (0.3%%)   6.618656s (0.3%%)
+┃┃ linearSolve : 22m 0.802771s (82.1%%)   32m 49.696298s (81.7%%)
+┃┃ Compute_Min_Dist : 0.027420s (0.0%%)   0.032150s (0.0%%)
+┃┃┏ DBCStiff : 0.012707s (0.0%%)   0.061369s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.008499s (0.0%%)   0.036602s (0.0%%)
+┃┃┃┃ computePsi : 0.008171s (0.0%%)   0.035335s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000070s (0.0%%)   0.000211s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 7.502713s (0.5%%)   11.270003s (0.5%%)
+┃┗
+┃ computeDG : 0.003115s (0.0%%)   0.016423s (0.0%%)
+┃ Uncounted : 0.022744s (0.0%%)   8.100447s (0.3%%)
+┗
+span size = 0.0
+span size = 1.0
+span size = 1.0
+span size = 1.0
+span size = 1.0
+span size = 1.0
+span size = 1.0
+curMaxStepSize reduced
+span size = 1.0
+span size = 1.0
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.9
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.8
+span size = 0.7
+span size = 0.7
+span size = 0.7
+span size = 0.7
+span size = 0.7
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  712 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 6
+[##########                                        ]  20.000
+┏ Global : 24m 47.745236s (100.0%%)   1h 4m 57.957615s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004281s (0.0%%)   0.025946s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.005768s (0.0%%)   0.028623s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 24m 47.707485s (100.0%%)   1h 4m 49.758474s (99.8%%)
+┃┃ Compute Total Volume : 0.015332s (0.0%%)   0.084992s (0.0%%)
+┃┃ Compute XTilde : 0.000192s (0.0%%)   0.001142s (0.0%%)
+┃┃ Find Object Boundary : 1.015157s (0.1%%)   6.247460s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 5.273255s (0.4%%)   15.180030s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 2.383861s (0.2%%)   7.178563s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.524899s (0.0%%)   1.548976s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 2.010198s (0.1%%)   5.452122s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.918571s (0.1%%)   2.502410s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 3.091768s (0.2%%)   7.868031s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 1.852739s (0.1%%)   4.902614s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.191355s (0.0%%)   0.438589s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.708156s (0.0%%)   1.634232s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.028776s (0.0%%)   0.056449s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 2.981160s (0.2%%)   7.301995s (0.2%%)
+┃┃┃ computePsi : 2.759606s (0.2%%)   6.845844s (0.2%%)
+┃┃┃ Compute_Barrier : 0.027147s (0.0%%)   0.051510s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 8.608642s (0.6%%)   22.256116s (0.6%%)
+┃┃┃ computeStress : 0.607243s (0.0%%)   1.570983s (0.0%%)
+┃┃┃ elem2node : 6.345183s (0.4%%)   16.583679s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.084355s (0.0%%)   0.164519s (0.0%%)
+┃┃┃ Uncounted : 1.571861s (0.1%%)   3.936935s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 2m 4.097297s (8.3%%)   5m 22.429798s (8.3%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1m 13.688186s (5.0%%)   3m 11.543128s (4.9%%)
+┃┃┃┃ computeStressDerivative : 8.571730s (0.6%%)   22.390963s (0.6%%)
+┃┃┃┃ elem2node : 46.441078s (3.1%%)   2m 1.068961s (3.1%%)
+┃┃┃┃ Uncounted : 18.675377s (1.3%%)   48.083205s (1.2%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 49.148993s (3.3%%)   2m 7.788953s (3.3%%)
+┃┃┃ Compute_Barrier_Hessian : 1.257602s (0.1%%)   3.091566s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1m 49.687469s (7.4%%)   4m 46.189384s (7.3%%)
+┃┃ projectDBC : 4.104936s (0.3%%)   10.723592s (0.3%%)
+┃┃ linearSolve : 20m 20.915737s (82.1%%)   53m 10.612035s (81.9%%)
+┃┃ Compute_Min_Dist : 0.035101s (0.0%%)   0.067250s (0.0%%)
+┃┃┏ DBCStiff : 0.015238s (0.0%%)   0.076607s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.011312s (0.0%%)   0.047914s (0.0%%)
+┃┃┃┃ computePsi : 0.010832s (0.0%%)   0.046167s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000096s (0.0%%)   0.000307s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 6.947630s (0.5%%)   18.217632s (0.5%%)
+┃┗
+┃ computeDG : 0.003640s (0.0%%)   0.020063s (0.0%%)
+┃ Uncounted : 0.024063s (0.0%%)   8.124509s (0.2%%)
+┗
+span size = 0.0
+span size = 0.7
+span size = 0.7
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.6
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.5
+span size = 0.4
+span size = 0.4
+span size = 0.3
+span size = 0.3
+span size = 0.2
+span size = 0.1
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  811 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 7
+[###########                                       ]  23.333
+┏ Global : 9m 6.662079s (100.0%%)   1h 14m 4.619694s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004125s (0.0%%)   0.030071s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004511s (0.0%%)   0.033134s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 9m 6.627802s (100.0%%)   1h 13m 56.386276s (99.8%%)
+┃┃ Compute Total Volume : 0.013423s (0.0%%)   0.098415s (0.0%%)
+┃┃ Compute XTilde : 0.000191s (0.0%%)   0.001333s (0.0%%)
+┃┃ Find Object Boundary : 1.023657s (0.2%%)   7.271117s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 1.822438s (0.3%%)   17.002468s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.850183s (0.2%%)   8.028746s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.236043s (0.0%%)   1.785019s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.613873s (0.1%%)   6.065995s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.375908s (0.1%%)   2.878318s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 1.311354s (0.2%%)   9.179385s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.735026s (0.1%%)   5.637640s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.136976s (0.0%%)   0.575565s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.322135s (0.1%%)   1.956367s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.009647s (0.0%%)   0.066096s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 1.142978s (0.2%%)   8.444972s (0.2%%)
+┃┃┃ computePsi : 1.066297s (0.2%%)   7.912141s (0.2%%)
+┃┃┃ Compute_Barrier : 0.012220s (0.0%%)   0.063730s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 3.054223s (0.6%%)   25.310338s (0.6%%)
+┃┃┃ computeStress : 0.240126s (0.0%%)   1.811109s (0.0%%)
+┃┃┃ elem2node : 2.342354s (0.4%%)   18.926033s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.034925s (0.0%%)   0.199443s (0.0%%)
+┃┃┃ Uncounted : 0.436817s (0.1%%)   4.373753s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 45.996651s (8.4%%)   6m 8.426449s (8.3%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 27.288835s (5.0%%)   3m 38.831964s (4.9%%)
+┃┃┃┃ computeStressDerivative : 3.069137s (0.6%%)   25.460100s (0.6%%)
+┃┃┃┃ elem2node : 17.205801s (3.1%%)   2m 18.274761s (3.1%%)
+┃┃┃┃ Uncounted : 7.013898s (1.3%%)   55.097103s (1.2%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 18.229698s (3.3%%)   2m 26.018651s (3.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.477144s (0.1%%)   3.568710s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 40.314470s (7.4%%)   5m 26.503854s (7.3%%)
+┃┃ projectDBC : 1.495228s (0.3%%)   12.218821s (0.3%%)
+┃┃ linearSolve : 7m 27.367002s (81.8%%)   1h 37.979037s (81.9%%)
+┃┃ Compute_Min_Dist : 0.015155s (0.0%%)   0.082406s (0.0%%)
+┃┃┏ DBCStiff : 0.011017s (0.0%%)   0.087624s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.010623s (0.0%%)   0.058537s (0.0%%)
+┃┃┃┃ computePsi : 0.010091s (0.0%%)   0.056259s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000152s (0.0%%)   0.000459s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 2.684107s (0.5%%)   20.901739s (0.5%%)
+┃┗
+┃ computeDG : 0.002932s (0.0%%)   0.022995s (0.0%%)
+┃ Uncounted : 0.022708s (0.0%%)   8.147217s (0.2%%)
+┗
+span size = 0.0
+span size = 0.5
+span size = 0.5
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.3
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.4
+span size = 0.3
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  944 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 8
+[#############                                     ]  26.667
+┏ Global : 12m 14.873383s (100.0%%)   1h 26m 19.493077s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004152s (0.0%%)   0.034223s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004535s (0.0%%)   0.037670s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 12m 14.838539s (100.0%%)   1h 26m 11.224815s (99.8%%)
+┃┃ Compute Total Volume : 0.013118s (0.0%%)   0.111533s (0.0%%)
+┃┃ Compute XTilde : 0.000188s (0.0%%)   0.001521s (0.0%%)
+┃┃ Find Object Boundary : 1.013019s (0.1%%)   8.284137s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 1.974840s (0.3%%)   18.977308s (0.4%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 1.004058s (0.1%%)   9.032805s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.184459s (0.0%%)   1.969479s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.646315s (0.1%%)   6.712309s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.454023s (0.1%%)   3.332341s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 1.456946s (0.2%%)   10.636330s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.807771s (0.1%%)   6.445411s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.093485s (0.0%%)   0.669050s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.415912s (0.1%%)   2.372278s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.012603s (0.0%%)   0.078698s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 1.460044s (0.2%%)   9.905017s (0.2%%)
+┃┃┃ computePsi : 1.355244s (0.2%%)   9.267385s (0.2%%)
+┃┃┃ Compute_Barrier : 0.016293s (0.0%%)   0.080023s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 4.121333s (0.6%%)   29.431671s (0.6%%)
+┃┃┃ computeStress : 0.281050s (0.0%%)   2.092159s (0.0%%)
+┃┃┃ elem2node : 3.079225s (0.4%%)   22.005258s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.051094s (0.0%%)   0.250537s (0.0%%)
+┃┃┃ Uncounted : 0.709964s (0.1%%)   5.083717s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1m 2.956954s (8.6%%)   7m 11.383403s (8.3%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 37.471410s (5.1%%)   4m 16.303374s (4.9%%)
+┃┃┃┃ computeStressDerivative : 4.279797s (0.6%%)   29.739896s (0.6%%)
+┃┃┃┃ elem2node : 23.452332s (3.2%%)   2m 41.727094s (3.1%%)
+┃┃┃┃ Uncounted : 9.739282s (1.3%%)   1m 4.836384s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 24.883074s (3.4%%)   2m 50.901725s (3.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.601156s (0.1%%)   4.169866s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 54.656335s (7.4%%)   6m 21.160189s (7.4%%)
+┃┃ projectDBC : 2.009863s (0.3%%)   14.228684s (0.3%%)
+┃┃ linearSolve : 10m 1.036172s (81.8%%)   1h 10m 39.015209s (81.8%%)
+┃┃ Compute_Min_Dist : 0.021553s (0.0%%)   0.103958s (0.0%%)
+┃┃┏ DBCStiff : 0.007950s (0.0%%)   0.095574s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.007555s (0.0%%)   0.066092s (0.0%%)
+┃┃┃┃ computePsi : 0.007202s (0.0%%)   0.063461s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000106s (0.0%%)   0.000565s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 3.656200s (0.5%%)   24.557939s (0.5%%)
+┃┗
+┃ computeDG : 0.003238s (0.0%%)   0.026233s (0.0%%)
+┃ Uncounted : 0.022919s (0.0%%)   8.170136s (0.2%%)
+┗
+span size = 0.0
+span size = 0.3
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  1164 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 9
+[###############                                   ]  30.000
+┏ Global : 20m 11.365071s (100.0%%)   1h 46m 30.858147s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004130s (0.0%%)   0.038353s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004512s (0.0%%)   0.042181s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 20m 11.329592s (100.0%%)   1h 46m 22.554407s (99.9%%)
+┃┃ Compute Total Volume : 0.013114s (0.0%%)   0.124647s (0.0%%)
+┃┃ Compute XTilde : 0.000188s (0.0%%)   0.001709s (0.0%%)
+┃┃ Find Object Boundary : 1.007918s (0.1%%)   9.292055s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 3.039070s (0.3%%)   22.016377s (0.3%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 1.716553s (0.1%%)   10.749358s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.282256s (0.0%%)   2.251735s (0.0%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.821800s (0.1%%)   7.534109s (0.1%%)
+┃┃┗
+┃┃ computeDG : 0.738348s (0.1%%)   4.070688s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 2.098593s (0.2%%)   12.734923s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 1.162626s (0.1%%)   7.608037s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.123166s (0.0%%)   0.792216s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.594427s (0.0%%)   2.966706s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.019439s (0.0%%)   0.098138s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 2.158951s (0.2%%)   12.063968s (0.2%%)
+┃┃┃ computePsi : 2.028723s (0.2%%)   11.296108s (0.2%%)
+┃┃┃ Compute_Barrier : 0.019419s (0.0%%)   0.099442s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 6.750441s (0.6%%)   36.182113s (0.6%%)
+┃┃┃ computeStress : 0.480785s (0.0%%)   2.572944s (0.0%%)
+┃┃┃ elem2node : 5.091674s (0.4%%)   27.096933s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.062824s (0.0%%)   0.313361s (0.0%%)
+┃┃┃ Uncounted : 1.115158s (0.1%%)   6.198875s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1m 43.747409s (8.6%%)   8m 55.130812s (8.4%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1m 1.735552s (5.1%%)   5m 18.038926s (5.0%%)
+┃┃┃┃ computeStressDerivative : 6.925767s (0.6%%)   36.665663s (0.6%%)
+┃┃┃┃ elem2node : 38.832807s (3.2%%)   3m 20.559901s (3.1%%)
+┃┃┃┃ Uncounted : 15.976978s (1.3%%)   1m 20.813362s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 41.193045s (3.4%%)   3m 32.094770s (3.3%%)
+┃┃┃ Compute_Barrier_Hessian : 0.816869s (0.1%%)   4.986735s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1m 30.376209s (7.5%%)   7m 51.536399s (7.4%%)
+┃┃ projectDBC : 3.319488s (0.3%%)   17.548172s (0.3%%)
+┃┃ linearSolve : 16m 32.053261s (81.9%%)   1h 27m 11.068471s (81.9%%)
+┃┃ Compute_Min_Dist : 0.025456s (0.0%%)   0.129414s (0.0%%)
+┃┃┏ DBCStiff : 0.008295s (0.0%%)   0.103870s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.007632s (0.0%%)   0.073724s (0.0%%)
+┃┃┃┃ computePsi : 0.007189s (0.0%%)   0.070650s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000080s (0.0%%)   0.000645s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 5.992851s (0.5%%)   30.550790s (0.5%%)
+┃┗
+┃ computeDG : 0.003284s (0.0%%)   0.029517s (0.0%%)
+┃ Uncounted : 0.023554s (0.0%%)   8.193690s (0.1%%)
+┗
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.3
+span size = 0.4
+span size = 0.5
+span size = 0.4
+span size = 0.5
+span size = 0.4
+span size = 0.3
+span size = 0.3
+span size = 0.5
+span size = 0.3
+span size = 0.5
+span size = 0.3
+span size = 0.5
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.3
+span size = 0.4
+span size = 0.2
+span size = 0.4
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.4
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.3
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.2
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.1
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.1
+span size = 0.1
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2324 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 10
+[################                                  ]  33.333
+┏ Global : 1h 46m 24.822694s (100.0%%)   3h 32m 55.680842s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004118s (0.0%%)   0.042471s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004513s (0.0%%)   0.046695s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 1h 46m 24.787381s (100.0%%)   3h 32m 47.341788s (99.9%%)
+┃┃ Compute Total Volume : 0.013157s (0.0%%)   0.137803s (0.0%%)
+┃┃ Compute XTilde : 0.000190s (0.0%%)   0.001898s (0.0%%)
+┃┃ Find Object Boundary : 1.020644s (0.0%%)   10.312698s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 38.675328s (0.6%%)   1m 0.691706s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 18.360231s (0.3%%)   29.109589s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 4.496979s (0.1%%)   6.748714s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 13.393008s (0.2%%)   20.927117s (0.2%%)
+┃┃┗
+┃┃ computeDG : 3.932209s (0.1%%)   8.002898s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 10.295045s (0.2%%)   23.029968s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 6.698690s (0.1%%)   14.306726s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.631811s (0.0%%)   1.424027s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 1.835258s (0.0%%)   4.801964s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.033147s (0.0%%)   0.131285s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 10.619898s (0.2%%)   22.683866s (0.2%%)
+┃┃┃ computePsi : 10.165161s (0.2%%)   21.461269s (0.2%%)
+┃┃┃ Compute_Barrier : 0.006511s (0.0%%)   0.105953s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 35.948454s (0.6%%)   1m 12.130567s (0.6%%)
+┃┃┃ computeStress : 2.570955s (0.0%%)   5.143899s (0.0%%)
+┃┃┃ elem2node : 26.816473s (0.4%%)   53.913406s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.022655s (0.0%%)   0.336017s (0.0%%)
+┃┃┃ Uncounted : 6.538370s (0.1%%)   12.737245s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 9m 8.290070s (8.6%%)   18m 3.420882s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 5m 25.467782s (5.1%%)   10m 43.506708s (5.0%%)
+┃┃┃┃ computeStressDerivative : 35.056702s (0.5%%)   1m 11.722365s (0.6%%)
+┃┃┃┃ elem2node : 3m 25.536400s (3.2%%)   6m 46.096301s (3.2%%)
+┃┃┃┃ Uncounted : 1m 24.874680s (1.3%%)   2m 45.688043s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 3m 37.691489s (3.4%%)   7m 9.786259s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 5.122899s (0.1%%)   10.109634s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 7m 56.219202s (7.5%%)   15m 47.755601s (7.4%%)
+┃┃ projectDBC : 17.420498s (0.3%%)   34.968670s (0.3%%)
+┃┃ linearSolve : 1h 26m 49.560680s (81.6%%)   2h 54m 0.629150s (81.7%%)
+┃┃ Compute_Min_Dist : 0.007724s (0.0%%)   0.137139s (0.0%%)
+┃┃┏ DBCStiff : 0.049961s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.007883s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.007639s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000010s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 32.734321s (0.5%%)   1m 3.285112s (0.5%%)
+┃┗
+┃ computeDG : 0.003006s (0.0%%)   0.032523s (0.0%%)
+┃ Uncounted : 0.023675s (0.0%%)   8.217365s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2341 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 11
+[##################                                ]  36.667
+┏ Global : 1m 35.769275s (100.0%%)   3h 34m 31.450116s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004140s (0.0%%)   0.046611s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004492s (0.0%%)   0.051186s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 1m 35.735809s (100.0%%)   3h 34m 23.077597s (99.9%%)
+┃┃ Compute Total Volume : 0.013129s (0.0%%)   0.150933s (0.0%%)
+┃┃ Compute XTilde : 0.000190s (0.0%%)   0.002088s (0.0%%)
+┃┃ Find Object Boundary : 1.021749s (1.1%%)   11.334447s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.165892s (0.2%%)   1m 0.857598s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.098748s (0.1%%)   29.208337s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.015960s (0.0%%)   6.764674s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.032347s (0.0%%)   20.959464s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.057963s (0.1%%)   8.060860s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.146206s (0.2%%)   23.176174s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.092556s (0.1%%)   14.399283s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.009085s (0.0%%)   1.433112s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.027636s (0.0%%)   4.829600s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000473s (0.0%%)   0.131758s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.165759s (0.2%%)   22.849625s (0.2%%)
+┃┃┃ computePsi : 0.160247s (0.2%%)   21.621517s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000074s (0.0%%)   0.106027s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.522428s (0.5%%)   1m 12.652994s (0.6%%)
+┃┃┃ computeStress : 0.035582s (0.0%%)   5.179482s (0.0%%)
+┃┃┃ elem2node : 0.399070s (0.4%%)   54.312476s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000237s (0.0%%)   0.336254s (0.0%%)
+┃┃┃ Uncounted : 0.087538s (0.1%%)   12.824783s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 8.105952s (8.5%%)   18m 11.526835s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 4.842936s (5.1%%)   10m 48.349644s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.532220s (0.6%%)   1m 12.254585s (0.6%%)
+┃┃┃┃ elem2node : 3.008660s (3.1%%)   6m 49.104961s (3.2%%)
+┃┃┃┃ Uncounted : 1.302056s (1.4%%)   2m 46.990099s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 3.197389s (3.3%%)   7m 12.983647s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.065506s (0.1%%)   10.175140s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 6.993895s (7.3%%)   15m 54.749496s (7.4%%)
+┃┃ projectDBC : 0.254217s (0.3%%)   35.222886s (0.3%%)
+┃┃ linearSolve : 1m 17.753176s (81.2%%)   2h 55m 18.382326s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000083s (0.0%%)   0.137221s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.535171s (0.6%%)   1m 3.820283s (0.5%%)
+┃┗
+┃ computeDG : 0.003015s (0.0%%)   0.035538s (0.0%%)
+┃ Uncounted : 0.021819s (0.0%%)   8.239185s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.1
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2346 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 12
+[####################                              ]  40.000
+┏ Global : 28.828258s (100.0%%)   3h 35m 0.278374s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004111s (0.0%%)   0.050723s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004517s (0.0%%)   0.055703s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 28.794540s (99.9%%)   3h 34m 51.872137s (99.9%%)
+┃┃ Compute Total Volume : 0.013319s (0.0%%)   0.164252s (0.0%%)
+┃┃ Compute XTilde : 0.000220s (0.0%%)   0.002308s (0.0%%)
+┃┃ Find Object Boundary : 1.016159s (3.5%%)   12.350606s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.066106s (0.2%%)   1m 0.923704s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.044973s (0.2%%)   29.253310s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.005068s (0.0%%)   6.769742s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.009751s (0.0%%)   20.969214s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.020278s (0.1%%)   8.081138s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.050672s (0.2%%)   23.226845s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.032586s (0.1%%)   14.431869s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003057s (0.0%%)   1.436169s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.009275s (0.0%%)   4.838875s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000163s (0.0%%)   0.131921s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.055950s (0.2%%)   22.905575s (0.2%%)
+┃┃┃ computePsi : 0.054129s (0.2%%)   21.675646s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000025s (0.0%%)   0.106052s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.174925s (0.6%%)   1m 12.827920s (0.6%%)
+┃┃┃ computeStress : 0.011019s (0.0%%)   5.190500s (0.0%%)
+┃┃┃ elem2node : 0.144228s (0.5%%)   54.456704s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000064s (0.0%%)   0.336318s (0.0%%)
+┃┃┃ Uncounted : 0.019615s (0.1%%)   12.844398s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 2.369000s (8.2%%)   18m 13.895834s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1.412372s (4.9%%)   10m 49.762016s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.140772s (0.5%%)   1m 12.395356s (0.6%%)
+┃┃┃┃ elem2node : 0.893049s (3.1%%)   6m 49.998009s (3.2%%)
+┃┃┃┃ Uncounted : 0.378552s (1.3%%)   2m 47.368651s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.944005s (3.3%%)   7m 13.927653s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.012584s (0.0%%)   10.187725s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 2.063539s (7.2%%)   15m 56.813035s (7.4%%)
+┃┃ projectDBC : 0.074817s (0.3%%)   35.297703s (0.3%%)
+┃┃ linearSolve : 22.703007s (78.8%%)   2h 55m 41.085333s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000022s (0.0%%)   0.137244s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.186526s (0.6%%)   1m 4.006809s (0.5%%)
+┃┗
+┃ computeDG : 0.003373s (0.0%%)   0.038911s (0.0%%)
+┃ Uncounted : 0.021717s (0.1%%)   8.260901s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2350 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 13
+[#####################                             ]  43.333
+┏ Global : 23.315389s (100.0%%)   3h 35m 23.593764s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004146s (0.0%%)   0.054868s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004486s (0.0%%)   0.060189s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 23.264207s (99.8%%)   3h 35m 15.136344s (99.9%%)
+┃┃ Compute Total Volume : 0.013319s (0.1%%)   0.177572s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.002497s (0.0%%)
+┃┃ Find Object Boundary : 1.001913s (4.3%%)   13.352518s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.044410s (0.2%%)   1m 0.968114s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.026332s (0.1%%)   29.279642s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.004761s (0.0%%)   6.774503s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.008010s (0.0%%)   20.977224s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.016609s (0.1%%)   8.097747s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.046742s (0.2%%)   23.273588s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.026293s (0.1%%)   14.458162s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.002533s (0.0%%)   1.438702s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.012985s (0.1%%)   4.851859s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000142s (0.0%%)   0.132063s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.047262s (0.2%%)   22.952837s (0.2%%)
+┃┃┃ computePsi : 0.045842s (0.2%%)   21.721488s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000020s (0.0%%)   0.106072s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.138156s (0.6%%)   1m 12.966076s (0.6%%)
+┃┃┃ computeStress : 0.008313s (0.0%%)   5.198814s (0.0%%)
+┃┃┃ elem2node : 0.106065s (0.5%%)   54.562769s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000052s (0.0%%)   0.336370s (0.0%%)
+┃┃┃ Uncounted : 0.023726s (0.1%%)   12.868124s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.908101s (8.2%%)   18m 15.803935s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1.145577s (4.9%%)   10m 50.907594s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.140566s (0.6%%)   1m 12.535922s (0.6%%)
+┃┃┃┃ elem2node : 0.710760s (3.0%%)   6m 50.708770s (3.2%%)
+┃┃┃┃ Uncounted : 0.294252s (1.3%%)   2m 47.662902s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.754914s (3.2%%)   7m 14.682567s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.007578s (0.0%%)   10.195302s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.654850s (7.1%%)   15m 58.467886s (7.4%%)
+┃┃ projectDBC : 0.060185s (0.3%%)   35.357888s (0.3%%)
+┃┃ linearSolve : 18.197990s (78.1%%)   2h 55m 59.283322s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000018s (0.0%%)   0.137262s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.134462s (0.6%%)   1m 4.141271s (0.5%%)
+┃┗
+┃ computeDG : 0.015927s (0.1%%)   0.054838s (0.0%%)
+┃ Uncounted : 0.026624s (0.1%%)   8.287525s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2354 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 14
+[#######################                           ]  46.667
+┏ Global : 23.123331s (100.0%%)   3h 35m 46.717094s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004111s (0.0%%)   0.058979s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004488s (0.0%%)   0.064677s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 23.089966s (99.9%%)   3h 35m 38.226310s (99.9%%)
+┃┃ Compute Total Volume : 0.013374s (0.1%%)   0.190945s (0.0%%)
+┃┃ Compute XTilde : 0.000178s (0.0%%)   0.002675s (0.0%%)
+┃┃ Find Object Boundary : 1.010409s (4.4%%)   14.362927s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.044055s (0.2%%)   1m 1.012170s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.026907s (0.1%%)   29.306549s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.004074s (0.0%%)   6.778578s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.007846s (0.0%%)   20.985070s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.018717s (0.1%%)   8.116464s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.040833s (0.2%%)   23.314421s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.026108s (0.1%%)   14.484270s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.002793s (0.0%%)   1.441495s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.007206s (0.0%%)   4.859065s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000122s (0.0%%)   0.132185s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.048297s (0.2%%)   23.001134s (0.2%%)
+┃┃┃ computePsi : 0.045569s (0.2%%)   21.767057s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000021s (0.0%%)   0.106093s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.135238s (0.6%%)   1m 13.101313s (0.6%%)
+┃┃┃ computeStress : 0.009640s (0.0%%)   5.208454s (0.0%%)
+┃┃┃ elem2node : 0.105647s (0.5%%)   54.668416s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000054s (0.0%%)   0.336424s (0.0%%)
+┃┃┃ Uncounted : 0.019896s (0.1%%)   12.888020s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.873653s (8.1%%)   18m 17.677588s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 1.115369s (4.8%%)   10m 52.022962s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.113534s (0.5%%)   1m 12.649456s (0.6%%)
+┃┃┃┃ elem2node : 0.711183s (3.1%%)   6m 51.419952s (3.2%%)
+┃┃┃┃ Uncounted : 0.290652s (1.3%%)   2m 47.953554s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.751168s (3.2%%)   7m 15.433734s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.007092s (0.0%%)   10.202394s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.640303s (7.1%%)   16m 0.108189s (7.4%%)
+┃┃ projectDBC : 0.059856s (0.3%%)   35.417745s (0.3%%)
+┃┃ linearSolve : 18.086197s (78.2%%)   2h 56m 17.369520s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000017s (0.0%%)   0.137279s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.118838s (0.5%%)   1m 4.260109s (0.5%%)
+┃┗
+┃ computeDG : 0.003165s (0.0%%)   0.058004s (0.0%%)
+┃ Uncounted : 0.021600s (0.1%%)   8.309125s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2357 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 15
+[#########################                         ]  50.000
+┏ Global : 17.734137s (100.0%%)   3h 36m 4.451231s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004157s (0.0%%)   0.063137s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004503s (0.0%%)   0.069179s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.701771s (99.8%%)   3h 35m 55.928081s (99.9%%)
+┃┃ Compute Total Volume : 0.013026s (0.1%%)   0.203971s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.002864s (0.0%%)
+┃┃ Find Object Boundary : 1.026724s (5.8%%)   15.389651s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.035324s (0.2%%)   1m 1.047493s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021583s (0.1%%)   29.328132s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003212s (0.0%%)   6.781789s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006294s (0.0%%)   20.991365s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012981s (0.1%%)   8.129445s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.034841s (0.2%%)   23.349262s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.023387s (0.1%%)   14.507657s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001930s (0.0%%)   1.443425s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005680s (0.0%%)   4.864745s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000109s (0.0%%)   0.132294s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037062s (0.2%%)   23.038196s (0.2%%)
+┃┃┃ computePsi : 0.035889s (0.2%%)   21.802946s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106109s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.103989s (0.6%%)   1m 13.205302s (0.6%%)
+┃┃┃ computeStress : 0.005950s (0.0%%)   5.214404s (0.0%%)
+┃┃┃ elem2node : 0.082319s (0.5%%)   54.750735s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000038s (0.0%%)   0.336462s (0.0%%)
+┃┃┃ Uncounted : 0.015681s (0.1%%)   12.903701s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.420460s (8.0%%)   18m 19.098048s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.842356s (4.7%%)   10m 52.865318s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.092461s (0.5%%)   1m 12.741917s (0.6%%)
+┃┃┃┃ elem2node : 0.532151s (3.0%%)   6m 51.952103s (3.2%%)
+┃┃┃┃ Uncounted : 0.217743s (1.2%%)   2m 48.171298s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.564721s (3.2%%)   7m 15.998455s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.013361s (0.1%%)   10.215755s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.235501s (7.0%%)   16m 1.343690s (7.4%%)
+┃┃ projectDBC : 0.045205s (0.3%%)   35.462950s (0.3%%)
+┃┃ linearSolve : 13.627737s (76.8%%)   2h 56m 30.997257s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137292s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.108719s (0.6%%)   1m 4.368829s (0.5%%)
+┃┗
+┃ computeDG : 0.003012s (0.0%%)   0.061016s (0.0%%)
+┃ Uncounted : 0.020693s (0.1%%)   8.329818s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2360 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 16
+[##########################                        ]  53.333
+┏ Global : 17.745834s (100.0%%)   3h 36m 22.197065s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004107s (0.0%%)   0.067244s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004549s (0.0%%)   0.073728s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.709893s (99.8%%)   3h 36m 13.637974s (99.9%%)
+┃┃ Compute Total Volume : 0.013268s (0.1%%)   0.217239s (0.0%%)
+┃┃ Compute XTilde : 0.000196s (0.0%%)   0.003060s (0.0%%)
+┃┃ Find Object Boundary : 1.012112s (5.7%%)   16.401763s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034880s (0.2%%)   1m 1.082374s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021234s (0.1%%)   29.349366s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003202s (0.0%%)   6.784992s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006235s (0.0%%)   20.997600s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012348s (0.1%%)   8.141793s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.036599s (0.2%%)   23.385862s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.023904s (0.1%%)   14.531561s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.003179s (0.0%%)   1.446604s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005563s (0.0%%)   4.870308s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000109s (0.0%%)   0.132403s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.036702s (0.2%%)   23.074898s (0.2%%)
+┃┃┃ computePsi : 0.035557s (0.2%%)   21.838503s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000017s (0.0%%)   0.106125s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.092081s (0.5%%)   1m 13.297384s (0.6%%)
+┃┃┃ computeStress : 0.006310s (0.0%%)   5.220714s (0.0%%)
+┃┃┃ elem2node : 0.068113s (0.4%%)   54.818849s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000042s (0.0%%)   0.336504s (0.0%%)
+┃┃┃ Uncounted : 0.017616s (0.1%%)   12.921317s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.439366s (8.1%%)   18m 20.537414s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.855495s (4.8%%)   10m 53.720813s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.107699s (0.6%%)   1m 12.849616s (0.6%%)
+┃┃┃┃ elem2node : 0.533548s (3.0%%)   6m 52.485652s (3.2%%)
+┃┃┃┃ Uncounted : 0.214248s (1.2%%)   2m 48.385545s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.565383s (3.2%%)   7m 16.563838s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.018466s (0.1%%)   10.234221s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.225388s (6.9%%)   16m 2.569078s (7.4%%)
+┃┃ projectDBC : 0.045005s (0.3%%)   35.507955s (0.3%%)
+┃┃ linearSolve : 13.656968s (77.0%%)   2h 56m 44.654225s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000014s (0.0%%)   0.137305s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.104966s (0.6%%)   1m 4.473794s (0.5%%)
+┃┗
+┃ computeDG : 0.007038s (0.0%%)   0.068054s (0.0%%)
+┃ Uncounted : 0.020246s (0.1%%)   8.350065s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2363 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 17
+[############################                      ]  56.667
+┏ Global : 17.777380s (100.0%%)   3h 36m 39.974445s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004166s (0.0%%)   0.071410s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004501s (0.0%%)   0.078229s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.745326s (99.8%%)   3h 36m 31.383300s (99.9%%)
+┃┃ Compute Total Volume : 0.013118s (0.1%%)   0.230357s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.003249s (0.0%%)
+┃┃ Find Object Boundary : 1.024361s (5.8%%)   17.426124s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034301s (0.2%%)   1m 1.116675s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.020785s (0.1%%)   29.370150s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003141s (0.0%%)   6.788132s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006186s (0.0%%)   21.003786s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012500s (0.1%%)   8.154293s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.031099s (0.2%%)   23.416960s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.019800s (0.1%%)   14.551360s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001948s (0.0%%)   1.448552s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005573s (0.0%%)   4.875881s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000098s (0.0%%)   0.132501s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.036594s (0.2%%)   23.111493s (0.2%%)
+┃┃┃ computePsi : 0.035439s (0.2%%)   21.873942s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106141s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.103498s (0.6%%)   1m 13.400882s (0.6%%)
+┃┃┃ computeStress : 0.006248s (0.0%%)   5.226962s (0.0%%)
+┃┃┃ elem2node : 0.082050s (0.5%%)   54.900898s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000042s (0.0%%)   0.336546s (0.0%%)
+┃┃┃ Uncounted : 0.015158s (0.1%%)   12.936475s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.435737s (8.1%%)   18m 21.973151s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.852012s (4.8%%)   10m 54.572825s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.086298s (0.5%%)   1m 12.935914s (0.6%%)
+┃┃┃┃ elem2node : 0.538014s (3.0%%)   6m 53.023666s (3.2%%)
+┃┃┃┃ Uncounted : 0.227699s (1.3%%)   2m 48.613245s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.567565s (3.2%%)   7m 17.131403s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.016142s (0.1%%)   10.250363s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.240357s (7.0%%)   16m 3.809434s (7.4%%)
+┃┃ projectDBC : 0.045432s (0.3%%)   35.553387s (0.3%%)
+┃┃ linearSolve : 13.678106s (76.9%%)   2h 56m 58.332331s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137317s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.090021s (0.5%%)   1m 4.563816s (0.5%%)
+┃┗
+┃ computeDG : 0.003015s (0.0%%)   0.071069s (0.0%%)
+┃ Uncounted : 0.020373s (0.1%%)   8.370437s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2366 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 18
+[##############################                    ]  60.000
+┏ Global : 17.567393s (100.0%%)   3h 36m 57.541839s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004114s (0.0%%)   0.075524s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004489s (0.0%%)   0.082718s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.533776s (99.8%%)   3h 36m 48.917076s (99.9%%)
+┃┃ Compute Total Volume : 0.013121s (0.1%%)   0.243479s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.003438s (0.0%%)
+┃┃ Find Object Boundary : 1.015174s (5.8%%)   18.441298s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.041227s (0.2%%)   1m 1.157901s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.027679s (0.2%%)   29.397830s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003193s (0.0%%)   6.791325s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006210s (0.0%%)   21.009996s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012981s (0.1%%)   8.167274s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.036859s (0.2%%)   23.453820s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.025438s (0.1%%)   14.576798s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001899s (0.0%%)   1.450451s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005691s (0.0%%)   4.881572s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000110s (0.0%%)   0.132611s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.036861s (0.2%%)   23.148354s (0.2%%)
+┃┃┃ computePsi : 0.035644s (0.2%%)   21.909586s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106156s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.084119s (0.5%%)   1m 13.485000s (0.6%%)
+┃┃┃ computeStress : 0.005920s (0.0%%)   5.232883s (0.0%%)
+┃┃┃ elem2node : 0.067995s (0.4%%)   54.968894s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000037s (0.0%%)   0.336583s (0.0%%)
+┃┃┃ Uncounted : 0.010166s (0.1%%)   12.946641s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.434178s (8.2%%)   18m 23.407330s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.865047s (4.9%%)   10m 55.437872s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.105429s (0.6%%)   1m 13.041343s (0.6%%)
+┃┃┃┃ elem2node : 0.535631s (3.0%%)   6m 53.559298s (3.2%%)
+┃┃┃┃ Uncounted : 0.223987s (1.3%%)   2m 48.837231s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.562823s (3.2%%)   7m 17.694226s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.006283s (0.0%%)   10.256646s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.222652s (7.0%%)   16m 5.032086s (7.4%%)
+┃┃ projectDBC : 0.045097s (0.3%%)   35.598484s (0.3%%)
+┃┃ linearSolve : 13.497518s (76.8%%)   2h 57m 11.829849s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137330s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.093787s (0.5%%)   1m 4.657602s (0.5%%)
+┃┗
+┃ computeDG : 0.003379s (0.0%%)   0.074447s (0.0%%)
+┃ Uncounted : 0.021637s (0.1%%)   8.392074s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2369 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 19
+[###############################                   ]  63.333
+┏ Global : 17.800010s (100.0%%)   3h 37m 15.341848s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.005356s (0.0%%)   0.080880s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.005727s (0.0%%)   0.088445s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.765337s (99.8%%)   3h 37m 6.682413s (99.9%%)
+┃┃ Compute Total Volume : 0.012833s (0.1%%)   0.256312s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.003627s (0.0%%)
+┃┃ Find Object Boundary : 1.023598s (5.8%%)   19.464896s (0.1%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034260s (0.2%%)   1m 1.192162s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.020778s (0.1%%)   29.418607s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003172s (0.0%%)   6.794498s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006104s (0.0%%)   21.016099s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013237s (0.1%%)   8.180512s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.037398s (0.2%%)   23.491217s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020724s (0.1%%)   14.597522s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.007279s (0.0%%)   1.457730s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005582s (0.0%%)   4.887154s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000113s (0.0%%)   0.132724s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.038131s (0.2%%)   23.186484s (0.2%%)
+┃┃┃ computePsi : 0.036933s (0.2%%)   21.946520s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106171s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.115978s (0.7%%)   1m 13.600979s (0.6%%)
+┃┃┃ computeStress : 0.006374s (0.0%%)   5.239257s (0.0%%)
+┃┃┃ elem2node : 0.105604s (0.6%%)   55.074498s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000037s (0.0%%)   0.336620s (0.0%%)
+┃┃┃ Uncounted : 0.003963s (0.0%%)   12.950604s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.424442s (8.0%%)   18m 24.831772s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.849705s (4.8%%)   10m 56.287577s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.095873s (0.5%%)   1m 13.137216s (0.6%%)
+┃┃┃┃ elem2node : 0.539895s (3.0%%)   6m 54.099193s (3.2%%)
+┃┃┃┃ Uncounted : 0.213937s (1.2%%)   2m 49.051169s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.568298s (3.2%%)   7m 18.262524s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.006417s (0.0%%)   10.263063s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.241941s (7.0%%)   16m 6.274027s (7.4%%)
+┃┃ projectDBC : 0.045364s (0.3%%)   35.643848s (0.3%%)
+┃┃ linearSolve : 13.681888s (76.9%%)   2h 57m 25.511737s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137342s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.096064s (0.5%%)   1m 4.753667s (0.5%%)
+┃┗
+┃ computeDG : 0.003018s (0.0%%)   0.077466s (0.0%%)
+┃ Uncounted : 0.020570s (0.1%%)   8.412644s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2372 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 20
+[#################################                 ]  66.667
+┏ Global : 17.617835s (100.0%%)   3h 37m 32.959683s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004127s (0.0%%)   0.085007s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004519s (0.0%%)   0.092964s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.585543s (99.8%%)   3h 37m 24.267956s (99.9%%)
+┃┃ Compute Total Volume : 0.013312s (0.1%%)   0.269623s (0.0%%)
+┃┃ Compute XTilde : 0.000192s (0.0%%)   0.003819s (0.0%%)
+┃┃ Find Object Boundary : 1.006915s (5.7%%)   20.471811s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034542s (0.2%%)   1m 1.226704s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021129s (0.1%%)   29.439736s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003145s (0.0%%)   6.797643s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006125s (0.0%%)   21.022225s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012800s (0.1%%)   8.193312s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.031456s (0.2%%)   23.522673s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020156s (0.1%%)   14.617678s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001854s (0.0%%)   1.459584s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005546s (0.0%%)   4.892700s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000106s (0.0%%)   0.132830s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037122s (0.2%%)   23.223607s (0.2%%)
+┃┃┃ computePsi : 0.035969s (0.2%%)   21.982489s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106187s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.099964s (0.6%%)   1m 13.700943s (0.6%%)
+┃┃┃ computeStress : 0.007093s (0.0%%)   5.246350s (0.0%%)
+┃┃┃ elem2node : 0.085277s (0.5%%)   55.159775s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000037s (0.0%%)   0.336657s (0.0%%)
+┃┃┃ Uncounted : 0.007557s (0.0%%)   12.958160s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.444730s (8.2%%)   18m 26.276502s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.853319s (4.8%%)   10m 57.140897s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.096982s (0.6%%)   1m 13.234198s (0.6%%)
+┃┃┃┃ elem2node : 0.537503s (3.1%%)   6m 54.636696s (3.2%%)
+┃┃┃┃ Uncounted : 0.218834s (1.2%%)   2m 49.270002s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.564762s (3.2%%)   7m 18.827287s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.026627s (0.2%%)   10.289691s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.239786s (7.0%%)   16m 7.513813s (7.4%%)
+┃┃ projectDBC : 0.045331s (0.3%%)   35.689179s (0.3%%)
+┃┃ linearSolve : 13.484948s (76.5%%)   2h 57m 38.996685s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137354s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.134433s (0.8%%)   1m 4.888099s (0.5%%)
+┃┗
+┃ computeDG : 0.003276s (0.0%%)   0.080742s (0.0%%)
+┃ Uncounted : 0.020370s (0.1%%)   8.433015s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2375 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 21
+[###################################               ]  70.000
+┏ Global : 17.753397s (100.0%%)   3h 37m 50.713081s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004185s (0.0%%)   0.089192s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004500s (0.0%%)   0.097464s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.719627s (99.8%%)   3h 37m 41.987584s (99.9%%)
+┃┃ Compute Total Volume : 0.013020s (0.1%%)   0.282644s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.004008s (0.0%%)
+┃┃ Find Object Boundary : 1.028743s (5.8%%)   21.500554s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034885s (0.2%%)   1m 1.261589s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021337s (0.1%%)   29.461073s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003252s (0.0%%)   6.800895s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006182s (0.0%%)   21.028407s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.014030s (0.1%%)   8.207342s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.032470s (0.2%%)   23.555143s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.021056s (0.1%%)   14.638734s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001967s (0.0%%)   1.461551s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005666s (0.0%%)   4.898366s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000103s (0.0%%)   0.132933s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.038592s (0.2%%)   23.262199s (0.2%%)
+┃┃┃ computePsi : 0.037415s (0.2%%)   22.019904s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000017s (0.0%%)   0.106204s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.088611s (0.5%%)   1m 13.789554s (0.6%%)
+┃┃┃ computeStress : 0.007175s (0.0%%)   5.253525s (0.0%%)
+┃┃┃ elem2node : 0.068491s (0.4%%)   55.228266s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000033s (0.0%%)   0.336691s (0.0%%)
+┃┃┃ Uncounted : 0.012912s (0.1%%)   12.971073s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.437387s (8.1%%)   18m 27.713889s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.861761s (4.9%%)   10m 58.002657s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.098931s (0.6%%)   1m 13.333130s (0.6%%)
+┃┃┃┃ elem2node : 0.538548s (3.0%%)   6m 55.175244s (3.2%%)
+┃┃┃┃ Uncounted : 0.224281s (1.3%%)   2m 49.494284s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.563830s (3.2%%)   7m 19.391116s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.011778s (0.1%%)   10.301468s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.225913s (6.9%%)   16m 8.739726s (7.4%%)
+┃┃ projectDBC : 0.045169s (0.3%%)   35.734349s (0.3%%)
+┃┃ linearSolve : 13.655216s (76.9%%)   2h 57m 52.651901s (81.7%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137367s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.105389s (0.6%%)   1m 4.993489s (0.5%%)
+┃┗
+┃ computeDG : 0.003652s (0.0%%)   0.084394s (0.0%%)
+┃ Uncounted : 0.021433s (0.1%%)   8.454448s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2378 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 22
+[####################################              ]  73.333
+┏ Global : 17.663890s (100.0%%)   3h 38m 8.376971s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004187s (0.0%%)   0.093379s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004495s (0.0%%)   0.101959s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.610575s (99.7%%)   3h 37m 59.598158s (99.9%%)
+┃┃ Compute Total Volume : 0.013025s (0.1%%)   0.295669s (0.0%%)
+┃┃ Compute XTilde : 0.000193s (0.0%%)   0.004201s (0.0%%)
+┃┃ Find Object Boundary : 1.019275s (5.8%%)   22.519830s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.035236s (0.2%%)   1m 1.296825s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021564s (0.1%%)   29.482637s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003332s (0.0%%)   6.804227s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006257s (0.0%%)   21.034664s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012712s (0.1%%)   8.220053s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.031976s (0.2%%)   23.587119s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020765s (0.1%%)   14.659500s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001832s (0.0%%)   1.463383s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005665s (0.0%%)   4.904031s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000106s (0.0%%)   0.133039s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.036489s (0.2%%)   23.298687s (0.2%%)
+┃┃┃ computePsi : 0.035344s (0.2%%)   22.055248s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106219s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.113050s (0.6%%)   1m 13.902605s (0.6%%)
+┃┃┃ computeStress : 0.006045s (0.0%%)   5.259570s (0.0%%)
+┃┃┃ elem2node : 0.096751s (0.5%%)   55.325017s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000036s (0.0%%)   0.336727s (0.0%%)
+┃┃┃ Uncounted : 0.010218s (0.1%%)   12.981291s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.429148s (8.1%%)   18m 29.143037s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.860987s (4.9%%)   10m 58.863645s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.098647s (0.6%%)   1m 13.431777s (0.6%%)
+┃┃┃┃ elem2node : 0.539604s (3.1%%)   6m 55.714848s (3.2%%)
+┃┃┃┃ Uncounted : 0.222736s (1.3%%)   2m 49.717019s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.567397s (3.2%%)   7m 19.958514s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.000742s (0.0%%)   10.302211s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.251725s (7.1%%)   16m 9.991452s (7.4%%)
+┃┃ projectDBC : 0.045885s (0.3%%)   35.780234s (0.3%%)
+┃┃ linearSolve : 13.511048s (76.5%%)   2h 58m 6.162950s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137379s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.110799s (0.6%%)   1m 5.104288s (0.5%%)
+┃┗
+┃ computeDG : 0.015894s (0.1%%)   0.100288s (0.0%%)
+┃ Uncounted : 0.028740s (0.2%%)   8.483187s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2381 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 23
+[######################################            ]  76.667
+┏ Global : 17.566754s (100.0%%)   3h 38m 25.943726s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004111s (0.0%%)   0.097489s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004515s (0.0%%)   0.106473s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.534064s (99.8%%)   3h 38m 17.132222s (99.9%%)
+┃┃ Compute Total Volume : 0.013148s (0.1%%)   0.308816s (0.0%%)
+┃┃ Compute XTilde : 0.000197s (0.0%%)   0.004398s (0.0%%)
+┃┃ Find Object Boundary : 1.005139s (5.7%%)   23.524968s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.035052s (0.2%%)   1m 1.331878s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021596s (0.1%%)   29.504233s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003098s (0.0%%)   6.807325s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006304s (0.0%%)   21.040968s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013421s (0.1%%)   8.233474s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.032009s (0.2%%)   23.619128s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020732s (0.1%%)   14.680231s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001823s (0.0%%)   1.465206s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005754s (0.0%%)   4.909785s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000106s (0.0%%)   0.133145s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037682s (0.2%%)   23.336369s (0.2%%)
+┃┃┃ computePsi : 0.036545s (0.2%%)   22.091792s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106235s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.102338s (0.6%%)   1m 14.004943s (0.6%%)
+┃┃┃ computeStress : 0.005932s (0.0%%)   5.265503s (0.0%%)
+┃┃┃ elem2node : 0.083061s (0.5%%)   55.408078s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000039s (0.0%%)   0.336766s (0.0%%)
+┃┃┃ Uncounted : 0.013306s (0.1%%)   12.994596s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.407685s (8.0%%)   18m 30.550722s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.835098s (4.8%%)   10m 59.698743s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.086521s (0.5%%)   1m 13.518297s (0.6%%)
+┃┃┃┃ elem2node : 0.535203s (3.0%%)   6m 56.250051s (3.2%%)
+┃┃┃┃ Uncounted : 0.213375s (1.2%%)   2m 49.930394s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.565920s (3.2%%)   7m 20.524433s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.006647s (0.0%%)   10.308858s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.237219s (7.0%%)   16m 11.228671s (7.4%%)
+┃┃ projectDBC : 0.045301s (0.3%%)   35.825535s (0.3%%)
+┃┃ linearSolve : 13.504056s (76.9%%)   2h 58m 19.667005s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137393s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.100803s (0.6%%)   1m 5.205091s (0.5%%)
+┃┗
+┃ computeDG : 0.003094s (0.0%%)   0.103382s (0.0%%)
+┃ Uncounted : 0.020971s (0.1%%)   8.504159s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2384 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 24
+[########################################          ]  80.000
+┏ Global : 17.599190s (100.0%%)   3h 38m 43.542916s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004143s (0.0%%)   0.101632s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004512s (0.0%%)   0.110985s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.565347s (99.8%%)   3h 38m 34.697569s (99.9%%)
+┃┃ Compute Total Volume : 0.013055s (0.1%%)   0.321871s (0.0%%)
+┃┃ Compute XTilde : 0.000283s (0.0%%)   0.004681s (0.0%%)
+┃┃ Find Object Boundary : 1.022217s (5.8%%)   24.547185s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034900s (0.2%%)   1m 1.366778s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021488s (0.1%%)   29.525721s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003114s (0.0%%)   6.810439s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006236s (0.0%%)   21.047204s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013627s (0.1%%)   8.247102s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.032178s (0.2%%)   23.651306s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020695s (0.1%%)   14.700926s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001980s (0.0%%)   1.467186s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005729s (0.0%%)   4.915514s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000098s (0.0%%)   0.133243s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.042697s (0.2%%)   23.379067s (0.2%%)
+┃┃┃ computePsi : 0.039448s (0.2%%)   22.131240s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000017s (0.0%%)   0.106252s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.087593s (0.5%%)   1m 14.092536s (0.6%%)
+┃┃┃ computeStress : 0.007037s (0.0%%)   5.272540s (0.0%%)
+┃┃┃ elem2node : 0.068076s (0.4%%)   55.476154s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000039s (0.0%%)   0.336805s (0.0%%)
+┃┃┃ Uncounted : 0.012441s (0.1%%)   13.007038s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.417703s (8.1%%)   18m 31.968425s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.851306s (4.8%%)   11m 0.550049s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.095071s (0.5%%)   1m 13.613368s (0.6%%)
+┃┃┃┃ elem2node : 0.536899s (3.1%%)   6m 56.786950s (3.2%%)
+┃┃┃┃ Uncounted : 0.219336s (1.2%%)   2m 50.149731s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.563951s (3.2%%)   7m 21.088384s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.002425s (0.0%%)   10.311283s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.207256s (6.9%%)   16m 12.435927s (7.4%%)
+┃┃ projectDBC : 0.044693s (0.3%%)   35.870228s (0.3%%)
+┃┃ linearSolve : 13.535693s (76.9%%)   2h 58m 33.202699s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137405s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.113439s (0.6%%)   1m 5.318530s (0.5%%)
+┃┗
+┃ computeDG : 0.003673s (0.0%%)   0.107055s (0.0%%)
+┃ Uncounted : 0.021515s (0.1%%)   8.525674s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2387 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 25
+[#########################################         ]  83.333
+┏ Global : 17.645466s (100.0%%)   3h 39m 1.188382s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004132s (0.0%%)   0.105764s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004504s (0.0%%)   0.115490s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.612425s (99.8%%)   3h 38m 52.309994s (99.9%%)
+┃┃ Compute Total Volume : 0.012980s (0.1%%)   0.334851s (0.0%%)
+┃┃ Compute XTilde : 0.000188s (0.0%%)   0.004869s (0.0%%)
+┃┃ Find Object Boundary : 1.019766s (5.8%%)   25.566951s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.036460s (0.2%%)   1m 1.403238s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.022787s (0.1%%)   29.548508s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003239s (0.0%%)   6.813678s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006251s (0.0%%)   21.053455s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013456s (0.1%%)   8.260557s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.038992s (0.2%%)   23.690297s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.026239s (0.1%%)   14.727165s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.002066s (0.0%%)   1.469252s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.006670s (0.0%%)   4.922184s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000126s (0.0%%)   0.133369s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.036789s (0.2%%)   23.415856s (0.2%%)
+┃┃┃ computePsi : 0.035643s (0.2%%)   22.166883s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106268s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.109497s (0.6%%)   1m 14.202033s (0.6%%)
+┃┃┃ computeStress : 0.006242s (0.0%%)   5.278781s (0.0%%)
+┃┃┃ elem2node : 0.082442s (0.5%%)   55.558596s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000042s (0.0%%)   0.336847s (0.0%%)
+┃┃┃ Uncounted : 0.020771s (0.1%%)   13.027809s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.417236s (8.0%%)   18m 33.385662s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.853483s (4.8%%)   11m 1.403532s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.085425s (0.5%%)   1m 13.698793s (0.6%%)
+┃┃┃┃ elem2node : 0.540391s (3.1%%)   6m 57.327341s (3.2%%)
+┃┃┃┃ Uncounted : 0.227668s (1.3%%)   2m 50.377398s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.562447s (3.2%%)   7m 21.650831s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.001286s (0.0%%)   10.312569s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.238400s (7.0%%)   16m 13.674327s (7.4%%)
+┃┃ projectDBC : 0.044918s (0.3%%)   35.915146s (0.3%%)
+┃┃ linearSolve : 13.546476s (76.8%%)   2h 58m 46.749174s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137418s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.097254s (0.6%%)   1m 5.415783s (0.5%%)
+┃┗
+┃ computeDG : 0.003025s (0.0%%)   0.110080s (0.0%%)
+┃ Uncounted : 0.021380s (0.1%%)   8.547054s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2390 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 26
+[###########################################       ]  86.667
+┏ Global : 17.762785s (100.0%%)   3h 39m 18.951168s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004134s (0.0%%)   0.109898s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004507s (0.0%%)   0.119997s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.730338s (99.8%%)   3h 39m 10.040332s (99.9%%)
+┃┃ Compute Total Volume : 0.013246s (0.1%%)   0.348097s (0.0%%)
+┃┃ Compute XTilde : 0.000187s (0.0%%)   0.005056s (0.0%%)
+┃┃ Find Object Boundary : 1.036884s (5.8%%)   26.603835s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.035987s (0.2%%)   1m 1.439225s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021623s (0.1%%)   29.570131s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003258s (0.0%%)   6.816936s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006786s (0.0%%)   21.060241s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.015816s (0.1%%)   8.276374s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.034248s (0.2%%)   23.724545s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.022555s (0.1%%)   14.749720s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.002081s (0.0%%)   1.471333s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005635s (0.0%%)   4.927820s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000099s (0.0%%)   0.133469s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.034289s (0.2%%)   23.450145s (0.2%%)
+┃┃┃ computePsi : 0.033193s (0.2%%)   22.200076s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106283s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.086879s (0.5%%)   1m 14.288912s (0.6%%)
+┃┃┃ computeStress : 0.005863s (0.0%%)   5.284644s (0.0%%)
+┃┃┃ elem2node : 0.067839s (0.4%%)   55.626435s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000037s (0.0%%)   0.336884s (0.0%%)
+┃┃┃ Uncounted : 0.013140s (0.1%%)   13.040949s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.396604s (7.9%%)   18m 34.782266s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.831995s (4.7%%)   11m 2.235527s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.085130s (0.5%%)   1m 13.783924s (0.6%%)
+┃┃┃┃ elem2node : 0.533754s (3.0%%)   6m 57.861095s (3.2%%)
+┃┃┃┃ Uncounted : 0.213110s (1.2%%)   2m 50.590508s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.563011s (3.2%%)   7m 22.213843s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.001576s (0.0%%)   10.314145s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.223964s (6.9%%)   16m 14.898291s (7.4%%)
+┃┃ projectDBC : 0.045045s (0.3%%)   35.960191s (0.3%%)
+┃┃ linearSolve : 13.704076s (77.2%%)   2h 59m 0.453250s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137431s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.103101s (0.6%%)   1m 5.518884s (0.5%%)
+┃┗
+┃ computeDG : 0.003000s (0.0%%)   0.113080s (0.0%%)
+┃ Uncounted : 0.020806s (0.1%%)   8.567860s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2393 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 27
+[#############################################     ]  90.000
+┏ Global : 17.713346s (100.0%%)   3h 39m 36.664514s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004124s (0.0%%)   0.114022s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004488s (0.0%%)   0.124485s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.680437s (99.8%%)   3h 39m 27.720770s (99.9%%)
+┃┃ Compute Total Volume : 0.013087s (0.1%%)   0.361184s (0.0%%)
+┃┃ Compute XTilde : 0.000226s (0.0%%)   0.005282s (0.0%%)
+┃┃ Find Object Boundary : 1.008274s (5.7%%)   27.612109s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034558s (0.2%%)   1m 1.473783s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.020985s (0.1%%)   29.591117s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003238s (0.0%%)   6.820174s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006032s (0.0%%)   21.066273s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012537s (0.1%%)   8.288911s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.031617s (0.2%%)   23.756162s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020231s (0.1%%)   14.769951s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001949s (0.0%%)   1.473282s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005557s (0.0%%)   4.933376s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000106s (0.0%%)   0.133575s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037043s (0.2%%)   23.487189s (0.2%%)
+┃┃┃ computePsi : 0.035918s (0.2%%)   22.235994s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106299s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.105490s (0.6%%)   1m 14.394402s (0.6%%)
+┃┃┃ computeStress : 0.005916s (0.0%%)   5.290560s (0.0%%)
+┃┃┃ elem2node : 0.083336s (0.5%%)   55.709771s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000042s (0.0%%)   0.336925s (0.0%%)
+┃┃┃ Uncounted : 0.016196s (0.1%%)   13.057146s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.441555s (8.1%%)   18m 36.223821s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.857204s (4.8%%)   11m 3.092730s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.097745s (0.6%%)   1m 13.881668s (0.6%%)
+┃┃┃┃ elem2node : 0.543118s (3.1%%)   6m 58.404213s (3.2%%)
+┃┃┃┃ Uncounted : 0.216342s (1.2%%)   2m 50.806850s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.568186s (3.2%%)   7m 22.782029s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.016140s (0.1%%)   10.330285s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.236732s (7.0%%)   16m 16.135023s (7.4%%)
+┃┃ projectDBC : 0.045238s (0.3%%)   36.005429s (0.3%%)
+┃┃ linearSolve : 13.595488s (76.8%%)   2h 59m 14.048738s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000015s (0.0%%)   0.137446s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.118579s (0.7%%)   1m 5.637463s (0.5%%)
+┃┗
+┃ computeDG : 0.002940s (0.0%%)   0.116020s (0.0%%)
+┃ Uncounted : 0.021357s (0.1%%)   8.589217s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2396 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 28
+[##############################################    ]  93.333
+┏ Global : 18.008171s (100.0%%)   3h 39m 54.672685s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004243s (0.0%%)   0.118266s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004501s (0.0%%)   0.128986s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.973776s (99.8%%)   3h 39m 45.694546s (99.9%%)
+┃┃ Compute Total Volume : 0.013335s (0.1%%)   0.374519s (0.0%%)
+┃┃ Compute XTilde : 0.000173s (0.0%%)   0.005455s (0.0%%)
+┃┃ Find Object Boundary : 1.255822s (7.0%%)   28.867931s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034644s (0.2%%)   1m 1.508426s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021055s (0.1%%)   29.612172s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003222s (0.0%%)   6.823396s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006071s (0.0%%)   21.072343s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.012808s (0.1%%)   8.301719s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.037102s (0.2%%)   23.793264s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020444s (0.1%%)   14.790395s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.006914s (0.0%%)   1.480196s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005790s (0.0%%)   4.939167s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000110s (0.0%%)   0.133685s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037829s (0.2%%)   23.525017s (0.2%%)
+┃┃┃ computePsi : 0.036684s (0.2%%)   22.272678s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000016s (0.0%%)   0.106315s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.110867s (0.6%%)   1m 14.505268s (0.6%%)
+┃┃┃ computeStress : 0.006246s (0.0%%)   5.296806s (0.0%%)
+┃┃┃ elem2node : 0.082169s (0.5%%)   55.791940s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000040s (0.0%%)   0.336966s (0.0%%)
+┃┃┃ Uncounted : 0.022411s (0.1%%)   13.079557s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.409416s (7.8%%)   18m 37.633236s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.838381s (4.7%%)   11m 3.931111s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.088236s (0.5%%)   1m 13.969904s (0.6%%)
+┃┃┃┃ elem2node : 0.535044s (3.0%%)   6m 58.939257s (3.2%%)
+┃┃┃┃ Uncounted : 0.215100s (1.2%%)   2m 51.021950s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.564493s (3.1%%)   7m 23.346522s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.006522s (0.0%%)   10.336806s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.221878s (6.8%%)   16m 17.356901s (7.4%%)
+┃┃ projectDBC : 0.045228s (0.3%%)   36.050656s (0.3%%)
+┃┃ linearSolve : 13.704002s (76.1%%)   2h 59m 27.752740s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137458s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.090661s (0.5%%)   1m 5.728124s (0.5%%)
+┃┗
+┃ computeDG : 0.003731s (0.0%%)   0.119751s (0.0%%)
+┃ Uncounted : 0.021920s (0.1%%)   8.611137s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2399 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 29
+[################################################  ]  96.667
+┏ Global : 17.843820s (100.0%%)   3h 40m 12.516505s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004139s (0.0%%)   0.122404s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004488s (0.0%%)   0.133474s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.810822s (99.8%%)   3h 40m 3.505368s (99.9%%)
+┃┃ Compute Total Volume : 0.013051s (0.1%%)   0.387570s (0.0%%)
+┃┃ Compute XTilde : 0.000189s (0.0%%)   0.005644s (0.0%%)
+┃┃ Find Object Boundary : 1.004586s (5.6%%)   29.872517s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.034724s (0.2%%)   1m 1.543150s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.021141s (0.1%%)   29.633313s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003196s (0.0%%)   6.826593s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006123s (0.0%%)   21.078467s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013404s (0.1%%)   8.315123s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.038491s (0.2%%)   23.831755s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.026436s (0.1%%)   14.816831s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001898s (0.0%%)   1.482094s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.006140s (0.0%%)   4.945307s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000115s (0.0%%)   0.133799s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.037292s (0.2%%)   23.562309s (0.2%%)
+┃┃┃ computePsi : 0.035922s (0.2%%)   22.308600s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106330s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.096781s (0.5%%)   1m 14.602049s (0.6%%)
+┃┃┃ computeStress : 0.006233s (0.0%%)   5.303039s (0.0%%)
+┃┃┃ elem2node : 0.082250s (0.5%%)   55.874190s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000037s (0.0%%)   0.337003s (0.0%%)
+┃┃┃ Uncounted : 0.008261s (0.0%%)   13.087817s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.395739s (7.8%%)   18m 39.028976s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.830967s (4.7%%)   11m 4.762078s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.082499s (0.5%%)   1m 14.052404s (0.6%%)
+┃┃┃┃ elem2node : 0.533244s (3.0%%)   6m 59.472501s (3.2%%)
+┃┃┃┃ Uncounted : 0.215224s (1.2%%)   2m 51.237174s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.563027s (3.2%%)   7m 23.909549s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.001725s (0.0%%)   10.338531s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.224702s (6.9%%)   16m 18.581603s (7.4%%)
+┃┃ projectDBC : 0.044907s (0.3%%)   36.095563s (0.3%%)
+┃┃ linearSolve : 13.793171s (77.3%%)   2h 59m 41.545911s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000013s (0.0%%)   0.137471s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.113773s (0.6%%)   1m 5.841897s (0.5%%)
+┃┗
+┃ computeDG : 0.002949s (0.0%%)   0.122700s (0.0%%)
+┃ Uncounted : 0.021422s (0.1%%)   8.632559s (0.1%%)
+┗
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+project rhs for Dirichlet boundary condition 16
+span size = 0.0
+Total PN iteration count:  2402 
+
+Advance dt with 4.00e-02
+[##################################################] 100.000 Frame 30
+[##################################################] 100.000
+┏ Global : 17.887143s (100.0%%)   3h 40m 30.403648s (100.0%%)
+┃ Write_Surface_TriMesh_Obj : 0.004114s (0.0%%)   0.126519s (0.0%%)
+┃ Write_Surface_TriMesh_Obj_Regional : 0.004498s (0.0%%)   0.137972s (0.0%%)
+┃┏ implicitEuler_drdx_ipc : 17.854451s (99.8%%)   3h 40m 21.359818s (99.9%%)
+┃┃ Compute Total Volume : 0.013168s (0.1%%)   0.400738s (0.0%%)
+┃┃ Compute XTilde : 0.000188s (0.0%%)   0.005833s (0.0%%)
+┃┃ Find Object Boundary : 1.017886s (5.7%%)   30.890402s (0.2%%)
+┃┃┏ Compute_Intersection_Free_StepSize : 0.036883s (0.2%%)   1m 1.580033s (0.5%%)
+┃┃┃ Compute_Intersection_Free_StepSize_Build_Hash : 0.023356s (0.1%%)   29.656669s (0.2%%)
+┃┃┃ Compute_Intersection_Free_StepSize_PT : 0.003116s (0.0%%)   6.829709s (0.1%%)
+┃┃┃ Compute_Intersection_Free_StepSize_EE : 0.006106s (0.0%%)   21.084573s (0.2%%)
+┃┃┗
+┃┃ computeDG : 0.013198s (0.1%%)   8.328321s (0.1%%)
+┃┃┏ Compute_Constraint_Set : 0.032172s (0.2%%)   23.863927s (0.2%%)
+┃┃┃ Compute_Constraint_Set_Build_Hash : 0.020732s (0.1%%)   14.837563s (0.1%%)
+┃┃┃ Compute_Constraint_Set_PT : 0.001872s (0.0%%)   1.483966s (0.0%%)
+┃┃┃ Compute_Constraint_Set_EE : 0.005669s (0.0%%)   4.950976s (0.0%%)
+┃┃┃ Compute_Constraint_Set_Merge : 0.000104s (0.0%%)   0.133903s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential : 0.035443s (0.2%%)   23.597752s (0.2%%)
+┃┃┃ computePsi : 0.034284s (0.2%%)   22.342883s (0.2%%)
+┃┃┃ Compute_Barrier : 0.000015s (0.0%%)   0.106345s (0.0%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Gradient : 0.100124s (0.6%%)   1m 14.702173s (0.6%%)
+┃┃┃ computeStress : 0.006087s (0.0%%)   5.309126s (0.0%%)
+┃┃┃ elem2node : 0.067880s (0.4%%)   55.942070s (0.4%%)
+┃┃┃ Compute_Barrier_Gradient : 0.000046s (0.0%%)   0.337048s (0.0%%)
+┃┃┃ Uncounted : 0.026111s (0.1%%)   13.113929s (0.1%%)
+┃┃┗
+┃┃┏ Compute_IncPotential_Hessian : 1.405256s (7.9%%)   18m 40.434232s (8.5%%)
+┃┃┃┏ Compute_IncPotential_Hessian_Elasticity : 0.838676s (4.7%%)   11m 5.600754s (5.0%%)
+┃┃┃┃ computeStressDerivative : 0.093772s (0.5%%)   1m 14.146176s (0.6%%)
+┃┃┃┃ elem2node : 0.529010s (3.0%%)   7m 0.001511s (3.2%%)
+┃┃┃┃ Uncounted : 0.215893s (1.2%%)   2m 51.453067s (1.3%%)
+┃┃┃┗
+┃┃┃ Compute_IncPotential_Hessian_Inertia : 0.565298s (3.2%%)   7m 24.474847s (3.4%%)
+┃┃┃ Compute_Barrier_Hessian : 0.001262s (0.0%%)   10.339793s (0.1%%)
+┃┃┗
+┃┃ constructCSRMatrixFromTriplet : 1.225737s (6.9%%)   16m 19.807341s (7.4%%)
+┃┃ projectDBC : 0.044980s (0.3%%)   36.140543s (0.3%%)
+┃┃ linearSolve : 13.827546s (77.3%%)   2h 59m 55.373457s (81.6%%)
+┃┃ Compute_Min_Dist : 0.000012s (0.0%%)   0.137483s (0.0%%)
+┃┃┏ DBCStiff : 0.000000s (0.0%%)   0.153830s (0.0%%)
+┃┃┃┏ Compute_IncPotential : 0.000000s (0.0%%)   0.081607s (0.0%%)
+┃┃┃┃ computePsi : 0.000000s (0.0%%)   0.078289s (0.0%%)
+┃┃┃┃ Compute_Barrier : 0.000000s (0.0%%)   0.000655s (0.0%%)
+┃┃┃┗
+┃┃┗
+┃┃ Uncounted : 0.101858s (0.6%%)   1m 5.943755s (0.5%%)
+┃┗
+┃ computeDG : 0.003160s (0.0%%)   0.125860s (0.0%%)
+┃ Uncounted : 0.020920s (0.1%%)   8.653480s (0.1%%)
+┗

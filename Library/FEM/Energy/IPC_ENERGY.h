@@ -19,10 +19,10 @@ public:
             MESH_ELEM_ATTR<T, dim>& elemAttr,
             FIXED_COROTATED<T, dim>& elasticityAttr,
             std::vector<VECTOR<int, dim + 1>>& constraintSet,
-    T dHat2, T kappa[],
-    double& value
-    ) {
-        Compute_Barrier<T, dim, elasticIPC>(X, nodeAttr, constraintSet, 
+            T dHat2, T kappa[],
+            double& value)
+            {
+            Compute_Barrier<T, dim, elasticIPC>(X, nodeAttr, constraintSet,
             std::vector<VECTOR<T, 2>>(constraintSet.size(), VECTOR<T, 2>(1, dHat2)),
             dHat2, kappa, T(0), value);
     }

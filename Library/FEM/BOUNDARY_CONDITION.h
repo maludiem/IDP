@@ -61,15 +61,18 @@ void Init_Dirichlet(MESH_NODE<T, dim>& X,
     VECTOR<T, dim> rangeMin = relBoxMin;
     VECTOR<T, dim> rangeMax = relBoxMax;
     VECTOR<T, dim> rangeMid;
-    for (int dimI = 0; dimI < dim; ++dimI) {
-        rangeMin(dimI) *= bboxMax(dimI) - bboxMin(dimI);
-        rangeMin(dimI) += bboxMin(dimI);
-        rangeMax(dimI) *= bboxMax(dimI) - bboxMin(dimI);
-        rangeMax(dimI) += bboxMin(dimI);
-    }
+//    for (int dimI = 0; dimI < dim; ++dimI) {
+//        rangeMin(dimI) *= bboxMax(dimI) - bboxMin(dimI);
+//        rangeMin(dimI) += bboxMin(dimI);
+//        rangeMax(dimI) *= bboxMax(dimI) - bboxMin(dimI);
+//        rangeMax(dimI) += bboxMin(dimI);
+//    }
+
     rangeMid = (rangeMax + rangeMin) * 0.5;
 
-    std::cout << "DBC node inds: ";
+    //add sentence
+    std::cout << "test!!\n ";//add
+    std::cout << "DBC node inds: ";//original
     VECTOR<int, 2> range;
     range[0] = DBC.size;
     range[1] = -1;

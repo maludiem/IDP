@@ -268,13 +268,14 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
         DBCStiff = 1e6;
         Compute_DBC_Dist2(Xn, DBC, DBCPenaltyXn);
     }
-
+    printf("find CHOLMOD error 1\n");
     // Newton loop
     int PNIter = 0;
     T infNorm = 0.0;
     bool useGD = false;
     // compute deformation gradient, constraint set, and energy
     Compute_Deformation_Gradient(X, Elem, elemAttr, elasticityAttr);
+     printf("find CHOLMOD error 2\n");
     std::vector<VECTOR<int, dim + 1>> constraintSet_prev;
     std::vector<T> dist2_prev;
     std::vector<VECTOR<int, dim + 1>> constraintSet;
@@ -294,7 +295,7 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
             Compute_Friction_Basis<T, dim, elasticIPC>(X, constraintSet, stencilInfo, fricConstraintSet, closestPoint, tanBasis, normalForce, dHat2, kappa, T(0));
         }
     }
-
+     printf("find CHOLMOD error 3\n");
     if constexpr (dim == 3) {
         if (PARAMETER::Get("dumpling_on_plate", (T)0)) {
             T stiffness = PARAMETER::Get("dumpling_on_plate", (T)0);
@@ -442,7 +443,7 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
             energy.Add(std::make_shared<ROD_SPRING_ENERGY<T, dim>>());
         }
     }
-
+     printf("find CHOLMOD error 4\n");
     T Eprev;
     energy.Compute_IncPotential(Elem, gravity, h, X, Xtilde, nodeAttr, elemAttr, elasticityAttr,
         constraintSet, dHat2, kappa, Eprev);
@@ -455,7 +456,7 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
     if (DBCStiff) {
         Compute_DBC_Energy(X, nodeAttr, DBC, DBCStiff, Eprev);
     }
-
+     printf("find CHOLMOD error 5\n");
     std::deque<T> MDBCProgressI;
     int currentIter = 0;
     do {
@@ -499,7 +500,7 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
                 rhs[id * dim + 2] = -g[2];
             }
         });
-
+         printf("find CHOLMOD error 6\n");
         // compute Hessian
         if (!useGD) {
             std::vector<Eigen::Triplet<T>> triplets;
@@ -518,12 +519,14 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
             // project Matrix for Dirichlet boundary condition
             if (DBCStiff) {
                 sysMtr.Project_DBC(DBCb_fixed, dim);
+                printf("sysMtr DBCStiff yes\n");
             }
             else {
                 sysMtr.Project_DBC(DBCb, dim);
+                printf("sysMtr DBCStiff no\n");
             }
         }
-
+         printf("find CHOLMOD error 7\n");
         // compute search direction
         {
             TIMER_FLAG("linearSolve");
@@ -541,7 +544,7 @@ int Advance_One_Step_IE(MESH_ELEM<dim>& Elem,
                 }
             }
         }
-
+         printf("find CHOLMOD error 8\n");
         // line search
         MESH_NODE<T, dim> Xprev;
         Append_Attribute(X, Xprev);
